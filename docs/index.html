@@ -14,7 +14,8 @@
     <div class="title">
       <span class="eyebrow">99th Academy Awards · 2027</span>
       <h1>Oscars Predictions Tracker</h1>
-      <p class="lede">Every contender, every category. See which films are in the race, where each performer stands, and what moved since last week.</p>
+      <p class="dates">Nominations announced Jan. 21, 2027 · Ceremony Mar. 14, 2027</p>
+      <p class="lede">Every contender, every category. See which films are in the race, where each performer stands, and what changed since last week.</p>
     </div>
     <div class="controls">
       <div class="seg" role="group" aria-label="Theme">
@@ -35,8 +36,9 @@
 
   <div class="tabbar">
     <div class="tabs">
-      <button class="tab" data-tab-btn="films">Films by category</button>
-      <button class="tab" data-tab-btn="people">Performers</button>
+      <button class="tab" data-tab-btn="films">Films</button>
+      <button class="tab" data-tab-btn="cats">Categories</button>
+      <button class="tab" data-tab-btn="people">People</button>
     </div>
     <span class="meta" id="meta"></span>
   </div>
@@ -46,18 +48,22 @@
     <p>When the Academy announces its nominees, they will appear here next to what was predicted.</p>
   </section>
 
-  <section id="films" aria-label="Films by category">
+  <section id="films" aria-label="Films">
     <div class="legend">
-      <span><i class="badge r1">1</i>Frontrunner</span>
-      <span><i class="badge r2">2</i>Strong contender</span>
-      <span><i class="badge r3">3</i>In the mix</span>
-      <span><b class="chg up">▲</b> up <b class="chg down">▼</b> down <b class="chg new">NEW</b> since last week</span>
+      <span><i class="chipkey win"></i>Predicted winner</span>
+      <span><i class="chipkey nom"></i>Predicted nominee</span>
+      <span><b class="chg new">NEW</b> added since last week</span>
+      <span><b class="chg up">WINNER</b> became predicted winner</span>
     </div>
-    <div class="gridwrap"><div id="grid" class="grid"></div></div>
+    <div id="filmlist" class="filmlist"></div>
     <div id="dropped"></div>
   </section>
 
-  <section id="people" aria-label="Performers" hidden>
+  <section id="cats" aria-label="Categories" hidden>
+    <div id="catlist" class="catlist"></div>
+  </section>
+
+  <section id="people" aria-label="People" hidden>
     <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
     <div id="cards" class="cards"></div>
   </section>

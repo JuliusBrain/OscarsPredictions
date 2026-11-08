@@ -1,112 +1,932 @@
 {
  "date": "2026-11-08",
- "source": "placeholder",
+ "source": "variety",
+ "source_updated": "2026-11-06T00:43:59+00:00",
  "categories": {
-  "Picture": [
+  "Best Picture": [
    {
-    "rank": 1,
-    "film": "[Film 1]",
-    "people": []
+    "film": "Artificial",
+    "studio": "Neon",
+    "people": [
+     "Jeffrey Clifford",
+     "Jennifer Fox",
+     "Luca Guadagnino",
+     "David Heyman",
+     "Simon Rich"
+    ],
+    "winner": false
    },
    {
-    "rank": 2,
-    "film": "[Film 3]",
-    "people": []
+    "film": "The Debut",
+    "studio": "A24",
+    "people": [
+     "Jesse Eisenberg",
+     "Ali Herting",
+     "Dave McCary",
+     "Emma Stone"
+    ],
+    "winner": false
    },
    {
-    "rank": 3,
-    "film": "[Film 2]",
-    "people": []
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [
+     "Cale Boyter",
+     "Mary Parent",
+     "Denis Villeneuve"
+    ],
+    "winner": false
    },
    {
-    "rank": 4,
-    "film": "[Film 5]",
-    "people": []
+    "film": "Elsinore",
+    "studio": "Focus Features",
+    "people": [
+     "Mickey Liddell",
+     "Pete Shilaimon",
+     "Andrew Scott",
+     "Gaby Tana"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Invite",
+    "studio": "A24",
+    "people": [
+     "Ben Browning",
+     "Megan Ellison",
+     "David Permut"
+    ],
+    "winner": false
+   },
+   {
+    "film": "La Bola Negra",
+    "studio": "Netflix",
+    "people": [
+     "Javier Ambrossi",
+     "Javier Calvo",
+     "Jorge Pezzi"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "Christopher Nolan",
+     "Emma Thomas"
+    ],
+    "winner": true
+   },
+   {
+    "film": "Project Hail Mary",
+    "studio": "Amazon MGM Studios",
+    "people": [
+     "Ryan Gosling",
+     "Phil Lord",
+     "Christopher Miller",
+     "Rachel O’Connor",
+     "Amy Pascal",
+     "Aditya Sood"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Wild Horse Nine",
+    "studio": "Searchlight Pictures",
+    "people": [
+     "Graham Broadbent",
+     "Pete Czernin",
+     "Martin McDonagh",
+     "Anie Overland"
+    ],
+    "winner": false
+   },
+   {
+    "film": "You Can See Everything",
+    "studio": "A24",
+    "people": [
+     "Maggie Ambrose",
+     "Tatiana Bears",
+     "Jack Davis",
+     "Nathan Fielder",
+     "Lance Oppenheim"
+    ],
+    "winner": false
    }
   ],
-  "Director": [
+  "Directing": [
    {
-    "rank": 1,
-    "film": "[Film 1]",
+    "film": "La Bola Negra",
+    "studio": "Netflix",
     "people": [
-     "[Director A]"
-    ]
+     "Javier Ambrossi",
+     "Javier Calvo"
+    ],
+    "winner": false
    },
    {
-    "rank": 2,
-    "film": "[Film 2]",
+    "film": "You Can See Everything",
+    "studio": "A24",
     "people": [
-     "[Director B]"
-    ]
+     "Nathan Fielder",
+     "Lance Oppenheim"
+    ],
+    "winner": false
    },
    {
-    "rank": 3,
-    "film": "[Film 3]",
+    "film": "Project Hail Mary",
+    "studio": "Amazon MGM Studios",
     "people": [
-     "[Director C]"
-    ]
+     "Phil Lord",
+     "Christopher Miller"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "Christopher Nolan"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [
+     "Denis Villeneuve"
+    ],
+    "winner": true
    }
   ],
   "Actor": [
    {
-    "rank": 1,
-    "film": "[Film 1]",
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
     "people": [
-     "[Performer 1]"
-    ]
+     "Matt Damon"
+    ],
+    "winner": false
    },
    {
-    "rank": 2,
-    "film": "[Film 5]",
+    "film": "Project Hail Mary",
+    "studio": "Amazon MGM Studios",
     "people": [
-     "[Performer 7]"
-    ]
+     "Ryan Gosling"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Wild Horse Nine",
+    "studio": "Searchlight Pictures",
+    "people": [
+     "John Malkovich"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Elsinore",
+    "studio": "Focus Features",
+    "people": [
+     "Andrew Scott"
+    ],
+    "winner": true
+   },
+   {
+    "film": "The Only Living Pickpocket in New York",
+    "studio": "Sony Pictures Classics",
+    "people": [
+     "John Turturro"
+    ],
+    "winner": false
    }
   ],
   "Actress": [
    {
-    "rank": 1,
-    "film": "[Film 2]",
+    "film": "Disclosure Day",
+    "studio": "Universal Pictures",
     "people": [
-     "[Performer 2]"
-    ]
+     "Emily Blunt"
+    ],
+    "winner": false
    },
    {
-    "rank": 2,
-    "film": "[Film 4]",
+    "film": "Rose",
+    "studio": "Mubi",
     "people": [
-     "[Performer 6]"
-    ]
-   }
-  ],
-  "Supp. Actor": [
-   {
-    "rank": 1,
-    "film": "[Film 3]",
-    "people": [
-     "[Performer 3]"
-    ]
-   }
-  ],
-  "Supp. Actress": [
-   {
-    "rank": 1,
-    "film": "[Film 4]",
-    "people": [
-     "[Performer 4]"
-    ]
-   }
-  ],
-  "Screenplay": [
-   {
-    "rank": 1,
-    "film": "[Film 2]",
-    "people": []
+     "Sandra Hüller"
+    ],
+    "winner": false
    },
    {
-    "rank": 2,
-    "film": "[Film 3]",
-    "people": []
+    "film": "The Debut",
+    "studio": "A24",
+    "people": [
+     "Julianne Moore"
+    ],
+    "winner": true
+   },
+   {
+    "film": "Obsession",
+    "studio": "Focus Features",
+    "people": [
+     "Inde Navarrette"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Invite",
+    "studio": "A24",
+    "people": [
+     "Olivia Wilde"
+    ],
+    "winner": false
+   }
+  ],
+  "Supporting Actor": [
+   {
+    "film": "Artificial",
+    "studio": "Neon",
+    "people": [
+     "Andrew Garfield"
+    ],
+    "winner": true
+   },
+   {
+    "film": "The Debut",
+    "studio": "A24",
+    "people": [
+     "Paul Giamatti"
+    ],
+    "winner": false
+   },
+   {
+    "film": "La Bola Negra",
+    "studio": "Netflix",
+    "people": [
+     "Guitarricadelafuente"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "John Leguizamo"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Wild Horse Nine",
+    "studio": "Searchlight Pictures",
+    "people": [
+     "Sam Rockwell"
+    ],
+    "winner": false
+   }
+  ],
+  "Supporting Actress": [
+   {
+    "film": "Elsinore",
+    "studio": "Focus Features",
+    "people": [
+     "Olivia Colman"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Invite",
+    "studio": "A24",
+    "people": [
+     "Penélope Cruz"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "Anne Hathaway"
+    ],
+    "winner": true
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "Samantha Morton"
+    ],
+    "winner": false
+   },
+   {
+    "film": "You Can See Everything",
+    "studio": "A24",
+    "people": [
+     "Amanda Seyfried"
+    ],
+    "winner": false
+   }
+  ],
+  "Original Screenplay": [
+   {
+    "film": "Artificial",
+    "studio": "Neon",
+    "people": [
+     "Simon Rich"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Debut",
+    "studio": "A24",
+    "people": [
+     "Jesse Eisenberg"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Elsinore",
+    "studio": "Focus Features",
+    "people": [
+     "Stephen Beresford"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Tender Loving Care",
+    "studio": "Bleecker Street",
+    "people": [
+     "Mike Leigh"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Wild Horse Nine",
+    "studio": "Searchlight Pictures",
+    "people": [
+     "Martin McDonagh"
+    ],
+    "winner": true
+   }
+  ],
+  "Adapted Screenplay": [
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [
+     "Brian K. Vaughan",
+     "Denis Villeneuve"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Invite",
+    "studio": "A24",
+    "people": [
+     "Rashida Jones",
+     "Will McCormack"
+    ],
+    "winner": true
+   },
+   {
+    "film": "La Bola Negra",
+    "studio": "Netflix",
+    "people": [
+     "Javier Ambrossi",
+     "Javier Calvo",
+     "Alberto Conejero"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "Christopher Nolan"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Project Hail Mary",
+    "studio": "Amazon MGM Studios",
+    "people": [
+     "Drew Goddard"
+    ],
+    "winner": false
+   }
+  ],
+  "Casting": [
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [
+     "Francine Maisler"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Elsinore",
+    "studio": "Focus Features",
+    "people": [
+     "Jessica Ronane"
+    ],
+    "winner": false
+   },
+   {
+    "film": "La Bola Negra",
+    "studio": "Netflix",
+    "people": [
+     "Eva Leira",
+     "Yolanda Serrano"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "John Papsidera"
+    ],
+    "winner": true
+   },
+   {
+    "film": "Wild Horse Nine",
+    "studio": "Searchlight Pictures",
+    "people": [
+     "Sarah Finn"
+    ],
+    "winner": false
+   }
+  ],
+  "Animated Feature": [
+   {
+    "film": "Iron Boy",
+    "studio": "Sony Pictures Classics",
+    "people": [
+     "Louis Clichy",
+     "Nicolas de Rosanbo",
+     "Fabrice Delville"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Ray Gunn",
+    "studio": "Netflix",
+    "people": [
+     "Brad Bird",
+     "Lisa Beroud"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Tangles",
+    "studio": "Independent Film Company",
+    "people": [
+     "Leah Nelson",
+     "Jay Grandin",
+     "Jennifer W. Ray",
+     "Lauren Miller Rogen",
+     "Seth Rogen"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Toy Story 5",
+    "studio": "Pixar",
+    "people": [
+     "Andrew Stanton",
+     "Lindsey Collins",
+     "Jessica Choi"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Wildwood",
+    "studio": "Laika",
+    "people": [
+     "Travis Knight",
+     "Sam Wilson"
+    ],
+    "winner": true
+   }
+  ],
+  "Production Design": [
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [
+     "Patrice Vermette (production designer)",
+     "Shane Vieau (set decorator)"
+    ],
+    "winner": true
+   },
+   {
+    "film": "La Bola Negra",
+    "studio": "Netflix",
+    "people": [
+     "Roger Bellés (production designer)",
+     "Judit Ferrer (set decorator)"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "Ruth De Jong (production designer)",
+     "Larry Dias (set decorator)"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Project Hail Mary",
+    "studio": "Amazon MGM Studios",
+    "people": [
+     "Charles Wood (production designer)",
+     "John Bush (set decorator)"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Werwulf",
+    "studio": "Focus Features",
+    "people": [
+     "Craig Lathrop (production designer)",
+     "Anna Pinnock (set decorator)"
+    ],
+    "winner": false
+   }
+  ],
+  "Cinematography": [
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [
+     "Linus Sandgren"
+    ],
+    "winner": false
+   },
+   {
+    "film": "La Bola Negra",
+    "studio": "Netflix",
+    "people": [
+     "Gris Jordana"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "Hoyte van Hoytema"
+    ],
+    "winner": true
+   },
+   {
+    "film": "Project Hail Mary",
+    "studio": "Amazon MGM Studios",
+    "people": [
+     "Greig Fraser"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Werwulf",
+    "studio": "Focus Features",
+    "people": [
+     "Jarin Blaschke"
+    ],
+    "winner": false
+   }
+  ],
+  "Costume Design": [
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [],
+    "winner": true
+   },
+   {
+    "film": "La Bola Negra",
+    "studio": "Netflix",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Sense and Sensibility",
+    "studio": "Focus Features",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Wuthering Heights",
+    "studio": "Warner Bros.",
+    "people": [],
+    "winner": false
+   }
+  ],
+  "Film Editing": [
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [
+     "Joe Walker"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Invite",
+    "studio": "A24",
+    "people": [
+     "Anthony Boys",
+     "Yorgos Mavropsaridis"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "Jennifer Lame"
+    ],
+    "winner": true
+   },
+   {
+    "film": "Wild Horse Nine",
+    "studio": "Searchlight Pictures",
+    "people": [
+     "Mikkel E.G. Nielsen"
+    ],
+    "winner": false
+   },
+   {
+    "film": "You Can See Everything",
+    "studio": "A24",
+    "people": [
+     "Adam Locke-Norton"
+    ],
+    "winner": false
+   }
+  ],
+  "Makeup and Hairstyling": [
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [],
+    "winner": true
+   },
+   {
+    "film": "Ebenezer: A Christmas Carol",
+    "studio": "Paramount Pictures",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Michael",
+    "studio": "Lionsgate",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Werwulf",
+    "studio": "Focus Features",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Wicker",
+    "studio": "Black Bear Pictures",
+    "people": [],
+    "winner": false
+   }
+  ],
+  "Sound": [
+   {
+    "film": "Behemoth!",
+    "studio": "Searchlight Pictures",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [],
+    "winner": true
+   },
+   {
+    "film": "Project Hail Mary",
+    "studio": "Amazon MGM Studios",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Werwulf",
+    "studio": "Focus Features",
+    "people": [],
+    "winner": false
+   }
+  ],
+  "Visual Effects": [
+   {
+    "film": "Avengers: Doomsday",
+    "studio": "Marvel Studios",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [],
+    "winner": true
+   },
+   {
+    "film": "Project Hail Mary",
+    "studio": "Amazon MGM Studios",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Whalefall",
+    "studio": "20th Century Studios",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Wildwood",
+    "studio": "Laika",
+    "people": [],
+    "winner": false
+   }
+  ],
+  "Original Score": [
+   {
+    "film": "Disclosure Day",
+    "studio": "Universal Pictures",
+    "people": [
+     "John Williams"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Dune: Part Three",
+    "studio": "Warner Bros.",
+    "people": [
+     "Hans Zimmer"
+    ],
+    "winner": false
+   },
+   {
+    "film": "La Bola Negra",
+    "studio": "Netflix",
+    "people": [
+     "Raül Refree"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Odyssey",
+    "studio": "Universal Pictures",
+    "people": [
+     "Ludwig Göransson"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Project Hail Mary",
+    "studio": "Amazon MGM Studios",
+    "people": [
+     "Daniel Pemberton"
+    ],
+    "winner": true
+   }
+  ],
+  "Original Song": [
+   {
+    "film": "The Debut",
+    "studio": "A24",
+    "people": [],
+    "winner": true,
+    "song": "This City May Have Chewed Me Up (But It Hasn’t Spit Me Out)"
+   },
+   {
+    "film": "La Bola Negra",
+    "studio": "Netflix",
+    "people": [],
+    "winner": false,
+    "song": "La Nieve"
+   },
+   {
+    "film": "Maserati: The Brothers",
+    "studio": "Self-Distributed",
+    "people": [],
+    "winner": false,
+    "song": "One Right Here"
+   },
+   {
+    "film": "Musk",
+    "studio": "Bleecker Street",
+    "people": [],
+    "winner": false,
+    "song": "Let Me Sell You a Dream"
+   },
+   {
+    "film": "Toy Story 5",
+    "studio": "Pixar",
+    "people": [],
+    "winner": false,
+    "song": "I Knew It, I Knew You"
+   }
+  ],
+  "Documentary Feature": [
+   {
+    "film": "American Doctor",
+    "studio": "Watermelon Pictures",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Naza",
+    "studio": "The Guardian, MK2 and Neon",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Once Upon a Time in Harlem",
+    "studio": "Neon",
+    "people": [],
+    "winner": true
+   },
+   {
+    "film": "One in a Million",
+    "studio": "Frontline",
+    "people": [],
+    "winner": false
+   },
+   {
+    "film": "Rehearsals for a Revolution",
+    "studio": "Sony Pictures Classics",
+    "people": [],
+    "winner": false
+   }
+  ],
+  "International Feature": [
+   {
+    "film": "Fjord",
+    "studio": "Neon",
+    "people": [
+     "Cristian Mingui"
+    ],
+    "winner": false,
+    "country": "Romania"
+   },
+   {
+    "film": "La Bola Negra",
+    "studio": "Netflix",
+    "people": [
+     "Javier Ambrossi",
+     "Javier Calvo"
+    ],
+    "winner": true,
+    "country": "Spain"
+   },
+   {
+    "film": "Minotaur",
+    "studio": "Mubi",
+    "people": [
+     "Andrey Zvyagintsev"
+    ],
+    "winner": false,
+    "country": "France"
+   },
+   {
+    "film": "Possible Love",
+    "studio": "Netflix",
+    "people": [
+     "Lee Chang-dong"
+    ],
+    "winner": false,
+    "country": "South Korea"
+   },
+   {
+    "film": "Rose",
+    "studio": "Mubi",
+    "people": [
+     "Markus Schleinzer"
+    ],
+    "winner": false,
+    "country": "Austria"
    }
   ]
  }
