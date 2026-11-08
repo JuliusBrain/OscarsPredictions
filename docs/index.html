@@ -50,6 +50,14 @@
   </section>
 
   <section id="films" aria-label="Films">
+    <div class="watchbar">
+      <div class="seg" role="group" aria-label="Filter by watched">
+        <button data-filter-btn="all">All</button>
+        <button data-filter-btn="todo">To watch</button>
+        <button data-filter-btn="seen">Watched</button>
+      </div>
+      <span id="progress" class="progress" aria-live="polite"></span>
+    </div>
     <div class="legend">
       <span><i class="chipkey win"></i>Predicted winner</span>
       <span><i class="chipkey nom"></i>Predicted nominee</span>

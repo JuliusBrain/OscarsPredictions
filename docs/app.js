@@ -1,7 +1,10 @@
 (function () {
   var ACCENTS = { gold: ['#D4AF37', '#7A5C12'], champagne: ['#E8D8A8', '#8A6D3B'], rose: ['#E5677B', '#A3263E'] };
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
-  var state = { theme: 'mid', accent: 'gold', mode: 'predicted', tab: 'films', cat: 'All' };
+  var state = { theme: 'mid', accent: 'gold', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all' };
+  var watched = {};
+  try { JSON.parse(localStorage.getItem('watched') || '[]').forEach(function (f) { watched[f] = 1; }); } catch (e) {}
+  function saveWatched() { store('watched', JSON.stringify(Object.keys(watched))); }
   var data = null, changes = { entries: {}, dropped: [] };
 
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) {} return null; }
@@ -23,7 +26,7 @@
     var root = document.documentElement;
     root.setAttribute('data-theme', state.theme);
     root.style.setProperty('--accent', ACCENTS[state.accent][state.theme === 'light' ? 1 : 0]);
-    ['theme', 'accent', 'mode', 'tab'].forEach(function (f) {
+    ['theme', 'accent', 'mode', 'tab', 'filter'].forEach(function (f) {
       document.querySelectorAll('[data-' + f + '-btn]').forEach(function (b) {
         b.setAttribute('aria-pressed', b.getAttribute('data-' + f + '-btn') === state[f]);
       });
@@ -41,13 +44,30 @@
     var list = Object.keys(films).map(function (k) { return films[k]; }).sort(function (a, b) {
       return b.noms.length - a.noms.length || a.name.localeCompare(b.name);
     });
+    var seenCount = list.filter(function (f) { return watched[f.name]; }).length;
+    document.getElementById('progress').textContent = seenCount + ' of ' + list.length + ' watched · ' + (list.length - seenCount) + ' left to watch';
+    var shown = list.filter(function (f) {
+      return state.filter === 'all' || (state.filter === 'seen') === !!watched[f.name];
+    });
     var box = document.getElementById('filmlist');
     box.textContent = '';
-    list.forEach(function (f) {
+    if (!shown.length) box.appendChild(el('div', 'none', state.filter === 'seen' ? 'No films marked as watched yet.' : 'Nothing left to watch. You have seen everything on the list.'));
+    shown.forEach(function (f) {
       var wins = f.noms.filter(function (n) { return n.winner; }).length;
-      var row = el('div', 'filmrow'), name = el('div', 'filmname');
+      var row = el('div', 'filmrow' + (watched[f.name] ? ' seen' : '')), name = el('div', 'filmname');
       name.appendChild(el('b', '', f.name));
       name.appendChild(el('span', '', f.studio + ' · ' + f.noms.length + (f.noms.length === 1 ? ' nomination' : ' nominations') + (wins ? ' · ' + wins + ' predicted ' + (wins === 1 ? 'win' : 'wins') : '')));
+      var lab = el('label', 'watch'), cb = el('input');
+      cb.type = 'checkbox'; cb.checked = !!watched[f.name]; cb.setAttribute('data-film', f.name);
+      cb.onchange = function () {
+        if (cb.checked) watched[f.name] = 1; else delete watched[f.name];
+        saveWatched(); render();
+        var again = document.querySelector('input[data-film]');
+        document.querySelectorAll('input[data-film]').forEach(function (i) { if (i.getAttribute('data-film') === f.name) again = i; });
+        if (again && again.getAttribute('data-film') === f.name) again.focus();
+      };
+      lab.appendChild(cb); lab.appendChild(document.createTextNode('Watched'));
+      name.appendChild(lab);
       var chips = el('div', 'noms');
       f.noms.sort(function (a, b) { return (b.winner - a.winner); }).forEach(function (n) {
         var c = el('span', 'nom' + (n.winner ? ' win' : ''), n.cat);
@@ -83,6 +103,7 @@
         li.appendChild(t);
         var who = (e.song ? e.film + ' · ' : '') + (e.people.length && PEOPLE_CATS.indexOf(cat) >= 0 ? e.people.join(', ') + ' · ' : '') + e.studio + (e.country ? ' · ' + e.country : '');
         li.appendChild(el('span', 'who', who));
+        if (watched[e.film]) li.appendChild(el('span', 'seen-tag', 'Watched'));
         ul.appendChild(li);
       });
       card.appendChild(ul); box.appendChild(card);
@@ -104,7 +125,7 @@
         e.people.forEach(function (p) {
           var card = el('article', 'card'), top = el('div', 'top'), info = el('div');
           info.appendChild(el('div', 'name', p));
-          info.appendChild(el('div', 'film2', e.film));
+          info.appendChild(el('div', 'film2', e.film + (watched[e.film] ? ' · Watched' : '')));
           top.appendChild(info);
           if (e.winner) top.appendChild(el('span', 'tag', 'Winner'));
           card.appendChild(top);
@@ -126,7 +147,7 @@
     if (data) { renderFilms(); renderCats(); renderPeople(); }
   }
 
-  [['theme', 'theme'], ['accent', 'accent'], ['mode', 'mode'], ['tab', 'tab']].forEach(function (p) {
+  [['theme', 'theme'], ['accent', 'accent'], ['mode', 'mode'], ['tab', 'tab'], ['filter', 'filter']].forEach(function (p) {
     document.querySelectorAll('[data-' + p[0] + '-btn]').forEach(function (b) {
       b.onclick = function () {
         state[p[1]] = b.getAttribute('data-' + p[0] + '-btn');
