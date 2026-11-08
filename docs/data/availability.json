@@ -967,39 +967,32 @@
   "wicker": {
    "estimate": {
     "rent_buy": [
-     "2027-01-25",
-     "2027-03-11"
+     "2026-12-01",
+     "2026-12-31"
     ],
     "streaming": [
      "2027-03-11",
      "2027-06-09"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "A digital release is already dated 2026-12-01 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
    },
-   "tmdb_id": null,
-   "unmatched": true,
-   "candidates": [
-    {
-     "id": 1195803,
-     "title": "Wicker",
-     "release_date": "2026-10-21"
-    },
-    {
-     "id": 16307,
-     "title": "The Wicker Man",
-     "release_date": "1973-12-06"
-    },
-    {
-     "id": 11208,
-     "title": "Wicker Park",
-     "release_date": "2004-09-03"
-    },
-    {
-     "id": 1195803,
-     "title": "Wicker",
-     "release_date": "2026-10-21"
-    }
-   ]
+   "tmdb_id": 1195803,
+   "tmdb_title": "Wicker",
+   "tmdb_release_date": "2026-10-21",
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": {
+    "date": "2026-12-01",
+    "country": "US"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "wild-horse-nine": {
    "estimate": {
