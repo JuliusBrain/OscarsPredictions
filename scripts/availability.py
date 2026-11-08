@@ -53,7 +53,8 @@ def estimate(pl_cinema, world_premiere, digital_hint=None):
         basis = ("Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, "
                  "subscription streaming about 3 to 6 months.")
     return {"rent_buy": [rent[0].isoformat(), rent[1].isoformat()],
-            "streaming": [stream[0].isoformat(), stream[1].isoformat()], "basis": basis}
+            "streaming": [stream[0].isoformat(), stream[1].isoformat()], "basis": basis,
+            "basis_kind": "digital" if digital_hint else "typical", "hint": digital_hint or None}
 
 
 def parse_providers(payload):

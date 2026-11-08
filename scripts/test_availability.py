@@ -8,11 +8,13 @@ class AvailabilityTests(unittest.TestCase):
         self.assertEqual(e["rent_buy"], ["2027-02-01", "2027-03-18"])
         self.assertEqual(e["streaming"], ["2027-03-18", "2027-06-16"])
         self.assertIn("Typical gap", e["basis"])
+        self.assertEqual((e["basis_kind"], e["hint"]), ("typical", None))
 
     def test_estimate_prefers_known_digital_date(self):
         e = estimate("2026-07-17", "2026-07-06", {"date": "2026-11-17", "country": "US"})
         self.assertEqual(e["rent_buy"], ["2026-11-17", "2026-12-17"])
         self.assertIn("2026-11-17", e["basis"])
+        self.assertEqual((e["basis_kind"], e["hint"]["country"]), ("digital", "US"))
 
     def test_estimate_without_dates(self):
         self.assertIsNone(estimate(None, None))

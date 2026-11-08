@@ -3,93 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Oscars 2027 Predictions Tracker</title>
+<title>Oscars Predictions Tracker</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500;600&family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=12">
+<link rel="stylesheet" href="styles.css?v=16">
 </head>
 <body>
 <main class="wrap">
   <header class="head">
     <div class="title">
-      <span class="eyebrow">99th Academy Awards · 2027</span>
-      <h1>Oscars Predictions Tracker</h1>
-      <p class="dates">Nominations announced Jan. 21, 2027 · Ceremony Mar. 14, 2027</p>
-      <p class="lede">Every contender, every category. See which films are in the race, where each performer stands, and what changed since last week.</p>
+      <span class="eyebrow" data-i18n="eyebrow">99th Academy Awards · 2027</span>
+      <h1 data-i18n="title">Oscars Predictions Tracker</h1>
+      <p class="dates" data-i18n="dates">Nominations announced Jan. 21, 2027 · Ceremony Mar. 14, 2027</p>
+      <p class="lede" data-i18n="lede">Every contender, every category. See which films are in the race, where each performer stands, and what changed since last week.</p>
     </div>
     <div class="controls">
-      <div class="seg" role="group" aria-label="Theme">
+      <div class="seg" role="group" data-i18n-aria="aria.lang" aria-label="Language">
+        <button data-lang-btn="en" lang="en">EN</button>
+        <button data-lang-btn="pl" lang="pl">PL</button>
+      </div>
+      <div class="seg" role="group" data-i18n-aria="aria.theme" aria-label="Theme">
         <button data-theme-btn="deco">Deco Noir</button>
         <button data-theme-btn="midnight">Midnight Velvet</button>
         <button data-theme-btn="program">Cinema Program</button>
       </div>
-      <div class="seg" role="group" aria-label="Mode">
-        <button data-mode-btn="predicted">Predictions</button>
-        <button data-mode-btn="nominees">Official nominees</button>
+      <div class="seg" role="group" data-i18n-aria="aria.mode" aria-label="Mode">
+        <button data-mode-btn="predicted" data-i18n="mode.predicted">Predictions</button>
+        <button data-mode-btn="nominees" data-i18n="mode.nominees">Official nominees</button>
       </div>
     </div>
   </header>
 
   <div class="tabbar">
     <div class="tabs">
-      <button class="tab" data-tab-btn="films">Films</button>
-      <button class="tab" data-tab-btn="cats">Categories</button>
-      <button class="tab" data-tab-btn="people">People</button>
+      <button class="tab" data-tab-btn="films" data-i18n="tab.films">Films</button>
+      <button class="tab" data-tab-btn="cal" data-i18n="tab.cal">Calendar</button>
+      <button class="tab" data-tab-btn="cats" data-i18n="tab.cats">Categories</button>
+      <button class="tab" data-tab-btn="people" data-i18n="tab.people">People</button>
     </div>
     <span class="meta" id="meta"></span>
   </div>
 
   <section id="nominees" hidden>
     <div id="nomempty" class="empty">
-      <h2>Nominations not announced yet</h2>
-      <p>When the Academy announces its nominees, they will appear here next to what was predicted.</p>
+      <h2 data-i18n="nom.empty.title">Nominations not announced yet</h2>
+      <p data-i18n="nom.empty.text">When the Academy announces its nominees, they will appear here next to what was predicted.</p>
     </div>
     <div id="nomlist" class="catlist"></div>
   </section>
 
-  <section id="films" aria-label="Films">
+  <section id="films" data-i18n-aria="tab.films" aria-label="Films">
     <div class="watchbar">
-      <div class="seg" role="group" aria-label="Filter by watched">
-        <button data-filter-btn="all">All</button>
-        <button data-filter-btn="todo">To watch</button>
-        <button data-filter-btn="seen">Watched</button>
+      <div class="seg" role="group" data-i18n-aria="aria.filter" aria-label="Filter by watched">
+        <button data-filter-btn="all" data-i18n="filter.all">All</button>
+        <button data-filter-btn="todo" data-i18n="filter.todo">To watch</button>
+        <button data-filter-btn="seen" data-i18n="filter.seen">Watched</button>
       </div>
       <span id="progress" class="progress" aria-live="polite"></span>
       <span id="syncstate" class="syncstate" aria-live="polite"></span>
     </div>
     <div class="legend">
-      <span><i class="chipkey win"></i>Predicted winner</span>
-      <span><i class="chipkey nom"></i>Predicted nominee</span>
-      <span><b class="chg new">NEW</b> added since last week</span>
-      <span><b class="chg up">WINNER</b> became predicted winner</span>
+      <span><i class="chipkey win"></i><span data-i18n="legend.win">Predicted winner</span></span>
+      <span><i class="chipkey nom"></i><span data-i18n="legend.nom">Predicted nominee</span></span>
+      <span><b class="chg new" data-i18n="badge.new">NEW</b> <span data-i18n="legend.new">added since last week</span></span>
+      <span><b class="chg up" data-i18n="badge.winner">WINNER</b> <span data-i18n="legend.winner">became predicted winner</span></span>
     </div>
     <div id="filmlist" class="filmlist"></div>
     <div id="dropped"></div>
   </section>
 
-  <section id="cats" aria-label="Categories" hidden>
+  <section id="cal" data-i18n-aria="tab.cal" aria-label="Calendar" hidden>
+    <div id="calendar"></div>
+  </section>
+
+  <section id="cats" data-i18n-aria="tab.cats" aria-label="Categories" hidden>
     <div id="catlist" class="catlist"></div>
   </section>
 
-  <section id="people" aria-label="People" hidden>
-    <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
+  <section id="people" data-i18n-aria="tab.people" aria-label="People" hidden>
+    <div id="chips" class="chips" role="group" data-i18n-aria="aria.chips" aria-label="Filter by category"></div>
     <div id="cards" class="cards"></div>
   </section>
+
   <details class="sync" id="syncbox">
-    <summary>Sync settings</summary>
-    <p>Watched marks are saved to <code>docs/data/watched.json</code> in this repo through the GitHub API, so they follow you across devices. Without a token they are kept only in this browser.</p>
+    <summary data-i18n="sync.summary">Sync settings</summary>
+    <p data-i18n-html="sync.p1">Watched marks are saved to <code>docs/data/watched.json</code> in this repo through the GitHub API, so they follow you across devices. Without a token they are kept only in this browser.</p>
     <ol>
-      <li>Create a <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a> with repository access to <b>JuliusBrain/OscarsPredictions only</b> and permission <b>Contents: Read and write</b>.</li>
-      <li>Paste it below. It is stored in this browser only and is sent only to api.github.com.</li>
+      <li data-i18n-html="sync.li1">Create a <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a> with repository access to <b>JuliusBrain/OscarsPredictions only</b> and permission <b>Contents: Read and write</b>.</li>
+      <li data-i18n="sync.li2">Paste it below. It is stored in this browser only and is sent only to api.github.com.</li>
     </ol>
     <div class="tokenrow">
-      <label for="token">GitHub token</label>
+      <label for="token" data-i18n="sync.label">GitHub token</label>
       <input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_...">
-      <button id="tokensave" class="chip">Save token</button>
-      <button id="tokenclear" class="chip">Remove token</button>
+      <button id="tokensave" class="chip" data-i18n="sync.save">Save token</button>
+      <button id="tokenclear" class="chip" data-i18n="sync.clear">Remove token</button>
     </div>
   </details>
-  <p class="credits">Premiere dates: <a href="https://www.filmweb.pl" target="_blank" rel="noopener">Filmweb</a>. Streaming and VOD availability: <a href="https://www.themoviedb.org" target="_blank" rel="noopener">TMDB</a>, with watch-provider data from <a href="https://www.justwatch.com" target="_blank" rel="noopener">JustWatch</a>. This product uses the TMDB API but is not endorsed or certified by TMDB. Release-window estimates are guesses from typical gaps, not announcements.</p>
+  <p class="credits" data-i18n-html="credits">Premiere dates: <a href="https://www.filmweb.pl" target="_blank" rel="noopener">Filmweb</a>.</p>
 </main>
-<script src="app.js?v=12"></script>
+<script src="i18n.js?v=16"></script>
+<script src="app.js?v=16"></script>
 </body>
 </html>
