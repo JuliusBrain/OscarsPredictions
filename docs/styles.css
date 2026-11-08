@@ -73,6 +73,11 @@ h1{margin:0;font-family:var(--font-display);font-weight:var(--h1-weight);font-si
 .none{padding:32px 16px;text-align:center;color:var(--muted)}
 .catlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
 .catcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-card);padding:20px;display:flex;flex-direction:column;gap:14px}
+.cathead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.catprog{font-size:13px;font-weight:700;white-space:nowrap;padding:3px 10px;border:1.5px solid var(--outline);border-radius:var(--r-chip);color:var(--text)}
+.catprog.done{background:var(--accent);border-color:var(--accent);color:var(--onaccent)}
+.catbar{height:6px;margin:-4px 0 0;background:var(--pline);border-radius:var(--r-chip);overflow:hidden}
+.catbar i{display:block;height:100%;background:var(--accent)}
 .catcard h3{margin:0;font-family:var(--font-display);font-weight:var(--h1-weight);font-size:24px;letter-spacing:calc(var(--h1-ls) / 2)}
 .catcard ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}
 .catcard li{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:calc(var(--r-chip))}

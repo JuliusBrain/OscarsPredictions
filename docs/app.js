@@ -267,7 +267,17 @@
     box.textContent = '';
     Object.keys(source.categories).forEach(function (cat) {
       var card = el('div', 'catcard'), ul = el('ul');
-      card.appendChild(el('h3', '', cat));
+      var ids = {}; source.categories[cat].forEach(function (e) { ids[slug(e.film)] = 1; });
+      var all = Object.keys(ids), seen = all.filter(function (id) { return watched[id]; }).length;
+      var head = el('div', 'cathead');
+      head.appendChild(el('h3', '', cat));
+      var prog = el('span', 'catprog' + (seen === all.length ? ' done' : ''), seen + ' of ' + all.length + (all.length === 1 ? ' film' : ' films') + ' watched');
+      head.appendChild(prog);
+      card.appendChild(head);
+      var bar = el('div', 'catbar'), fill = el('i');
+      fill.style.width = Math.round(seen / all.length * 100) + '%';
+      bar.setAttribute('aria-hidden', 'true'); bar.appendChild(fill);
+      card.appendChild(bar);
       source.categories[cat].forEach(function (e) {
         var li = el('li'), t = el('span'), strong = el('b', '', e.song ? e.song : e.film);
         t.appendChild(strong);
