@@ -11,8 +11,19 @@ Two themes share one layout (top bar, hero with progress card, card rows): **Mod
 - **EN | PL switch** at the top of the page. All UI text lives in `docs/i18n.js`; `scripts/test_i18n.py` fails if a string is missing in either language. In Polish, film titles use Filmweb's Polish titles (the original is shown under it).
 - **Calendar tab**: a month grid of Polish cinema premieres (dates from Filmweb) with a plan-to-watch list below it (upcoming first; already released and undated films are folded away). You can tick films as watched from the list.
 
+## Daily update (runs on your Mac)
+`scripts/daily-update.sh` downloads Variety's page with plain `wget` (its own user agent, one attempt), saves a snapshot **only if the predictions changed**, prints what changed (new, dropped, winner changes, and films still needing a Filmweb page), then commits and pushes. GitHub's workflow takes over from there: weekly diff, Filmweb dates, streaming data, deploy. It runs on your machine because Variety serves a normal download to a home connection; if it ever refuses (HTTP error) or the page layout changes, the script stops, tells you with a macOS notification, and does nothing else. It never retries or works around a block. Fall back to saving the page by hand and `/update-oscars`.
+
+```bash
+bash scripts/launchd/install.sh              # schedule it daily at 08:05 (a missed run happens when the Mac wakes)
+launchctl kickstart -k gui/$(id -u)/com.oscars-tracker.daily   # run it now
+DRY_RUN=1 bash scripts/daily-update.sh       # download and check only, no commit or push
+bash scripts/launchd/install.sh --uninstall  # remove the schedule
+```
+Log: `~/Library/Logs/oscars-daily.log`. Needs `wget` (`brew install wget`) and your normal `git push` access.
+
 ## Updating from Variety
-Variety blocks automated readers (HTTP 402 via TollBit), so the page is saved by hand from your own browser:
+Variety can block automated readers (HTTP 402 via TollBit; it did for cloud tools), so this manual route is the fallback when the daily job reports a refusal:
 
 1. Open the Variety page and use File > Save Page As (HTML) into `~/Downloads`.
 2. In Claude Code, run `/update-oscars`. It copies the page to `data/inbox/` (gitignored), parses it into `data/snapshots/YYYY-MM-DD.json`, checks the counts, and commits and pushes.
