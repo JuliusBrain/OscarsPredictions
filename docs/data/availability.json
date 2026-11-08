@@ -12,7 +12,9 @@
      "2026-08-06",
      "2026-11-04"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1596332,
    "tmdb_title": "American Doctor",
@@ -56,7 +58,9 @@
      "2027-03-16",
      "2027-06-14"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1003596,
    "tmdb_title": "Avengers: Doomsday",
@@ -83,7 +87,9 @@
      "2027-03-04",
      "2027-06-02"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1452168,
    "tmdb_title": "Behemoth!",
@@ -110,7 +116,12 @@
      "2026-09-08",
      "2026-12-07"
     ],
-    "basis": "A digital release is already dated 2026-07-21 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-07-21 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-07-21",
+     "country": "US"
+    }
    },
    "tmdb_id": 1275779,
    "tmdb_title": "Disclosure Day",
@@ -154,7 +165,9 @@
      "2027-03-16",
      "2027-06-14"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1170608,
    "tmdb_title": "Dune: Part Three",
@@ -181,7 +194,9 @@
      "2027-02-11",
      "2027-05-12"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1567605,
    "tmdb_title": "Ebenezer",
@@ -208,7 +223,9 @@
      "2027-04-29",
      "2027-07-28"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1599230,
    "tmdb_title": "Elsinore",
@@ -235,7 +252,12 @@
      "2027-04-29",
      "2027-07-28"
     ],
-    "basis": "A digital release is already dated 2026-11-24 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-11-24 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-11-24",
+     "country": "US"
+    }
    },
    "tmdb_id": 1401459,
    "tmdb_title": "Fjord",
@@ -265,7 +287,9 @@
      "2027-01-09",
      "2027-04-09"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 947493,
    "tmdb_title": "Iron Boy",
@@ -292,7 +316,12 @@
      "2027-05-20",
      "2027-08-18"
     ],
-    "basis": "A digital release is already dated 2026-12-02 in CA; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-12-02 in CA; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-12-02",
+     "country": "CA"
+    }
    },
    "tmdb_id": 1422041,
    "tmdb_title": "La Bola Negra",
@@ -339,7 +368,12 @@
      "2026-07-23",
      "2026-10-21"
     ],
-    "basis": "A digital release is already dated 2026-06-09 in DE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-06-09 in DE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-06-09",
+     "country": "DE"
+    }
    },
    "tmdb_id": 936075,
    "tmdb_title": "Michael",
@@ -383,7 +417,9 @@
      "2027-05-06",
      "2027-08-04"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 848700,
    "tmdb_title": "Minotaur",
@@ -410,7 +446,12 @@
      "2026-12-06",
      "2027-03-06"
     ],
-    "basis": "A digital release is already dated 2026-11-06 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-11-06 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-11-06",
+     "country": "US"
+    }
    },
    "tmdb_id": 1096228,
    "tmdb_title": "Musk",
@@ -440,7 +481,9 @@
      "2027-01-21",
      "2027-04-21"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1755291,
    "tmdb_title": "NAZA",
@@ -467,7 +510,9 @@
      "2026-08-13",
      "2026-11-11"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1502633,
    "tmdb_title": "Obsession",
@@ -511,7 +556,9 @@
      "2026-08-08",
      "2026-11-06"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": null,
    "unmatched": true,
@@ -543,7 +590,12 @@
      "2027-02-04",
      "2027-05-05"
     ],
-    "basis": "A digital release is already dated 2026-11-05 in AS; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-11-05 in AS; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-11-05",
+     "country": "AS"
+    }
    },
    "tmdb_id": 1483525,
    "tmdb_title": "Possible Love",
@@ -575,7 +627,12 @@
      "2026-06-18",
      "2026-09-16"
     ],
-    "basis": "A digital release is already dated 2026-05-12 in DE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-05-12 in DE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-05-12",
+     "country": "DE"
+    }
    },
    "tmdb_id": 687163,
    "tmdb_title": "Project Hail Mary",
@@ -621,7 +678,12 @@
      "2027-03-18",
      "2027-06-16"
     ],
-    "basis": "A digital release is already dated 2026-12-18 in AE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-12-18 in AE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-12-18",
+     "country": "AE"
+    }
    },
    "tmdb_id": 940009,
    "tmdb_title": "Ray Gunn",
@@ -668,7 +730,9 @@
      "2027-01-07",
      "2027-04-07"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1176962,
    "tmdb_title": "Rose",
@@ -695,7 +759,12 @@
      "2027-01-14",
      "2027-04-14"
     ],
-    "basis": "A digital release is already dated 2026-10-26 in GB; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-10-26 in GB; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-10-26",
+     "country": "GB"
+    }
    },
    "tmdb_id": 1503762,
    "tmdb_title": "Sense and Sensibility",
@@ -759,7 +828,9 @@
      "2027-03-25",
      "2027-06-23"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1391239,
    "tmdb_title": "The Debut",
@@ -786,7 +857,12 @@
      "2026-10-01",
      "2026-12-30"
     ],
-    "basis": "A digital release is already dated 2026-08-11 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-08-11 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-08-11",
+     "country": "US"
+    }
    },
    "tmdb_id": 950028,
    "tmdb_title": "The Invite",
@@ -829,7 +905,12 @@
      "2026-12-17",
      "2027-03-17"
     ],
-    "basis": "A digital release is already dated 2026-11-17 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-11-17 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-11-17",
+     "country": "US"
+    }
    },
    "tmdb_id": 1368337,
    "tmdb_title": "The Odyssey",
@@ -876,7 +957,12 @@
      "2026-09-17",
      "2026-12-16"
     ],
-    "basis": "A digital release is already dated 2026-08-18 in RO; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-08-18 in RO; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-08-18",
+     "country": "RO"
+    }
    },
    "tmdb_id": 1084244,
    "tmdb_title": "Toy Story 5",
@@ -920,7 +1006,9 @@
      "2027-04-08",
      "2027-07-07"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1421903,
    "tmdb_title": "Werwulf",
@@ -947,7 +1035,9 @@
      "2027-01-14",
      "2027-04-14"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1255833,
    "tmdb_title": "Whalefall",
@@ -974,7 +1064,12 @@
      "2027-03-11",
      "2027-06-09"
     ],
-    "basis": "A digital release is already dated 2026-12-01 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-12-01 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-12-01",
+     "country": "US"
+    }
    },
    "tmdb_id": 1195803,
    "tmdb_title": "Wicker",
@@ -1004,7 +1099,9 @@
      "2027-02-11",
      "2027-05-12"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 891621,
    "tmdb_title": "Wild Horse Nine",
@@ -1031,7 +1128,12 @@
      "2027-04-01",
      "2027-06-30"
     ],
-    "basis": "A digital release is already dated 2026-12-08 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-12-08 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-12-08",
+     "country": "US"
+    }
    },
    "tmdb_id": 791523,
    "tmdb_title": "Wildwood",
@@ -1061,7 +1163,12 @@
      "2026-05-14",
      "2026-08-12"
     ],
-    "basis": "A digital release is already dated 2026-03-30 in DE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+    "basis": "A digital release is already dated 2026-03-30 in DE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-03-30",
+     "country": "DE"
+    }
    },
    "tmdb_id": 1316092,
    "tmdb_title": "“Wuthering Heights”",
@@ -1107,7 +1214,9 @@
      "2027-02-04",
      "2027-05-05"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
    },
    "tmdb_id": 1765072,
    "tmdb_title": "You Can See Everything",
