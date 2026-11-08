@@ -486,15 +486,20 @@
   },
   "once-upon-a-time-in-harlem": {
    "estimate": null,
-   "tmdb_id": null,
-   "unmatched": true,
-   "candidates": [
-    {
-     "id": 1596300,
-     "title": "Once Upon a Time in Harlem",
-     "release_date": "2026-10-16"
-    }
-   ]
+   "tmdb_id": 1596300,
+   "tmdb_title": "Once Upon a Time in Harlem",
+   "tmdb_release_date": "2026-10-16",
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "one-in-a-million": {
    "estimate": {
@@ -846,15 +851,20 @@
   },
   "the-only-living-pickpocket-in-new-york": {
    "estimate": null,
-   "tmdb_id": null,
-   "unmatched": true,
-   "candidates": [
-    {
-     "id": 1458099,
-     "title": "The Only Living Pickpocket in New York",
-     "release_date": "2026-10-16"
-    }
-   ]
+   "tmdb_id": 1458099,
+   "tmdb_title": "The Only Living Pickpocket in New York",
+   "tmdb_release_date": "2026-10-16",
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "toy-story-5": {
    "estimate": {
@@ -966,20 +976,30 @@
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
    },
-   "tmdb_id": 1627954,
-   "tmdb_title": "The Wicker Children",
-   "tmdb_release_date": "2026-06-14",
-   "providers": {
-    "flatrate": [],
-    "rent": [],
-    "buy": [],
-    "ads": [],
-    "free": []
-   },
-   "link": null,
-   "digital_hint": null,
-   "pl_digital": null,
-   "checked": "2026-11-08"
+   "tmdb_id": null,
+   "unmatched": true,
+   "candidates": [
+    {
+     "id": 1195803,
+     "title": "Wicker",
+     "release_date": "2026-10-21"
+    },
+    {
+     "id": 16307,
+     "title": "The Wicker Man",
+     "release_date": "1973-12-06"
+    },
+    {
+     "id": 11208,
+     "title": "Wicker Park",
+     "release_date": "2004-09-03"
+    },
+    {
+     "id": 1195803,
+     "title": "Wicker",
+     "release_date": "2026-10-21"
+    }
+   ]
   },
   "wild-horse-nine": {
    "estimate": {
