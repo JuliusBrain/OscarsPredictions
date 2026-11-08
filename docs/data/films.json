@@ -17,7 +17,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -43,7 +44,8 @@
       "Jennifer Fox",
       "Luca Guadagnino",
       "Simon Rich"
-     ]
+     ],
+     "entries": 1
     },
     "Supporting Actor": {
      "first_seen": "2026-11-08",
@@ -54,7 +56,8 @@
      "official": false,
      "people": [
       "Andrew Garfield"
-     ]
+     ],
+     "entries": 1
     },
     "Original Screenplay": {
      "first_seen": "2026-11-08",
@@ -65,7 +68,8 @@
      "official": false,
      "people": [
       "Simon Rich"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -85,7 +89,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -105,7 +110,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -127,7 +133,8 @@
      "official": false,
      "people": [
       "Emily Blunt"
-     ]
+     ],
+     "entries": 1
     },
     "Original Score": {
      "first_seen": "2026-11-08",
@@ -138,7 +145,8 @@
      "official": false,
      "people": [
       "John Williams"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -162,7 +170,8 @@
       "Cale Boyter",
       "Denis Villeneuve",
       "Mary Parent"
-     ]
+     ],
+     "entries": 1
     },
     "Directing": {
      "first_seen": "2026-11-08",
@@ -173,7 +182,8 @@
      "official": false,
      "people": [
       "Denis Villeneuve"
-     ]
+     ],
+     "entries": 1
     },
     "Adapted Screenplay": {
      "first_seen": "2026-11-08",
@@ -185,7 +195,8 @@
      "people": [
       "Brian K. Vaughan",
       "Denis Villeneuve"
-     ]
+     ],
+     "entries": 1
     },
     "Casting": {
      "first_seen": "2026-11-08",
@@ -196,7 +207,8 @@
      "official": false,
      "people": [
       "Francine Maisler"
-     ]
+     ],
+     "entries": 1
     },
     "Production Design": {
      "first_seen": "2026-11-08",
@@ -208,7 +220,8 @@
      "people": [
       "Patrice Vermette (production designer)",
       "Shane Vieau (set decorator)"
-     ]
+     ],
+     "entries": 1
     },
     "Cinematography": {
      "first_seen": "2026-11-08",
@@ -219,7 +232,8 @@
      "official": false,
      "people": [
       "Linus Sandgren"
-     ]
+     ],
+     "entries": 1
     },
     "Costume Design": {
      "first_seen": "2026-11-08",
@@ -228,7 +242,8 @@
      "winner": true,
      "ever_winner": true,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "Film Editing": {
      "first_seen": "2026-11-08",
@@ -239,7 +254,8 @@
      "official": false,
      "people": [
       "Joe Walker"
-     ]
+     ],
+     "entries": 1
     },
     "Makeup and Hairstyling": {
      "first_seen": "2026-11-08",
@@ -248,7 +264,8 @@
      "winner": true,
      "ever_winner": true,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "Sound": {
      "first_seen": "2026-11-08",
@@ -257,7 +274,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "Visual Effects": {
      "first_seen": "2026-11-08",
@@ -266,7 +284,8 @@
      "winner": true,
      "ever_winner": true,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "Original Score": {
      "first_seen": "2026-11-08",
@@ -277,7 +296,8 @@
      "official": false,
      "people": [
       "Hans Zimmer"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -297,7 +317,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -322,7 +343,8 @@
       "Gaby Tana",
       "Mickey Liddell",
       "Pete Shilaimon"
-     ]
+     ],
+     "entries": 1
     },
     "Actor": {
      "first_seen": "2026-11-08",
@@ -333,7 +355,8 @@
      "official": false,
      "people": [
       "Andrew Scott"
-     ]
+     ],
+     "entries": 1
     },
     "Supporting Actress": {
      "first_seen": "2026-11-08",
@@ -344,7 +367,8 @@
      "official": false,
      "people": [
       "Olivia Colman"
-     ]
+     ],
+     "entries": 1
     },
     "Original Screenplay": {
      "first_seen": "2026-11-08",
@@ -355,7 +379,8 @@
      "official": false,
      "people": [
       "Stephen Beresford"
-     ]
+     ],
+     "entries": 1
     },
     "Casting": {
      "first_seen": "2026-11-08",
@@ -366,7 +391,8 @@
      "official": false,
      "people": [
       "Jessica Ronane"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -388,7 +414,8 @@
      "official": false,
      "people": [
       "Cristian Mingui"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -412,7 +439,8 @@
       "Fabrice Delville",
       "Louis Clichy",
       "Nicolas de Rosanbo"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -436,7 +464,8 @@
       "Javier Ambrossi",
       "Javier Calvo",
       "Jorge Pezzi"
-     ]
+     ],
+     "entries": 1
     },
     "Directing": {
      "first_seen": "2026-11-08",
@@ -448,7 +477,8 @@
      "people": [
       "Javier Ambrossi",
       "Javier Calvo"
-     ]
+     ],
+     "entries": 1
     },
     "Supporting Actor": {
      "first_seen": "2026-11-08",
@@ -459,7 +489,8 @@
      "official": false,
      "people": [
       "Guitarricadelafuente"
-     ]
+     ],
+     "entries": 1
     },
     "Adapted Screenplay": {
      "first_seen": "2026-11-08",
@@ -472,7 +503,8 @@
       "Alberto Conejero",
       "Javier Ambrossi",
       "Javier Calvo"
-     ]
+     ],
+     "entries": 1
     },
     "Casting": {
      "first_seen": "2026-11-08",
@@ -484,7 +516,8 @@
      "people": [
       "Eva Leira",
       "Yolanda Serrano"
-     ]
+     ],
+     "entries": 1
     },
     "Production Design": {
      "first_seen": "2026-11-08",
@@ -496,7 +529,8 @@
      "people": [
       "Judit Ferrer (set decorator)",
       "Roger Bellés (production designer)"
-     ]
+     ],
+     "entries": 1
     },
     "Cinematography": {
      "first_seen": "2026-11-08",
@@ -507,7 +541,8 @@
      "official": false,
      "people": [
       "Gris Jordana"
-     ]
+     ],
+     "entries": 1
     },
     "Costume Design": {
      "first_seen": "2026-11-08",
@@ -516,7 +551,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "Original Score": {
      "first_seen": "2026-11-08",
@@ -527,7 +563,8 @@
      "official": false,
      "people": [
       "Raül Refree"
-     ]
+     ],
+     "entries": 1
     },
     "Original Song": {
      "first_seen": "2026-11-08",
@@ -536,7 +573,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "International Feature": {
      "first_seen": "2026-11-08",
@@ -548,7 +586,8 @@
      "people": [
       "Javier Ambrossi",
       "Javier Calvo"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -568,7 +607,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -588,7 +628,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -610,7 +651,8 @@
      "official": false,
      "people": [
       "Andrey Zvyagintsev"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -630,7 +672,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -650,7 +693,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -672,7 +716,8 @@
      "official": false,
      "people": [
       "Inde Navarrette"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -692,7 +737,8 @@
      "winner": true,
      "ever_winner": true,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -712,7 +758,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -734,7 +781,8 @@
      "official": false,
      "people": [
       "Lee Chang-dong"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -761,7 +809,8 @@
       "Phil Lord",
       "Rachel O’Connor",
       "Ryan Gosling"
-     ]
+     ],
+     "entries": 1
     },
     "Directing": {
      "first_seen": "2026-11-08",
@@ -773,7 +822,8 @@
      "people": [
       "Christopher Miller",
       "Phil Lord"
-     ]
+     ],
+     "entries": 1
     },
     "Actor": {
      "first_seen": "2026-11-08",
@@ -784,7 +834,8 @@
      "official": false,
      "people": [
       "Ryan Gosling"
-     ]
+     ],
+     "entries": 1
     },
     "Adapted Screenplay": {
      "first_seen": "2026-11-08",
@@ -795,7 +846,8 @@
      "official": false,
      "people": [
       "Drew Goddard"
-     ]
+     ],
+     "entries": 1
     },
     "Production Design": {
      "first_seen": "2026-11-08",
@@ -807,7 +859,8 @@
      "people": [
       "Charles Wood (production designer)",
       "John Bush (set decorator)"
-     ]
+     ],
+     "entries": 1
     },
     "Cinematography": {
      "first_seen": "2026-11-08",
@@ -818,7 +871,8 @@
      "official": false,
      "people": [
       "Greig Fraser"
-     ]
+     ],
+     "entries": 1
     },
     "Sound": {
      "first_seen": "2026-11-08",
@@ -827,7 +881,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "Visual Effects": {
      "first_seen": "2026-11-08",
@@ -836,7 +891,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "Original Score": {
      "first_seen": "2026-11-08",
@@ -847,7 +903,8 @@
      "official": false,
      "people": [
       "Daniel Pemberton"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -870,7 +927,8 @@
      "people": [
       "Brad Bird",
       "Lisa Beroud"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -890,7 +948,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -912,7 +971,8 @@
      "official": false,
      "people": [
       "Sandra Hüller"
-     ]
+     ],
+     "entries": 1
     },
     "International Feature": {
      "first_seen": "2026-11-08",
@@ -923,7 +983,8 @@
      "official": false,
      "people": [
       "Markus Schleinzer"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -943,7 +1004,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -969,7 +1031,8 @@
       "Lauren Miller Rogen",
       "Leah Nelson",
       "Seth Rogen"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -991,7 +1054,8 @@
      "official": false,
      "people": [
       "Mike Leigh"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -1016,7 +1080,8 @@
       "Dave McCary",
       "Emma Stone",
       "Jesse Eisenberg"
-     ]
+     ],
+     "entries": 1
     },
     "Actress": {
      "first_seen": "2026-11-08",
@@ -1027,7 +1092,8 @@
      "official": false,
      "people": [
       "Julianne Moore"
-     ]
+     ],
+     "entries": 1
     },
     "Supporting Actor": {
      "first_seen": "2026-11-08",
@@ -1038,7 +1104,8 @@
      "official": false,
      "people": [
       "Paul Giamatti"
-     ]
+     ],
+     "entries": 1
     },
     "Original Screenplay": {
      "first_seen": "2026-11-08",
@@ -1049,7 +1116,8 @@
      "official": false,
      "people": [
       "Jesse Eisenberg"
-     ]
+     ],
+     "entries": 1
     },
     "Original Song": {
      "first_seen": "2026-11-08",
@@ -1058,7 +1126,8 @@
      "winner": true,
      "ever_winner": true,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -1082,7 +1151,8 @@
       "Ben Browning",
       "David Permut",
       "Megan Ellison"
-     ]
+     ],
+     "entries": 1
     },
     "Actress": {
      "first_seen": "2026-11-08",
@@ -1093,7 +1163,8 @@
      "official": false,
      "people": [
       "Olivia Wilde"
-     ]
+     ],
+     "entries": 1
     },
     "Supporting Actress": {
      "first_seen": "2026-11-08",
@@ -1104,7 +1175,8 @@
      "official": false,
      "people": [
       "Penélope Cruz"
-     ]
+     ],
+     "entries": 1
     },
     "Adapted Screenplay": {
      "first_seen": "2026-11-08",
@@ -1116,7 +1188,8 @@
      "people": [
       "Rashida Jones",
       "Will McCormack"
-     ]
+     ],
+     "entries": 1
     },
     "Film Editing": {
      "first_seen": "2026-11-08",
@@ -1128,7 +1201,8 @@
      "people": [
       "Anthony Boys",
       "Yorgos Mavropsaridis"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -1151,7 +1225,8 @@
      "people": [
       "Christopher Nolan",
       "Emma Thomas"
-     ]
+     ],
+     "entries": 1
     },
     "Directing": {
      "first_seen": "2026-11-08",
@@ -1162,7 +1237,8 @@
      "official": false,
      "people": [
       "Christopher Nolan"
-     ]
+     ],
+     "entries": 1
     },
     "Actor": {
      "first_seen": "2026-11-08",
@@ -1173,7 +1249,8 @@
      "official": false,
      "people": [
       "Matt Damon"
-     ]
+     ],
+     "entries": 1
     },
     "Supporting Actor": {
      "first_seen": "2026-11-08",
@@ -1184,19 +1261,21 @@
      "official": false,
      "people": [
       "John Leguizamo"
-     ]
+     ],
+     "entries": 1
     },
     "Supporting Actress": {
      "first_seen": "2026-11-08",
      "last_seen": "2026-11-08",
      "active": true,
-     "winner": false,
+     "winner": true,
      "ever_winner": true,
      "official": false,
      "people": [
       "Anne Hathaway",
       "Samantha Morton"
-     ]
+     ],
+     "entries": 2
     },
     "Adapted Screenplay": {
      "first_seen": "2026-11-08",
@@ -1207,7 +1286,8 @@
      "official": false,
      "people": [
       "Christopher Nolan"
-     ]
+     ],
+     "entries": 1
     },
     "Casting": {
      "first_seen": "2026-11-08",
@@ -1218,7 +1298,8 @@
      "official": false,
      "people": [
       "John Papsidera"
-     ]
+     ],
+     "entries": 1
     },
     "Production Design": {
      "first_seen": "2026-11-08",
@@ -1230,7 +1311,8 @@
      "people": [
       "Larry Dias (set decorator)",
       "Ruth De Jong (production designer)"
-     ]
+     ],
+     "entries": 1
     },
     "Cinematography": {
      "first_seen": "2026-11-08",
@@ -1241,7 +1323,8 @@
      "official": false,
      "people": [
       "Hoyte van Hoytema"
-     ]
+     ],
+     "entries": 1
     },
     "Costume Design": {
      "first_seen": "2026-11-08",
@@ -1250,7 +1333,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "Film Editing": {
      "first_seen": "2026-11-08",
@@ -1261,7 +1345,8 @@
      "official": false,
      "people": [
       "Jennifer Lame"
-     ]
+     ],
+     "entries": 1
     },
     "Sound": {
      "first_seen": "2026-11-08",
@@ -1270,7 +1355,8 @@
      "winner": true,
      "ever_winner": true,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "Original Score": {
      "first_seen": "2026-11-08",
@@ -1281,7 +1367,8 @@
      "official": false,
      "people": [
       "Ludwig Göransson"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -1303,7 +1390,8 @@
      "official": false,
      "people": [
       "John Turturro"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -1327,7 +1415,8 @@
       "Andrew Stanton",
       "Jessica Choi",
       "Lindsey Collins"
-     ]
+     ],
+     "entries": 1
     },
     "Original Song": {
      "first_seen": "2026-11-08",
@@ -1336,7 +1425,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -1359,7 +1449,8 @@
      "people": [
       "Anna Pinnock (set decorator)",
       "Craig Lathrop (production designer)"
-     ]
+     ],
+     "entries": 1
     },
     "Cinematography": {
      "first_seen": "2026-11-08",
@@ -1370,7 +1461,8 @@
      "official": false,
      "people": [
       "Jarin Blaschke"
-     ]
+     ],
+     "entries": 1
     },
     "Makeup and Hairstyling": {
      "first_seen": "2026-11-08",
@@ -1379,7 +1471,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     },
     "Sound": {
      "first_seen": "2026-11-08",
@@ -1388,7 +1481,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -1408,7 +1502,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -1428,7 +1523,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -1453,7 +1549,8 @@
       "Graham Broadbent",
       "Martin McDonagh",
       "Pete Czernin"
-     ]
+     ],
+     "entries": 1
     },
     "Actor": {
      "first_seen": "2026-11-08",
@@ -1464,7 +1561,8 @@
      "official": false,
      "people": [
       "John Malkovich"
-     ]
+     ],
+     "entries": 1
     },
     "Supporting Actor": {
      "first_seen": "2026-11-08",
@@ -1475,7 +1573,8 @@
      "official": false,
      "people": [
       "Sam Rockwell"
-     ]
+     ],
+     "entries": 1
     },
     "Original Screenplay": {
      "first_seen": "2026-11-08",
@@ -1486,7 +1585,8 @@
      "official": false,
      "people": [
       "Martin McDonagh"
-     ]
+     ],
+     "entries": 1
     },
     "Casting": {
      "first_seen": "2026-11-08",
@@ -1497,7 +1597,8 @@
      "official": false,
      "people": [
       "Sarah Finn"
-     ]
+     ],
+     "entries": 1
     },
     "Film Editing": {
      "first_seen": "2026-11-08",
@@ -1508,7 +1609,8 @@
      "official": false,
      "people": [
       "Mikkel E.G. Nielsen"
-     ]
+     ],
+     "entries": 1
     }
    }
   },
@@ -1531,7 +1633,8 @@
      "people": [
       "Sam Wilson",
       "Travis Knight"
-     ]
+     ],
+     "entries": 1
     },
     "Visual Effects": {
      "first_seen": "2026-11-08",
@@ -1540,7 +1643,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -1560,7 +1664,8 @@
      "winner": false,
      "ever_winner": false,
      "official": false,
-     "people": []
+     "people": [],
+     "entries": 1
     }
    }
   },
@@ -1586,7 +1691,8 @@
       "Maggie Ambrose",
       "Nathan Fielder",
       "Tatiana Bears"
-     ]
+     ],
+     "entries": 1
     },
     "Directing": {
      "first_seen": "2026-11-08",
@@ -1598,7 +1704,8 @@
      "people": [
       "Lance Oppenheim",
       "Nathan Fielder"
-     ]
+     ],
+     "entries": 1
     },
     "Supporting Actress": {
      "first_seen": "2026-11-08",
@@ -1609,7 +1716,8 @@
      "official": false,
      "people": [
       "Amanda Seyfried"
-     ]
+     ],
+     "entries": 1
     },
     "Film Editing": {
      "first_seen": "2026-11-08",
@@ -1620,7 +1728,8 @@
      "official": false,
      "people": [
       "Adam Locke-Norton"
-     ]
+     ],
+     "entries": 1
     }
    }
   }

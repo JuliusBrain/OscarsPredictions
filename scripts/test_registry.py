@@ -23,6 +23,18 @@ class RegistryTests(unittest.TestCase):
         self.assertTrue(r["a"]["categories"]["Best Picture"]["ever_winner"])
         self.assertFalse(r["a"]["categories"]["Best Picture"]["winner"])
 
+    def test_two_entries_same_film_and_category_keep_winner_and_count(self):
+        r = build([snap("2026-11-08", [("Supporting Actress", "A", True), ("Supporting Actress", "A", False)])])["films"]["a"]["categories"]["Supporting Actress"]
+        self.assertTrue(r["winner"])
+        self.assertEqual(r["entries"], 2)
+
+    def test_winner_reflects_latest_snapshot_only(self):
+        r = build([snap("2026-11-01", [("Directing", "A", True)]),
+                   snap("2026-11-08", [("Directing", "A", False), ("Directing", "A", False)])])["films"]["a"]["categories"]["Directing"]
+        self.assertFalse(r["winner"])
+        self.assertTrue(r["ever_winner"])
+        self.assertEqual(r["entries"], 2)
+
     def test_dropped_category_kept(self):
         r = build([snap("2026-11-01", [("Directing", "A", False), ("Sound", "A", False)]),
                    snap("2026-11-08", [("Sound", "A", False)])])["films"]["a"]["categories"]

@@ -21,7 +21,7 @@ def _film(name, studio, date):
 
 def _cat(date):
     return {"first_seen": date, "last_seen": date, "active": False, "winner": False,
-            "ever_winner": False, "official": False, "people": []}
+            "ever_winner": False, "official": False, "people": [], "entries": 0}
 
 
 def build(snaps, official=None, existing=None):
@@ -34,7 +34,11 @@ def build(snaps, official=None, existing=None):
                 f = films.setdefault(fid, _film(e["film"], e["studio"], snap["date"]))
                 f["name"], f["studio"], f["last_seen"] = e["film"], e["studio"], snap["date"]
                 c = f["categories"].setdefault(cat, _cat(snap["date"]))
-                c["last_seen"], c["winner"] = snap["date"], e["winner"]
+                if c["last_seen"] != snap["date"] or not c["entries"]:
+                    c["winner"], c["entries"] = False, 0  # first entry for this film+category in this snapshot
+                c["last_seen"] = snap["date"]
+                c["winner"] = c["winner"] or e["winner"]
+                c["entries"] += 1
                 c["ever_winner"] = c["ever_winner"] or e["winner"]
                 c["people"] = sorted(set(c["people"]) | set(e["people"]))
     latest = snaps[-1]["date"] if snaps else None

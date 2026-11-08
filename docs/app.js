@@ -1,8 +1,8 @@
 (function () {
   var REPO = 'JuliusBrain/OscarsPredictions', WPATH = 'docs/data/watched.json';
-  var ACCENTS = { gold: ['#D4AF37', '#7A5C12'], champagne: ['#E8D8A8', '#8A6D3B'], rose: ['#E5677B', '#A3263E'] };
+  var THEMES = ['deco', 'midnight', 'program'];
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
-  var state = { theme: 'mid', accent: 'gold', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all' };
+  var state = { theme: 'midnight', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all' };
   var data = null, registry = null, official = null, changes = { entries: {}, dropped: [] };
   var watched = {}, ops = [], remoteSha = null, saveTimer = null, saving = false, syncMsg = '';
 
@@ -107,8 +107,7 @@
   function applyTheme() {
     var root = document.documentElement;
     root.setAttribute('data-theme', state.theme);
-    root.style.setProperty('--accent', ACCENTS[state.accent][state.theme === 'light' ? 1 : 0]);
-    ['theme', 'accent', 'mode', 'tab', 'filter'].forEach(function (f) {
+    ['theme', 'mode', 'tab', 'filter'].forEach(function (f) {
       document.querySelectorAll('[data-' + f + '-btn]').forEach(function (b) {
         b.setAttribute('aria-pressed', b.getAttribute('data-' + f + '-btn') === state[f]);
       });
@@ -140,7 +139,8 @@
     name.appendChild(el('b', '', f.name));
     var cats = Object.keys(f.categories), act = cats.filter(function (c) { return f.categories[c].active; });
     var wins = act.filter(function (c) { return f.categories[c].winner; }).length;
-    var line = f.studio + ' · ' + (f.active ? act.length + (act.length === 1 ? ' nomination' : ' nominations') + (wins ? ' · ' + wins + ' predicted ' + (wins === 1 ? 'win' : 'wins') : '') : 'Dropped from Variety’s list (last seen ' + f.last_seen + ')');
+    var noms = act.reduce(function (s, c) { return s + (f.categories[c].entries || 1); }, 0);
+    var line = f.studio + ' · ' + (f.active ? noms + (noms === 1 ? ' nomination' : ' nominations') + (wins ? ' · ' + wins + ' predicted ' + (wins === 1 ? 'win' : 'wins') : '') : 'Dropped from Variety’s list (last seen ' + f.last_seen + ')');
     name.appendChild(el('span', '', line));
     var lab = el('label', 'watch'), cb = el('input');
     cb.type = 'checkbox'; cb.checked = seen; cb.setAttribute('data-film', f.id);
@@ -157,7 +157,7 @@
   function renderFilms() {
     var all = Object.keys(registry.films).map(function (k) { return registry.films[k]; });
     var active = all.filter(function (f) { return f.active; }), gone = all.filter(function (f) { return !f.active; });
-    function n(f) { return Object.keys(f.categories).filter(function (c) { return f.categories[c].active; }).length; }
+    function n(f) { return Object.keys(f.categories).reduce(function (s, c) { return s + (f.categories[c].active ? (f.categories[c].entries || 1) : 0); }, 0); }
     active.sort(function (a, b) { return n(b) - n(a) || a.name.localeCompare(b.name); });
     gone.sort(function (a, b) { return (b.nominated.length - a.nominated.length) || b.last_seen.localeCompare(a.last_seen) || a.name.localeCompare(b.name); });
     var seenCount = active.filter(function (f) { return watched[f.id]; }).length;
@@ -244,12 +244,12 @@
     }
   }
 
-  [['theme', 'theme'], ['accent', 'accent'], ['mode', 'mode'], ['tab', 'tab'], ['filter', 'filter']].forEach(function (p) {
+  [['theme', 'theme'], ['mode', 'mode'], ['tab', 'tab'], ['filter', 'filter']].forEach(function (p) {
     document.querySelectorAll('[data-' + p[0] + '-btn]').forEach(function (b) {
       b.onclick = function () {
         state[p[1]] = b.getAttribute('data-' + p[0] + '-btn');
         if (p[1] === 'tab') state.mode = 'predicted';
-        if (p[1] === 'theme' || p[1] === 'accent') store(p[1], state[p[1]]);
+        if (p[1] === 'theme') store('theme', state.theme);
         render();
       };
     });
@@ -264,8 +264,7 @@
   document.getElementById('tokenclear').onclick = function () {
     store('ghtoken', null); setSync('Token removed. Marks are kept in this browser only.');
   };
-  state.theme = ['dark', 'mid', 'light'].indexOf(store('theme')) >= 0 ? store('theme') : 'mid';
-  state.accent = ACCENTS[store('accent')] ? store('accent') : 'gold';
+  state.theme = THEMES.indexOf(store('theme')) >= 0 ? store('theme') : 'midnight';
   render();
 
   function getJson(url, optional) {
