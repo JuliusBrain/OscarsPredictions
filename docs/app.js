@@ -127,47 +127,74 @@
   function daysBetween(a, b) { return Math.round((Date.parse(a) - Date.parse(b)) / 864e5); }
   function line(cls, text) { return el('span', cls, text); }
 
+  function relDays(iso) {
+    var d = daysBetween(iso, today());
+    if (d === 0) return 'today';
+    var n = Math.abs(d), t = n >= 90 ? Math.round(n / 30) + ' months' : n + (n === 1 ? ' day' : ' days');
+    return d > 0 ? 'in ' + t : t + ' ago';
+  }
+  function cell(label, cls) {
+    var c = el('div', 'pcell' + (cls ? ' ' + cls : ''));
+    c.appendChild(el('span', 'plabel', label));
+    return c;
+  }
+  function dateCell(label, iso, year, missing) {
+    var c = cell(label);
+    if (iso) { c.appendChild(el('span', 'pval', fmt(iso))); c.appendChild(el('span', 'psub', relDays(iso))); }
+    else if (year) { c.appendChild(el('span', 'pval', String(year))); c.appendChild(el('span', 'psub', 'exact date not set')); }
+    else { c.appendChild(el('span', 'pval pnone', '—')); c.appendChild(el('span', 'psub', missing)); }
+    return c;
+  }
+
   function availBlock(f) {
-    var box = el('div', 'avail'), fw = filmweb[f.id], av = (availability.films || {})[f.id] || {}, now = today();
-    if (fw && (fw.world_premiere || fw.world_premiere_year || fw.pl_cinema)) {
-      var d = el('span', 'fwdates');
-      d.appendChild(document.createTextNode('World premiere ' + (fw.world_premiere ? fmt(fw.world_premiere) : fw.world_premiere_year ? fw.world_premiere_year + ' (date not set)' : 'unknown') + ' · Poland cinemas ' + (fw.pl_cinema ? fmt(fw.pl_cinema) : 'not set') + ' '));
-      var a = el('a', '', 'Filmweb'); a.href = fw.url; a.target = '_blank'; a.rel = 'noopener';
-      d.appendChild(a);
-      box.appendChild(d);
-    } else {
-      box.appendChild(line('fwdates', 'Premiere dates: not found on Filmweb yet'));
+    var panel = el('div', 'poland'), fw = filmweb[f.id], av = (availability.films || {})[f.id] || {}, now = today();
+    panel.setAttribute('role', 'group');
+    panel.setAttribute('aria-label', 'Release dates and availability in Poland');
+
+    var c1 = dateCell('World premiere', fw && fw.world_premiere, fw && fw.world_premiere_year, 'not found on Filmweb');
+    var c2 = dateCell('Polish cinemas', fw && fw.pl_cinema, null, 'no date announced');
+    if (fw && fw.url) {
+      var a = el('a', '', 'Filmweb ↗'); a.href = fw.url; a.target = '_blank'; a.rel = 'noopener';
+      var sub = c2.querySelector('.psub'); sub.appendChild(document.createTextNode(' · ')); sub.appendChild(a);
     }
+    panel.appendChild(c1); panel.appendChild(c2);
+
     var p = av.providers || {}, stream = p.flatrate || [], rentbuy = (p.rent || []).concat((p.buy || []).filter(function (x) { return (p.rent || []).indexOf(x) < 0; })), free = (p.free || []).concat(p.ads || []);
     var any = stream.length || rentbuy.length || free.length;
-    if (any) {
-      if (stream.length) box.appendChild(line('st', 'Streaming in Poland: ' + stream.join(', ')));
-      if (rentbuy.length) box.appendChild(line('st', 'Rent / buy in Poland: ' + rentbuy.join(', ')));
-      if (free.length) box.appendChild(line('st', 'Free in Poland: ' + free.join(', ')));
-      return box;
-    }
     var out = fw && fw.pl_cinema && fw.pl_cinema > now;
     var inCinemas = fw && fw.pl_cinema && !out && daysBetween(now, fw.pl_cinema) <= 90;
-    if (out) box.appendChild(line('st', 'Not out in Poland yet (cinemas ' + fmt(fw.pl_cinema) + ')'));
-    else if (fw && !fw.pl_cinema) box.appendChild(line('st', 'No Polish release announced on Filmweb yet' + (av.checked ? ' · not on any Polish streaming or VOD service' : '')));
-    else if (!availability.tmdb_enabled || !av.checked) box.appendChild(line('st', 'Streaming and VOD in Poland: not checked yet'));
-    else if (inCinemas) box.appendChild(line('st', 'In Polish cinemas · not on streaming or VOD yet'));
-    else box.appendChild(line('st', 'Not on any streaming or VOD service in Poland'));
+
+    var w = cell('Watch in Poland', 'pwatch'), pill, note = '';
+    if (any) pill = [stream.length ? 'Streaming' : rentbuy.length ? 'Rent / buy' : 'Free', 'ok'];
+    else if (out) { pill = ['Not out yet', 'wait']; note = 'Opens in Polish cinemas ' + fmt(fw.pl_cinema); }
+    else if (fw && !fw.pl_cinema) { pill = ['No Polish release yet', 'no']; note = 'Not announced on Filmweb'; }
+    else if (!availability.tmdb_enabled || !av.checked) { pill = ['Not checked', 'no']; note = 'Streaming data unavailable'; }
+    else if (inCinemas) { pill = ['In cinemas only', 'wait']; note = 'Not on any streaming or VOD service yet'; }
+    else { pill = ['Not available yet', 'no']; note = 'Not on any Polish streaming or VOD service'; }
+    w.appendChild(el('span', 'pstatus ' + pill[1], pill[0]));
+    if (any) {
+      [['Stream', stream], ['Rent / buy', rentbuy], ['Free', free]].forEach(function (g) {
+        if (!g[1].length) return;
+        var row = el('span', 'pgroup'); row.appendChild(el('b', '', g[0])); row.appendChild(document.createTextNode(g[1].join(' · ')));
+        w.appendChild(row);
+      });
+    } else if (note) w.appendChild(el('span', 'psub', note));
+    panel.appendChild(w);
+
     var e = av.estimate;
-    if (e) {
-      var late = e.rent_buy[1] < now && e.streaming[1] < now;
-      var rentPast = e.rent_buy[1] < now, streamPast = e.streaming[1] < now;
-      var text;
-      if (late) text = 'Past the usual release windows; no Polish service lists it yet.';
-      else {
-        text = (rentPast ? 'Rent/buy should already be possible (usual window has passed)' : 'Likely rent/buy ' + monRange(e.rent_buy[0], e.rent_buy[1])) +
-          ' · ' + (streamPast ? 'streaming window has passed' : 'streaming ' + monRange(e.streaming[0], e.streaming[1])) + ' (estimate)';
-      }
-      var est = line('est', text);
+    if (!any && e) {
+      var est = cell('Likely available · estimate', 'pest');
       est.title = e.basis;
-      box.appendChild(est);
+      var late = e.rent_buy[1] < now && e.streaming[1] < now;
+      function kv(k, v) { var r = el('span', 'pkv'); r.appendChild(el('span', '', k)); r.appendChild(el('b', '', v)); est.appendChild(r); }
+      if (late) kv('Status', 'past the usual windows');
+      else {
+        kv('Rent / buy', e.rent_buy[1] < now ? 'should be out' : monRange(e.rent_buy[0], e.rent_buy[1]));
+        kv('Streaming', e.streaming[1] < now ? 'window passed' : monRange(e.streaming[0], e.streaming[1]));
+      }
+      panel.appendChild(est);
     }
-    return box;
+    return panel;
   }
 
   /* ---------- views ---------- */
@@ -198,7 +225,6 @@
     var noms = act.reduce(function (s, c) { return s + (f.categories[c].entries || 1); }, 0);
     var line = f.studio + ' · ' + (f.active ? noms + (noms === 1 ? ' nomination' : ' nominations') + (wins ? ' · ' + wins + ' predicted ' + (wins === 1 ? 'win' : 'wins') : '') : 'Dropped from Variety’s list (last seen ' + f.last_seen + ')');
     name.appendChild(el('span', '', line));
-    name.appendChild(availBlock(f));
     var lab = el('label', 'watch'), cb = el('input');
     cb.type = 'checkbox'; cb.checked = seen; cb.setAttribute('data-film', f.id);
     cb.onchange = function () {
@@ -207,7 +233,7 @@
     };
     lab.appendChild(cb); lab.appendChild(document.createTextNode(seen && watched[f.id].at ? 'Watched · ' + watched[f.id].at : 'Watched'));
     name.appendChild(lab);
-    row.appendChild(name); row.appendChild(filmChips(f));
+    row.appendChild(name); row.appendChild(filmChips(f)); row.appendChild(availBlock(f));
     return row;
   }
 

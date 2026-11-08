@@ -45,6 +45,13 @@ class AvailabilityTests(unittest.TestCase):
         self.assertEqual(pick_match(homonyms, 2026, "2026-10-05")["id"], 11)
         self.assertEqual(pick_match(homonyms, 2026)["id"], 10)  # without a reference date popularity wins
 
+    def test_title_must_match_not_just_date(self):
+        r = [{"id": 1, "title": "The Wicker Children", "release_date": "2026-06-14", "popularity": 50},
+             {"id": 2, "title": "Wicker", "release_date": "2026-06-14", "popularity": 1}]
+        self.assertEqual(pick_match(r, 2026, "2026-01-24", ["Wicker"])["id"], 2)
+        self.assertIsNone(pick_match(r[:1], 2026, "2026-01-24", ["Wicker"]))
+        self.assertEqual(pick_match([{"id": 3, "title": "Czarna kula", "original_title": "La bola negra", "release_date": "2026-09-25"}], 2026, None, ["La Bola Negra!"])["id"], 3)
+
     def test_check_film_flow_with_fake_api(self):
         calls = []
         def get(path, **params):

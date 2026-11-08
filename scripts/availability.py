@@ -10,6 +10,8 @@ guesses from typical release windows, never announcements.
 """
 import json
 import os
+import re
+import unicodedata
 import sys
 import time
 import urllib.parse
@@ -84,11 +86,20 @@ def date_ok(release, ref):
     return abs((_d(release[:10]) - _d(ref)).days) <= DATE_TOLERANCE_DAYS
 
 
-def pick_match(results, year, ref=None):
+def norm(text):
+    ascii_text = unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "", ascii_text.lower())
+
+
+def pick_match(results, year, ref=None, names=None):
+    """Best candidate whose year and date fit, and whose title equals one of our known titles.
+    Requiring the title stops look-alikes ('The Wicker Children' for 'Wicker') being accepted."""
+    names = {norm(n) for n in (names or []) if n}
     for r in sorted(results, key=lambda r: -(r.get("popularity") or 0)):
         rel = r.get("release_date") or ""
         year_ok = year is None or (rel[:4].isdigit() and abs(int(rel[:4]) - year) <= 1)
-        if year_ok and date_ok(rel, ref):
+        title_ok = not names or norm(r.get("title")) in names or norm(r.get("original_title")) in names
+        if year_ok and title_ok and date_ok(rel, ref):
             return r
     return None
 
@@ -110,12 +121,13 @@ def resolve(get, queries, year, ref, cached=None, override=None):
         return override, d.get("title"), d.get("release_date"), []
     if cached:
         d = get(f"/movie/{cached}")
-        if date_ok(d.get("release_date"), ref):
+        names = {norm(q) for q in queries if q}
+        if date_ok(d.get("release_date"), ref) and (not names or norm(d.get("title")) in names or norm(d.get("original_title")) in names):
             return cached, d.get("title"), d.get("release_date"), []
     seen = []
     for q in dict.fromkeys(x for x in queries if x):
         results = get("/search/movie", query=q).get("results", [])
-        m = pick_match(results, year, ref)
+        m = pick_match(results, year, ref, queries)
         if m:
             return m["id"], m.get("title"), m.get("release_date"), []
         seen += [{"id": r["id"], "title": r.get("title"), "release_date": r.get("release_date")} for r in results[:3]]

@@ -2,16 +2,19 @@
 :root,:root[data-theme="midnight"]{
 --bg:#1D2742;--text:#F3F0E8;--muted:#C9CFE0;--muted2:#B4BCD3;--surface:#263356;--zebra:#2D3B63;--seg:#151D35;--segon:#3F4F7E;--segon-text:#F3F0E8;
 --border:#3F4F7E;--rowline:#34436C;--head:#222D4D;--chipborder:#4B5C8C;--dash:#5B6C9C;--outline:#A9B4D6;--accent:#E3D3A0;--onaccent:#151B30;--up:#8FE0A0;--down:#F4A0A0;
+--panel:rgba(21,29,53,.5);--pline:#3F4F7E;--pgap:1px;
 --font-display:'DM Serif Display',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;
 --r-card:16px;--r-chip:8px;--r-ctl:12px;--r-ctl-in:9px;--h1-size:58px;--h1-weight:400;--h1-case:none;--h1-ls:0;--chip-case:none;--chip-ls:0;--chip-size:13px}
 :root[data-theme="deco"]{
 --bg:#0C0B09;--text:#EFE6CF;--muted:#BDB195;--muted2:#A89C80;--surface:#15130F;--zebra:#1D1A14;--seg:#15130F;--segon:#2E2819;--segon-text:#C9A24B;
 --border:#3A3120;--rowline:#3A3120;--head:#15130F;--chipborder:#7A6330;--dash:#7A6330;--outline:#9C8650;--accent:#C9A24B;--onaccent:#0C0B09;--up:#8FD99B;--down:#F0A0A0;
+--panel:#0C0B09;--pline:#3A3120;--pgap:1px;
 --font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Jost',system-ui,sans-serif;
 --r-card:0;--r-chip:0;--r-ctl:0;--r-ctl-in:0;--h1-size:60px;--h1-weight:700;--h1-case:uppercase;--h1-ls:.08em;--chip-case:uppercase;--chip-ls:.12em;--chip-size:12px}
 :root[data-theme="program"]{
 --bg:#F1EADB;--text:#151412;--muted:#4F4A40;--muted2:#5F594C;--surface:#FBF7EC;--zebra:#EAE2CF;--seg:transparent;--segon:#151412;--segon-text:#F1EADB;
 --border:#151412;--rowline:#151412;--head:#E3D3A0;--chipborder:#151412;--dash:#151412;--outline:#151412;--accent:#B63017;--onaccent:#F1EADB;--up:#1B6B2C;--down:#A32222;
+--panel:#FBF7EC;--pline:#151412;--pgap:2px;
 --font-display:'Bebas Neue',Impact,sans-serif;--font-body:'IBM Plex Mono',ui-monospace,monospace;
 --r-card:0;--r-chip:0;--r-ctl:0;--r-ctl-in:0;--h1-size:96px;--h1-weight:400;--h1-case:none;--h1-ls:.01em;--chip-case:none;--chip-ls:0;--chip-size:12px}
 
@@ -94,11 +97,22 @@ h1{margin:0;font-family:var(--font-display);font-weight:var(--h1-weight);font-si
 .tokenrow label{font-weight:600;color:var(--text)}
 .tokenrow input{flex:1 1 260px;min-height:44px;padding:0 12px;border-radius:var(--r-chip);border:1px solid var(--chipborder);background:var(--bg);color:var(--text);font:inherit}
 
-/* Poland dates + availability */
-.avail{display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--muted);margin:6px 0 2px}
-.avail a{color:var(--accent)}
-.avail .st{font-weight:600;color:var(--text)}
-.avail .est{color:var(--muted2)}
+/* Poland panel: premiere, cinemas, availability, estimate */
+.poland{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--pgap);background:var(--pline);border:var(--pgap) solid var(--pline);border-radius:var(--r-chip);overflow:hidden;margin-top:4px}
+.pcell{background:var(--panel);padding:12px 14px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.plabel{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2)}
+.pval{font-size:17px;font-weight:600;color:var(--text);line-height:1.2}
+.pval.pnone{color:var(--muted2)}
+.psub{font-size:12px;color:var(--muted);line-height:1.4}
+.psub a{color:var(--accent);white-space:nowrap}
+.pstatus{display:inline-block;width:fit-content;padding:3px 10px;border-radius:var(--r-chip);font-size:13px;font-weight:700;border:1.5px solid var(--outline);color:var(--text)}
+.pstatus.ok{background:var(--accent);border-color:var(--accent);color:var(--onaccent)}
+.pstatus.no{border-style:dashed;color:var(--muted)}
+.pgroup{font-size:13px;color:var(--text);line-height:1.4}
+.pgroup b{color:var(--muted2);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-right:8px;font-weight:600}
+.pkv{display:flex;justify-content:space-between;gap:12px;font-size:13px;line-height:1.4}
+.pkv span{color:var(--muted)}
+.pkv b{color:var(--text);text-align:right}
 .credits{font-size:12px;color:var(--muted2);line-height:1.5;margin:0}
 .credits a{color:var(--accent)}
 
@@ -139,6 +153,8 @@ h1{margin:0;font-family:var(--font-display);font-weight:var(--h1-weight);font-si
 [data-theme="program"] .filmname{padding:20px 22px;border-right:2px dashed var(--text);gap:4px}
 [data-theme="program"] .filmname b{font-size:40px;line-height:1}
 [data-theme="program"] .noms{padding:20px 22px;align-content:flex-start}
+[data-theme="program"] .poland{margin:0;border:0;border-top:2px solid var(--text);border-radius:0}
+[data-theme="program"] .pcell{padding:14px 22px}
 [data-theme="program"] .nom{border-width:2px;font-weight:500}
 [data-theme="program"] .catcard,[data-theme="program"] .card,[data-theme="program"] .sync{border:2px solid var(--text)}
 [data-theme="program"] .catcard h3,[data-theme="program"] .card .name{font-size:34px}
