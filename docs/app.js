@@ -1,10 +1,10 @@
 (function () {
   var REPO = 'JuliusBrain/OscarsPredictions', WPATH = 'docs/data/watched.json';
-  var THEMES = ['deco', 'midnight', 'program'];
+  var THEMES = ['modern', 'deco'];
   var LANGS = ['en', 'pl'];
   var TABS = ['films', 'cal', 'cats', 'people'];
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
-  var state = { lang: 'en', theme: 'midnight', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', cal: null };
+  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', cal: null };
   var filmweb = {}, availability = { films: {}, tmdb_enabled: false };
   var data = null, registry = null, official = null, changes = { entries: {}, dropped: [] };
   var watched = {}, ops = [], remoteSha = null, saveTimer = null, saving = false;
@@ -307,6 +307,22 @@
     return row;
   }
 
+  function renderHero(total, seenCount) {
+    var hp = document.getElementById('heroprog'), hs = document.getElementById('herostats');
+    if (!hp || !hs) return;
+    hp.textContent = ''; hs.textContent = '';
+    hp.appendChild(el('span', 'hl', t('hero.progress')));
+    var hn = el('div', 'hn'); hn.appendChild(el('b', '', String(seenCount))); hn.appendChild(el('span', '', t('hero.of', { total: total })));
+    hp.appendChild(hn);
+    var bar = el('div', 'hbar'), fill = el('i');
+    fill.style.width = (total ? Math.round(seenCount / total * 100) : 0) + '%';
+    bar.setAttribute('aria-hidden', 'true'); bar.appendChild(fill); hp.appendChild(bar);
+    hp.appendChild(el('span', 'hs', t('hero.left', { n: total - seenCount })));
+    [[String(total), 'stat.films'], [String(Object.keys(data.categories).length), 'stat.cats'], [t('stat.nomsDate'), 'stat.noms'], [t('stat.cerDate'), 'stat.cer']].forEach(function (s) {
+      var d = el('div', 'stat'); d.appendChild(el('b', '', s[0])); d.appendChild(el('span', '', t(s[1]))); hs.appendChild(d);
+    });
+  }
+
   function renderFilms() {
     var all = Object.keys(registry.films).map(function (k) { return registry.films[k]; });
     var active = all.filter(function (f) { return f.active; }), gone = all.filter(function (f) { return !f.active; });
@@ -314,6 +330,7 @@
     gone.sort(function (a, b) { return (b.nominated.length - a.nominated.length) || b.last_seen.localeCompare(a.last_seen) || a.name.localeCompare(b.name); });
     var seenCount = active.filter(function (f) { return watched[f.id]; }).length;
     document.getElementById('progress').textContent = t('progress', { seen: seenCount, total: active.length, left: active.length - seenCount });
+    renderHero(active.length, seenCount);
     function keep(f) { return state.filter === 'all' || (state.filter === 'seen') === !!watched[f.id]; }
     var box = document.getElementById('filmlist');
     box.textContent = '';
@@ -522,7 +539,7 @@
       b.onclick = function () {
         state[p[1]] = b.getAttribute('data-' + p[0] + '-btn');
         if (p[1] === 'tab') state.mode = 'predicted';
-        if (p[1] === 'theme') store('theme', state.theme);
+        if (p[1] === 'theme') store('theme2', state.theme);
         if (p[1] === 'lang') { store('lang', state.lang); applyI18n(); }
         render();
       };
@@ -541,7 +558,7 @@
 
   var savedLang = store('lang');
   state.lang = LANGS.indexOf(savedLang) >= 0 ? savedLang : ((navigator.language || 'en').toLowerCase().indexOf('pl') === 0 ? 'pl' : 'en');
-  state.theme = THEMES.indexOf(store('theme')) >= 0 ? store('theme') : 'midnight';
+  state.theme = THEMES.indexOf(store('theme2')) >= 0 ? store('theme2') : 'modern';
   applyI18n();
   render();
 

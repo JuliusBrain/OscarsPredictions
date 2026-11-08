@@ -4,6 +4,9 @@ Personal tracker for the 2027 Oscars race: films against their nominations, cate
 
 Ground truth is Variety's [2027 Oscars predictions](https://variety.com/lists/2027-oscars-predictions/): predicted nominees per category (listed alphabetically, not ranked) with the predicted winner marked.
 
+## Themes
+Two themes share one layout (top bar, hero with progress card, card rows): **Modern Light** (default) and **Deco Noir**. A theme only sets design tokens in `docs/styles.css` (palette, fonts, corner shapes, shadows). The choice is remembered per browser.
+
 ## Language and calendar
 - **EN | PL switch** at the top of the page. All UI text lives in `docs/i18n.js`; `scripts/test_i18n.py` fails if a string is missing in either language. In Polish, film titles use Filmweb's Polish titles (the original is shown under it).
 - **Calendar tab**: a month grid of Polish cinema premieres (dates from Filmweb) with a plan-to-watch list below it (upcoming first; already released and undated films are folded away). You can tick films as watched from the list.

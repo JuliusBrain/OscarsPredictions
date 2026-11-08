@@ -1,34 +1,40 @@
 <!doctype html>
-<html lang="en" data-theme="midnight">
+<html lang="en" data-theme="modern">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oscars Predictions Tracker</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500;600&family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=16">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css?v=23">
 </head>
 <body>
 <main class="wrap">
+  <div class="brand" aria-hidden="true"><span class="logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg></span><span class="brandname">Oscars Tracker</span></div>
   <header class="head">
+    <div class="hero">
     <div class="title">
       <span class="eyebrow" data-i18n="eyebrow">99th Academy Awards · 2027</span>
       <h1 data-i18n="title">Oscars Predictions Tracker</h1>
       <p class="dates" data-i18n="dates">Nominations announced Jan. 21, 2027 · Ceremony Mar. 14, 2027</p>
       <p class="lede" data-i18n="lede">Every contender, every category. See which films are in the race, where each performer stands, and what changed since last week.</p>
+      <div class="herostats" id="herostats"></div>
+    </div>
+    <div class="heroprog" id="heroprog"></div>
     </div>
     <div class="controls">
-      <div class="seg" role="group" data-i18n-aria="aria.lang" aria-label="Language">
+      <div class="seg lang" role="group" data-i18n-aria="aria.lang" aria-label="Language">
         <button data-lang-btn="en" lang="en">EN</button>
         <button data-lang-btn="pl" lang="pl">PL</button>
       </div>
+      <div class="opts">
       <div class="seg" role="group" data-i18n-aria="aria.theme" aria-label="Theme">
+        <button data-theme-btn="modern">Modern Light</button>
         <button data-theme-btn="deco">Deco Noir</button>
-        <button data-theme-btn="midnight">Midnight Velvet</button>
-        <button data-theme-btn="program">Cinema Program</button>
       </div>
       <div class="seg" role="group" data-i18n-aria="aria.mode" aria-label="Mode">
         <button data-mode-btn="predicted" data-i18n="mode.predicted">Predictions</button>
         <button data-mode-btn="nominees" data-i18n="mode.nominees">Official nominees</button>
+      </div>
       </div>
     </div>
   </header>
@@ -100,7 +106,7 @@
   </details>
   <p class="credits" data-i18n-html="credits">Premiere dates: <a href="https://www.filmweb.pl" target="_blank" rel="noopener">Filmweb</a>.</p>
 </main>
-<script src="i18n.js?v=16"></script>
-<script src="app.js?v=16"></script>
+<script src="i18n.js?v=23"></script>
+<script src="app.js?v=23"></script>
 </body>
 </html>
