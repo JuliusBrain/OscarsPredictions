@@ -94,6 +94,14 @@ h1{margin:0;font-family:var(--font-display);font-weight:var(--h1-weight);font-si
 .tokenrow label{font-weight:600;color:var(--text)}
 .tokenrow input{flex:1 1 260px;min-height:44px;padding:0 12px;border-radius:var(--r-chip);border:1px solid var(--chipborder);background:var(--bg);color:var(--text);font:inherit}
 
+/* Poland dates + availability */
+.avail{display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--muted);margin:6px 0 2px}
+.avail a{color:var(--accent)}
+.avail .st{font-weight:600;color:var(--text)}
+.avail .est{color:var(--muted2)}
+.credits{font-size:12px;color:var(--muted2);line-height:1.5;margin:0}
+.credits a{color:var(--accent)}
+
 /* Deco Noir: double gold frame, centred caps header, chamfered winner chips */
 [data-theme="deco"] .wrap{margin:40px auto;padding:48px 40px 56px;border:1px solid var(--chipborder);box-shadow:0 0 0 7px var(--bg),0 0 0 8px var(--accent);max-width:1180px}
 [data-theme="deco"] .head{flex-direction:column;align-items:center;text-align:center}

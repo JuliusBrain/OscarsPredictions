@@ -25,6 +25,14 @@ git add data/snapshots docs/data && git commit -m "Update Variety snapshot" && g
 | `data/official/YYYY-MM-DD.json` | Official Academy nominees (same format as a snapshot). Drop one in on Jan. 21, 2027 and the Official nominees tab fills in. |
 | `docs/data/watched.json` | Your watched films, written by the site itself via the GitHub API. |
 
+### Polish release dates and where to watch
+Each film row shows its world premiere and Polish cinema date (from [Filmweb](https://www.filmweb.pl)) and where it can be watched in Poland.
+
+- `data/filmweb-map.json` maps each film id to its Filmweb page. Filmweb's search is script-rendered, so new films are mapped by hand or by `/update-oscars`. `scripts/filmweb.py` then reads the public film and `/dates` pages (polite: one request at a time, 2 s apart, cached; settled films refresh weekly) into `docs/data/filmweb.json`.
+- `scripts/availability.py` asks the [TMDB](https://www.themoviedb.org) API (watch-provider data by JustWatch) which Polish services stream, rent or sell each film. **This needs a free TMDB token**: create an account, open Settings > API, copy the *API Read Access Token*, then add it to this repo as the secret `TMDB_TOKEN` (`gh secret set TMDB_TOKEN`). Without it the site shows "not checked yet" and only the release-window estimate.
+- When a film is not on any Polish service yet, the site shows an **estimate** (rent/buy about 6 to 13 weeks after the Polish cinema date, streaming about 3 to 6 months), or builds on a digital release date already set in another country. It is a guess from typical gaps, never an announcement.
+- Filmweb itself loads its per-film streaming list through an undocumented internal API; this project does not use it.
+
 ### Saving watched marks to the repo
 Open **Sync settings** on the site and paste a fine-grained GitHub token limited to this repo with **Contents: Read and write**. It stays in your browser and is only sent to api.github.com. Each tick commits `docs/data/watched.json` (about a second later), which redeploys the site. Without a token, marks stay in that browser only.
 

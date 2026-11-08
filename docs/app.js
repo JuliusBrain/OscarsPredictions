@@ -3,6 +3,7 @@
   var THEMES = ['deco', 'midnight', 'program'];
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
   var state = { theme: 'midnight', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all' };
+  var filmweb = {}, availability = { films: {}, tmdb_enabled: false };
   var data = null, registry = null, official = null, changes = { entries: {}, dropped: [] };
   var watched = {}, ops = [], remoteSha = null, saveTimer = null, saving = false, syncMsg = '';
 
@@ -114,6 +115,61 @@
     });
   }
 
+  /* ---------- Poland: dates and where to watch ---------- */
+  function fmt(iso) { return new Date(iso + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); }
+  function mon(iso) { return new Date(iso + 'T00:00:00').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }); }
+  function monRange(a, b) {
+    var x = new Date(a + 'T00:00:00'), y = new Date(b + 'T00:00:00');
+    if (mon(a) === mon(b)) return mon(a);
+    if (x.getFullYear() === y.getFullYear()) return x.toLocaleDateString('en-GB', { month: 'short' }) + '–' + mon(b);
+    return mon(a) + '–' + mon(b);
+  }
+  function daysBetween(a, b) { return Math.round((Date.parse(a) - Date.parse(b)) / 864e5); }
+  function line(cls, text) { return el('span', cls, text); }
+
+  function availBlock(f) {
+    var box = el('div', 'avail'), fw = filmweb[f.id], av = (availability.films || {})[f.id] || {}, now = today();
+    if (fw && (fw.world_premiere || fw.world_premiere_year || fw.pl_cinema)) {
+      var d = el('span', 'fwdates');
+      d.appendChild(document.createTextNode('World premiere ' + (fw.world_premiere ? fmt(fw.world_premiere) : fw.world_premiere_year ? fw.world_premiere_year + ' (date not set)' : 'unknown') + ' · Poland cinemas ' + (fw.pl_cinema ? fmt(fw.pl_cinema) : 'not set') + ' '));
+      var a = el('a', '', 'Filmweb'); a.href = fw.url; a.target = '_blank'; a.rel = 'noopener';
+      d.appendChild(a);
+      box.appendChild(d);
+    } else {
+      box.appendChild(line('fwdates', 'Premiere dates: not found on Filmweb yet'));
+    }
+    var p = av.providers || {}, stream = p.flatrate || [], rentbuy = (p.rent || []).concat((p.buy || []).filter(function (x) { return (p.rent || []).indexOf(x) < 0; })), free = (p.free || []).concat(p.ads || []);
+    var any = stream.length || rentbuy.length || free.length;
+    if (any) {
+      if (stream.length) box.appendChild(line('st', 'Streaming in Poland: ' + stream.join(', ')));
+      if (rentbuy.length) box.appendChild(line('st', 'Rent / buy in Poland: ' + rentbuy.join(', ')));
+      if (free.length) box.appendChild(line('st', 'Free in Poland: ' + free.join(', ')));
+      return box;
+    }
+    var out = fw && fw.pl_cinema && fw.pl_cinema > now;
+    var inCinemas = fw && fw.pl_cinema && !out && daysBetween(now, fw.pl_cinema) <= 90;
+    if (out) box.appendChild(line('st', 'Not out in Poland yet (cinemas ' + fmt(fw.pl_cinema) + ')'));
+    else if (fw && !fw.pl_cinema) box.appendChild(line('st', 'No Polish release announced on Filmweb yet' + (av.checked ? ' · not on any Polish streaming or VOD service' : '')));
+    else if (!availability.tmdb_enabled || !av.checked) box.appendChild(line('st', 'Streaming and VOD in Poland: not checked yet'));
+    else if (inCinemas) box.appendChild(line('st', 'In Polish cinemas · not on streaming or VOD yet'));
+    else box.appendChild(line('st', 'Not on any streaming or VOD service in Poland'));
+    var e = av.estimate;
+    if (e) {
+      var late = e.rent_buy[1] < now && e.streaming[1] < now;
+      var rentPast = e.rent_buy[1] < now, streamPast = e.streaming[1] < now;
+      var text;
+      if (late) text = 'Past the usual release windows; no Polish service lists it yet.';
+      else {
+        text = (rentPast ? 'Rent/buy should already be possible (usual window has passed)' : 'Likely rent/buy ' + monRange(e.rent_buy[0], e.rent_buy[1])) +
+          ' · ' + (streamPast ? 'streaming window has passed' : 'streaming ' + monRange(e.streaming[0], e.streaming[1])) + ' (estimate)';
+      }
+      var est = line('est', text);
+      est.title = e.basis;
+      box.appendChild(est);
+    }
+    return box;
+  }
+
   /* ---------- views ---------- */
   function filmChips(f) {
     var chips = el('div', 'noms');
@@ -142,6 +198,7 @@
     var noms = act.reduce(function (s, c) { return s + (f.categories[c].entries || 1); }, 0);
     var line = f.studio + ' · ' + (f.active ? noms + (noms === 1 ? ' nomination' : ' nominations') + (wins ? ' · ' + wins + ' predicted ' + (wins === 1 ? 'win' : 'wins') : '') : 'Dropped from Variety’s list (last seen ' + f.last_seen + ')');
     name.appendChild(el('span', '', line));
+    name.appendChild(availBlock(f));
     var lab = el('label', 'watch'), cb = el('input');
     cb.type = 'checkbox'; cb.checked = seen; cb.setAttribute('data-film', f.id);
     cb.onchange = function () {
@@ -273,8 +330,9 @@
       return r.json();
     });
   }
-  Promise.all([getJson('data/latest.json'), getJson('data/changes.json'), getJson('data/films.json'), getJson('data/official.json', true)]).then(function (j) {
+  Promise.all([getJson('data/latest.json'), getJson('data/changes.json'), getJson('data/films.json'), getJson('data/official.json', true), getJson('data/filmweb.json', true), getJson('data/availability.json', true)]).then(function (j) {
     data = j[0]; changes = j[1]; registry = j[2]; official = j[3];
+    filmweb = j[4] || {}; availability = j[5] || { films: {}, tmdb_enabled: false };
     var m = 'Captured ' + data.date + ' · Source: Variety';
     m += changes.from ? ' · Changes vs ' + changes.from : ' · Changes will appear after the next snapshot';
     document.getElementById('meta').textContent = m;

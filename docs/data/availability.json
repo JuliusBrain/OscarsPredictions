@@ -1,0 +1,433 @@
+{
+ "generated": "2026-11-08",
+ "tmdb_enabled": false,
+ "films": {
+  "american-doctor": {
+   "estimate": {
+    "rent_buy": [
+     "2026-06-22",
+     "2026-08-06"
+    ],
+    "streaming": [
+     "2026-08-06",
+     "2026-11-04"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "artificial": {
+   "estimate": null
+  },
+  "avengers-doomsday": {
+   "estimate": {
+    "rent_buy": [
+     "2027-01-30",
+     "2027-03-16"
+    ],
+    "streaming": [
+     "2027-03-16",
+     "2027-06-14"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "behemoth": {
+   "estimate": {
+    "rent_buy": [
+     "2027-01-18",
+     "2027-03-04"
+    ],
+    "streaming": [
+     "2027-03-04",
+     "2027-06-02"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "disclosure-day": {
+   "estimate": {
+    "rent_buy": [
+     "2026-07-25",
+     "2026-09-08"
+    ],
+    "streaming": [
+     "2026-09-08",
+     "2026-12-07"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "dune-part-three": {
+   "estimate": {
+    "rent_buy": [
+     "2027-01-30",
+     "2027-03-16"
+    ],
+    "streaming": [
+     "2027-03-16",
+     "2027-06-14"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "ebenezer-a-christmas-carol": {
+   "estimate": {
+    "rent_buy": [
+     "2026-12-28",
+     "2027-02-11"
+    ],
+    "streaming": [
+     "2027-02-11",
+     "2027-05-12"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "elsinore": {
+   "estimate": {
+    "rent_buy": [
+     "2027-03-15",
+     "2027-04-29"
+    ],
+    "streaming": [
+     "2027-04-29",
+     "2027-07-28"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "fjord": {
+   "estimate": {
+    "rent_buy": [
+     "2027-03-15",
+     "2027-04-29"
+    ],
+    "streaming": [
+     "2027-04-29",
+     "2027-07-28"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "iron-boy": {
+   "estimate": {
+    "rent_buy": [
+     "2026-11-25",
+     "2027-01-09"
+    ],
+    "streaming": [
+     "2027-01-09",
+     "2027-04-09"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "la-bola-negra": {
+   "estimate": {
+    "rent_buy": [
+     "2027-04-05",
+     "2027-05-20"
+    ],
+    "streaming": [
+     "2027-05-20",
+     "2027-08-18"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "maserati-the-brothers": {
+   "estimate": null
+  },
+  "michael": {
+   "estimate": {
+    "rent_buy": [
+     "2026-06-08",
+     "2026-07-23"
+    ],
+    "streaming": [
+     "2026-07-23",
+     "2026-10-21"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "minotaur": {
+   "estimate": {
+    "rent_buy": [
+     "2027-03-22",
+     "2027-05-06"
+    ],
+    "streaming": [
+     "2027-05-06",
+     "2027-08-04"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "musk": {
+   "estimate": null
+  },
+  "naza": {
+   "estimate": {
+    "rent_buy": [
+     "2026-12-07",
+     "2027-01-21"
+    ],
+    "streaming": [
+     "2027-01-21",
+     "2027-04-21"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "obsession": {
+   "estimate": {
+    "rent_buy": [
+     "2026-06-29",
+     "2026-08-13"
+    ],
+    "streaming": [
+     "2026-08-13",
+     "2026-11-11"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "once-upon-a-time-in-harlem": {
+   "estimate": null
+  },
+  "one-in-a-million": {
+   "estimate": {
+    "rent_buy": [
+     "2026-06-24",
+     "2026-08-08"
+    ],
+    "streaming": [
+     "2026-08-08",
+     "2026-11-06"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "possible-love": {
+   "estimate": {
+    "rent_buy": [
+     "2026-12-21",
+     "2027-02-04"
+    ],
+    "streaming": [
+     "2027-02-04",
+     "2027-05-05"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "project-hail-mary": {
+   "estimate": {
+    "rent_buy": [
+     "2026-05-04",
+     "2026-06-18"
+    ],
+    "streaming": [
+     "2026-06-18",
+     "2026-09-16"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "ray-gunn": {
+   "estimate": {
+    "rent_buy": [
+     "2027-02-01",
+     "2027-03-18"
+    ],
+    "streaming": [
+     "2027-03-18",
+     "2027-06-16"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "rehearsals-for-a-revolution": {
+   "estimate": null
+  },
+  "rose": {
+   "estimate": {
+    "rent_buy": [
+     "2026-11-23",
+     "2027-01-07"
+    ],
+    "streaming": [
+     "2027-01-07",
+     "2027-04-07"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "sense-and-sensibility": {
+   "estimate": {
+    "rent_buy": [
+     "2026-11-30",
+     "2027-01-14"
+    ],
+    "streaming": [
+     "2027-01-14",
+     "2027-04-14"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "tangles": {
+   "estimate": null
+  },
+  "tender-loving-care": {
+   "estimate": null
+  },
+  "the-debut": {
+   "estimate": {
+    "rent_buy": [
+     "2027-02-08",
+     "2027-03-25"
+    ],
+    "streaming": [
+     "2027-03-25",
+     "2027-06-23"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "the-invite": {
+   "estimate": {
+    "rent_buy": [
+     "2026-08-17",
+     "2026-10-01"
+    ],
+    "streaming": [
+     "2026-10-01",
+     "2026-12-30"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "the-odyssey": {
+   "estimate": {
+    "rent_buy": [
+     "2026-08-31",
+     "2026-10-15"
+    ],
+    "streaming": [
+     "2026-10-15",
+     "2027-01-13"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "the-only-living-pickpocket-in-new-york": {
+   "estimate": null
+  },
+  "toy-story-5": {
+   "estimate": {
+    "rent_buy": [
+     "2026-08-01",
+     "2026-09-15"
+    ],
+    "streaming": [
+     "2026-09-15",
+     "2026-12-14"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "werwulf": {
+   "estimate": {
+    "rent_buy": [
+     "2027-02-22",
+     "2027-04-08"
+    ],
+    "streaming": [
+     "2027-04-08",
+     "2027-07-07"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "whalefall": {
+   "estimate": {
+    "rent_buy": [
+     "2026-11-30",
+     "2027-01-14"
+    ],
+    "streaming": [
+     "2027-01-14",
+     "2027-04-14"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "wicker": {
+   "estimate": {
+    "rent_buy": [
+     "2027-01-25",
+     "2027-03-11"
+    ],
+    "streaming": [
+     "2027-03-11",
+     "2027-06-09"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "wild-horse-nine": {
+   "estimate": {
+    "rent_buy": [
+     "2026-12-28",
+     "2027-02-11"
+    ],
+    "streaming": [
+     "2027-02-11",
+     "2027-05-12"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "wildwood": {
+   "estimate": {
+    "rent_buy": [
+     "2027-02-15",
+     "2027-04-01"
+    ],
+    "streaming": [
+     "2027-04-01",
+     "2027-06-30"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "wuthering-heights": {
+   "estimate": {
+    "rent_buy": [
+     "2026-03-30",
+     "2026-05-14"
+    ],
+    "streaming": [
+     "2026-05-14",
+     "2026-08-12"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  },
+  "you-can-see-everything": {
+   "estimate": {
+    "rent_buy": [
+     "2026-12-21",
+     "2027-02-04"
+    ],
+    "streaming": [
+     "2027-02-04",
+     "2027-05-05"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
+   }
+  }
+ }
+}
