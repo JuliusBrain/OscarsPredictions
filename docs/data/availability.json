@@ -1,6 +1,6 @@
 {
  "generated": "2026-11-08",
- "tmdb_enabled": false,
+ "tmdb_enabled": true,
  "films": {
   "american-doctor": {
    "estimate": {
@@ -13,10 +13,63 @@
      "2026-11-04"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1596332,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "artificial": {
-   "estimate": null
+   "estimate": {
+    "rent_buy": [
+     "2026-02-17",
+     "2026-03-19"
+    ],
+    "streaming": [
+     "2026-03-19",
+     "2026-06-17"
+    ],
+    "basis": "A digital release is already dated 2026-02-17 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1236153,
+   "providers": {
+    "flatrate": [
+     "Amazon Prime Video"
+    ],
+    "rent": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Player",
+     "Premiery Canal+",
+     "Rakuten TV"
+    ],
+    "buy": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Rakuten TV"
+    ],
+    "ads": [],
+    "free": []
+   },
+   "link": "https://www.themoviedb.org/movie/1236153-mercy/watch?locale=PL",
+   "digital_hint": {
+    "date": "2026-02-17",
+    "country": "US"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "avengers-doomsday": {
    "estimate": {
@@ -29,7 +82,19 @@
      "2027-06-14"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1003596,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "behemoth": {
    "estimate": {
@@ -42,20 +107,61 @@
      "2027-06-02"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1452168,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "disclosure-day": {
    "estimate": {
     "rent_buy": [
-     "2026-07-25",
-     "2026-09-08"
+     "2026-07-21",
+     "2026-08-20"
     ],
     "streaming": [
      "2026-09-08",
      "2026-12-07"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-07-21 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1275779,
+   "providers": {
+    "flatrate": [],
+    "rent": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Player",
+     "Premiery Canal+",
+     "Rakuten TV"
+    ],
+    "buy": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Rakuten TV"
+    ],
+    "ads": [],
+    "free": []
+   },
+   "link": "https://www.themoviedb.org/movie/1275779-disclosure-day/watch?locale=PL",
+   "digital_hint": {
+    "date": "2026-07-21",
+    "country": "US"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "dune-part-three": {
    "estimate": {
@@ -68,7 +174,19 @@
      "2027-06-14"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1170608,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "ebenezer-a-christmas-carol": {
    "estimate": {
@@ -81,7 +199,19 @@
      "2027-05-12"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1567605,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "elsinore": {
    "estimate": {
@@ -94,20 +224,47 @@
      "2027-07-28"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1599230,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "fjord": {
    "estimate": {
     "rent_buy": [
-     "2027-03-15",
-     "2027-04-29"
+     "2026-11-24",
+     "2026-12-24"
     ],
     "streaming": [
      "2027-04-29",
      "2027-07-28"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-11-24 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1401459,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": {
+    "date": "2026-11-24",
+    "country": "US"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "iron-boy": {
    "estimate": {
@@ -120,36 +277,104 @@
      "2027-04-09"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 947493,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "la-bola-negra": {
    "estimate": {
     "rent_buy": [
-     "2027-04-05",
-     "2027-05-20"
+     "2026-12-02",
+     "2027-01-01"
     ],
     "streaming": [
      "2027-05-20",
      "2027-08-18"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-12-02 in CA; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1422041,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": {
+    "date": "2026-12-02",
+    "country": "CA"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "maserati-the-brothers": {
-   "estimate": null
+   "estimate": null,
+   "tmdb_id": 1096831,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "michael": {
    "estimate": {
     "rent_buy": [
-     "2026-06-08",
-     "2026-07-23"
+     "2026-06-09",
+     "2026-07-09"
     ],
     "streaming": [
      "2026-07-23",
      "2026-10-21"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-06-09 in DE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 936075,
+   "providers": {
+    "flatrate": [],
+    "rent": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Player",
+     "Premiery Canal+",
+     "Rakuten TV"
+    ],
+    "buy": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Rakuten TV"
+    ],
+    "ads": [],
+    "free": []
+   },
+   "link": "https://www.themoviedb.org/movie/936075-michael/watch?locale=PL",
+   "digital_hint": {
+    "date": "2026-06-09",
+    "country": "DE"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "minotaur": {
    "estimate": {
@@ -162,10 +387,47 @@
      "2027-08-04"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 848700,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "musk": {
-   "estimate": null
+   "estimate": {
+    "rent_buy": [
+     "2026-11-06",
+     "2026-12-06"
+    ],
+    "streaming": [
+     "2026-12-06",
+     "2027-03-06"
+    ],
+    "basis": "A digital release is already dated 2026-11-06 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1096228,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": {
+    "date": "2026-11-06",
+    "country": "US"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "naza": {
    "estimate": {
@@ -178,23 +440,75 @@
      "2027-04-21"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1755291,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "obsession": {
    "estimate": {
     "rent_buy": [
-     "2026-06-29",
-     "2026-08-13"
+     "2026-06-30",
+     "2026-07-30"
     ],
     "streaming": [
      "2026-08-13",
      "2026-11-11"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-06-30 in GB; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1339713,
+   "providers": {
+    "flatrate": [],
+    "rent": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Player",
+     "Rakuten TV"
+    ],
+    "buy": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Rakuten TV"
+    ],
+    "ads": [],
+    "free": []
+   },
+   "link": "https://www.themoviedb.org/movie/1339713-obsession/watch?locale=PL",
+   "digital_hint": {
+    "date": "2026-06-30",
+    "country": "GB"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "once-upon-a-time-in-harlem": {
-   "estimate": null
+   "estimate": null,
+   "tmdb_id": 1596300,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "one-in-a-million": {
    "estimate": {
@@ -207,7 +521,19 @@
      "2026-11-06"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1596295,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "possible-love": {
    "estimate": {
@@ -220,36 +546,96 @@
      "2027-05-05"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": null,
+   "unmatched": true
   },
   "project-hail-mary": {
    "estimate": {
     "rent_buy": [
-     "2026-05-04",
-     "2026-06-18"
+     "2026-05-12",
+     "2026-06-11"
     ],
     "streaming": [
      "2026-06-18",
      "2026-09-16"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-05-12 in DE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 687163,
+   "providers": {
+    "flatrate": [
+     "Amazon Prime Video"
+    ],
+    "rent": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Player",
+     "Premiery Canal+",
+     "Rakuten TV"
+    ],
+    "buy": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Rakuten TV"
+    ],
+    "ads": [],
+    "free": []
+   },
+   "link": "https://www.themoviedb.org/movie/687163-project-hail-mary/watch?locale=PL",
+   "digital_hint": {
+    "date": "2026-05-12",
+    "country": "DE"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "ray-gunn": {
    "estimate": {
     "rent_buy": [
-     "2027-02-01",
-     "2027-03-18"
+     "2026-12-18",
+     "2027-01-17"
     ],
     "streaming": [
      "2027-03-18",
      "2027-06-16"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-12-18 in AE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 940009,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": {
+    "date": "2026-12-18",
+    "country": "AE"
+   },
+   "pl_digital": "2026-12-18",
+   "checked": "2026-11-08"
   },
   "rehearsals-for-a-revolution": {
-   "estimate": null
+   "estimate": null,
+   "tmdb_id": 1666864,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "rose": {
    "estimate": {
@@ -262,26 +648,77 @@
      "2027-04-07"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1176962,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "sense-and-sensibility": {
    "estimate": {
     "rent_buy": [
-     "2026-11-30",
-     "2027-01-14"
+     "2026-10-26",
+     "2026-11-25"
     ],
     "streaming": [
      "2027-01-14",
      "2027-04-14"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-10-26 in GB; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1503762,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": {
+    "date": "2026-10-26",
+    "country": "GB"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "tangles": {
-   "estimate": null
+   "estimate": null,
+   "tmdb_id": 1316999,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "tender-loving-care": {
-   "estimate": null
+   "estimate": null,
+   "tmdb_id": 1370191,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "the-debut": {
    "estimate": {
@@ -294,49 +731,145 @@
      "2027-06-23"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1391239,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "the-invite": {
    "estimate": {
     "rent_buy": [
-     "2026-08-17",
-     "2026-10-01"
+     "2026-08-11",
+     "2026-09-10"
     ],
     "streaming": [
      "2026-10-01",
      "2026-12-30"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-08-11 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 950028,
+   "providers": {
+    "flatrate": [
+     "Polsat Box Go"
+    ],
+    "rent": [
+     "Amazon Video",
+     "Pilot WP",
+     "Player",
+     "Premiery Canal+",
+     "Rakuten TV",
+     "TVP"
+    ],
+    "buy": [
+     "Amazon Video",
+     "Pilot WP",
+     "Rakuten TV"
+    ],
+    "ads": [],
+    "free": []
+   },
+   "link": "https://www.themoviedb.org/movie/950028-the-invite/watch?locale=PL",
+   "digital_hint": {
+    "date": "2026-08-11",
+    "country": "US"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "the-odyssey": {
    "estimate": {
     "rent_buy": [
-     "2026-08-31",
-     "2026-10-15"
+     "2026-11-17",
+     "2026-12-17"
     ],
     "streaming": [
-     "2026-10-15",
-     "2027-01-13"
+     "2026-12-17",
+     "2027-03-17"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-11-17 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1368337,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": {
+    "date": "2026-11-17",
+    "country": "US"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "the-only-living-pickpocket-in-new-york": {
-   "estimate": null
+   "estimate": null,
+   "tmdb_id": 1458099,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "toy-story-5": {
    "estimate": {
     "rent_buy": [
-     "2026-08-01",
-     "2026-09-15"
+     "2026-08-18",
+     "2026-09-17"
     ],
     "streaming": [
-     "2026-09-15",
-     "2026-12-14"
+     "2026-09-17",
+     "2026-12-16"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-08-18 in RO; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1084244,
+   "providers": {
+    "flatrate": [
+     "Disney Plus"
+    ],
+    "rent": [
+     "Amazon Video",
+     "Apple TV Store",
+     "Pilot WP",
+     "Player",
+     "Premiery Canal+",
+     "Rakuten TV"
+    ],
+    "buy": [
+     "Amazon Video",
+     "Apple TV Store",
+     "Pilot WP",
+     "Rakuten TV"
+    ],
+    "ads": [],
+    "free": []
+   },
+   "link": "https://www.themoviedb.org/movie/1084244-toy-story-5/watch?locale=PL",
+   "digital_hint": {
+    "date": "2026-08-18",
+    "country": "RO"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "werwulf": {
    "estimate": {
@@ -349,7 +882,19 @@
      "2027-07-07"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1421903,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "whalefall": {
    "estimate": {
@@ -362,20 +907,47 @@
      "2027-04-14"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1255833,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "wicker": {
    "estimate": {
     "rent_buy": [
-     "2027-01-25",
-     "2027-03-11"
+     "2026-12-01",
+     "2026-12-31"
     ],
     "streaming": [
      "2027-03-11",
      "2027-06-09"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-12-01 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1195803,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": {
+    "date": "2026-12-01",
+    "country": "US"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "wild-horse-nine": {
    "estimate": {
@@ -388,33 +960,91 @@
      "2027-05-12"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 891621,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "wildwood": {
    "estimate": {
     "rent_buy": [
-     "2027-02-15",
-     "2027-04-01"
+     "2026-12-08",
+     "2027-01-07"
     ],
     "streaming": [
      "2027-04-01",
      "2027-06-30"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-12-08 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 791523,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": {
+    "date": "2026-12-08",
+    "country": "US"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-08"
   },
   "wuthering-heights": {
    "estimate": {
     "rent_buy": [
      "2026-03-30",
-     "2026-05-14"
+     "2026-04-29"
     ],
     "streaming": [
      "2026-05-14",
      "2026-08-12"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+    "basis": "A digital release is already dated 2026-03-30 in DE; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later."
+   },
+   "tmdb_id": 1316092,
+   "providers": {
+    "flatrate": [
+     "HBO Max"
+    ],
+    "rent": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Player",
+     "Premiery Canal+",
+     "Rakuten TV"
+    ],
+    "buy": [
+     "Amazon Video",
+     "Apple TV Store",
+     "CHILI",
+     "Pilot WP",
+     "Rakuten TV"
+    ],
+    "ads": [],
+    "free": []
+   },
+   "link": "https://www.themoviedb.org/movie/1316092-wuthering-heights/watch?locale=PL",
+   "digital_hint": {
+    "date": "2026-03-30",
+    "country": "DE"
+   },
+   "pl_digital": "2026-05-01",
+   "checked": "2026-11-08"
   },
   "you-can-see-everything": {
    "estimate": {
@@ -427,7 +1057,19 @@
      "2027-05-05"
     ],
     "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months."
-   }
+   },
+   "tmdb_id": 1765072,
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": null,
+   "pl_digital": null,
+   "checked": "2026-11-08"
   }
  }
 }
