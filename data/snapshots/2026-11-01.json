@@ -1,0 +1,8 @@
+{"date":"2026-11-01","source":"placeholder","categories":{
+"Picture":[{"rank":1,"film":"[Film 1]","people":[]},{"rank":2,"film":"[Film 2]","people":[]},{"rank":3,"film":"[Film 3]","people":[]},{"rank":4,"film":"[Film 4]","people":[]}],
+"Director":[{"rank":1,"film":"[Film 2]","people":["[Director B]"]},{"rank":2,"film":"[Film 1]","people":["[Director A]"]},{"rank":3,"film":"[Film 3]","people":["[Director C]"]}],
+"Actor":[{"rank":1,"film":"[Film 1]","people":["[Performer 1]"]},{"rank":2,"film":"[Film 3]","people":["[Performer 5]"]}],
+"Actress":[{"rank":1,"film":"[Film 2]","people":["[Performer 2]"]},{"rank":2,"film":"[Film 4]","people":["[Performer 6]"]}],
+"Supp. Actor":[{"rank":1,"film":"[Film 3]","people":["[Performer 3]"]}],
+"Supp. Actress":[{"rank":1,"film":"[Film 4]","people":["[Performer 4]"]}],
+"Screenplay":[{"rank":1,"film":"[Film 2]","people":[]},{"rank":2,"film":"[Film 3]","people":[]}]}}

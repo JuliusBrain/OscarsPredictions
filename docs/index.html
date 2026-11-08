@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oscars 2027 Predictions Tracker</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="band"></div>
+<main class="wrap">
+  <header class="head">
+    <div class="title">
+      <span class="eyebrow">99th Academy Awards · 2027</span>
+      <h1>Oscars Predictions Tracker</h1>
+      <p class="lede">Every contender, every category. See which films are in the race, where each performer stands, and what moved since last week.</p>
+    </div>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Theme">
+        <button data-theme-btn="dark">Dark</button>
+        <button data-theme-btn="light">Light</button>
+      </div>
+      <div class="seg" role="group" aria-label="Accent">
+        <button data-accent-btn="gold">Gold</button>
+        <button data-accent-btn="champagne">Champagne</button>
+        <button data-accent-btn="rose">Rose</button>
+      </div>
+      <div class="seg" role="group" aria-label="Mode">
+        <button data-mode-btn="predicted">Predictions</button>
+        <button data-mode-btn="nominees">Official nominees</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="tabbar">
+    <div class="tabs">
+      <button class="tab" data-tab-btn="films">Films by category</button>
+      <button class="tab" data-tab-btn="people">Performers</button>
+    </div>
+    <span class="meta" id="meta"></span>
+  </div>
+
+  <section id="nominees" class="empty" hidden>
+    <h2>Nominations not announced yet</h2>
+    <p>When the Academy announces its nominees, they will appear here next to what was predicted.</p>
+  </section>
+
+  <section id="films" aria-label="Films by category">
+    <div class="legend">
+      <span><i class="badge r1">1</i>Frontrunner</span>
+      <span><i class="badge r2">2</i>Strong contender</span>
+      <span><i class="badge r3">3</i>In the mix</span>
+      <span><b class="chg up">▲</b> up <b class="chg down">▼</b> down <b class="chg new">NEW</b> since last week</span>
+    </div>
+    <div class="gridwrap"><div id="grid" class="grid"></div></div>
+    <div id="dropped"></div>
+  </section>
+
+  <section id="people" aria-label="Performers" hidden>
+    <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
+    <div id="cards" class="cards"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
