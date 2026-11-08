@@ -1,7 +1,7 @@
 (function () {
   var ACCENTS = { gold: ['#D4AF37', '#7A5C12'], champagne: ['#E8D8A8', '#8A6D3B'], rose: ['#E5677B', '#A3263E'] };
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
-  var state = { theme: 'dark', accent: 'gold', mode: 'predicted', tab: 'films', cat: 'All' };
+  var state = { theme: 'mid', accent: 'gold', mode: 'predicted', tab: 'films', cat: 'All' };
   var data = null, changes = { entries: {}, dropped: [] };
 
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) {} return null; }
@@ -22,7 +22,7 @@
   function applyTheme() {
     var root = document.documentElement;
     root.setAttribute('data-theme', state.theme);
-    root.style.setProperty('--accent', ACCENTS[state.accent][state.theme === 'dark' ? 0 : 1]);
+    root.style.setProperty('--accent', ACCENTS[state.accent][state.theme === 'light' ? 1 : 0]);
     ['theme', 'accent', 'mode', 'tab'].forEach(function (f) {
       document.querySelectorAll('[data-' + f + '-btn]').forEach(function (b) {
         b.setAttribute('aria-pressed', b.getAttribute('data-' + f + '-btn') === state[f]);
@@ -135,7 +135,7 @@
       };
     });
   });
-  state.theme = store('theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  state.theme = ['dark', 'mid', 'light'].indexOf(store('theme')) >= 0 ? store('theme') : 'mid';
   state.accent = ACCENTS[store('accent')] ? store('accent') : 'gold';
   render();
 
