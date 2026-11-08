@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 FILMWEB = ROOT / "docs" / "data" / "filmweb.json"
 FILMS = ROOT / "docs" / "data" / "films.json"
 TMDB_MAP = ROOT / "data" / "tmdb-map.json"
+OVERRIDES = ROOT / "data" / "tmdb-overrides.json"
 OUT = ROOT / "docs" / "data" / "availability.json"
 
 # Typical gaps after the Polish cinema release (days). Heuristic, not a promise.
@@ -73,11 +74,22 @@ def parse_release_dates(payload):
     return best, pl_digital
 
 
-def pick_match(results, year):
+DATE_TOLERANCE_DAYS = 240  # festival premiere vs wide release can be months apart
+
+
+def date_ok(release, ref):
+    """TMDB release date must be near Filmweb's date; unknown dates cannot rule a match out."""
+    if not release or not ref:
+        return True
+    return abs((_d(release[:10]) - _d(ref)).days) <= DATE_TOLERANCE_DAYS
+
+
+def pick_match(results, year, ref=None):
     for r in sorted(results, key=lambda r: -(r.get("popularity") or 0)):
-        ry = (r.get("release_date") or "")[:4]
-        if year is None or (ry.isdigit() and abs(int(ry) - year) <= 1):
-            return r["id"]
+        rel = r.get("release_date") or ""
+        year_ok = year is None or (rel[:4].isdigit() and abs(int(rel[:4]) - year) <= 1)
+        if year_ok and date_ok(rel, ref):
+            return r
     return None
 
 
@@ -90,24 +102,41 @@ def tmdb_get_factory(token):
     return get
 
 
-def check_film(get, name, year, tmdb_id=None):
+def resolve(get, queries, year, ref, cached=None, override=None):
+    """Return (tmdb_id, title, release_date, candidates). Cached ids are re-validated;
+    an id in data/tmdb-overrides.json is trusted as a manual correction."""
+    if override:
+        d = get(f"/movie/{override}")
+        return override, d.get("title"), d.get("release_date"), []
+    if cached:
+        d = get(f"/movie/{cached}")
+        if date_ok(d.get("release_date"), ref):
+            return cached, d.get("title"), d.get("release_date"), []
+    seen = []
+    for q in dict.fromkeys(x for x in queries if x):
+        results = get("/search/movie", query=q).get("results", [])
+        m = pick_match(results, year, ref)
+        if m:
+            return m["id"], m.get("title"), m.get("release_date"), []
+        seen += [{"id": r["id"], "title": r.get("title"), "release_date": r.get("release_date")} for r in results[:3]]
+    return None, None, None, seen[:5]
+
+
+def check_film(get, queries, year, ref=None, cached=None, override=None):
+    tmdb_id, title, rel, cands = resolve(get, queries, year, ref, cached, override)
     if tmdb_id is None:
-        params = {"query": name}
-        if year:
-            params["year"] = year
-        tmdb_id = pick_match(get("/search/movie", **params).get("results", []), year)
-    if tmdb_id is None:
-        return {"tmdb_id": None, "unmatched": True}
+        return {"tmdb_id": None, "unmatched": True, "candidates": cands}
     prov = parse_providers(get(f"/movie/{tmdb_id}/watch/providers"))
     hint, pl_digital = parse_release_dates(get(f"/movie/{tmdb_id}/release_dates"))
-    return {"tmdb_id": tmdb_id, "providers": prov["providers"], "link": prov["link"],
-            "digital_hint": hint, "pl_digital": pl_digital, "checked": date.today().isoformat()}
+    return {"tmdb_id": tmdb_id, "tmdb_title": title, "tmdb_release_date": rel, "providers": prov["providers"],
+            "link": prov["link"], "digital_hint": hint, "pl_digital": pl_digital, "checked": date.today().isoformat()}
 
 
 def main():
     fw = json.loads(FILMWEB.read_text()) if FILMWEB.exists() else {}
     films = json.loads(FILMS.read_text())["films"]
     tmap = json.loads(TMDB_MAP.read_text()) if TMDB_MAP.exists() else {}
+    overrides = json.loads(OVERRIDES.read_text()) if OVERRIDES.exists() else {}
     old = json.loads(OUT.read_text())["films"] if OUT.exists() else {}
     token = os.environ.get("TMDB_TOKEN", "").strip()
     get = tmdb_get_factory(token) if token else None
@@ -116,11 +145,15 @@ def main():
         rec = dict(old.get(fid, {}))
         if get and f.get("active", True):
             try:
-                year = (fw.get(fid) or {}).get("year")
-                name = (fw.get(fid) or {}).get("title_original") or f["name"]
-                res = check_film(get, name, year, tmap.get(fid))
+                w0 = fw.get(fid) or {}
+                res = check_film(get, [f["name"], w0.get("title_original"), w0.get("title_pl")], w0.get("year"),
+                                 w0.get("world_premiere") or w0.get("pl_cinema"), tmap.get(fid), overrides.get(fid))
+                for stale in ("providers", "link", "digital_hint", "pl_digital", "checked", "tmdb_title", "tmdb_release_date", "candidates", "unmatched"):
+                    rec.pop(stale, None)  # an unmatched film must not keep an earlier wrong match's data
                 if res.get("tmdb_id"):
                     tmap[fid] = res["tmdb_id"]
+                else:
+                    tmap.pop(fid, None)
                 rec.update(res)
                 time.sleep(0.3)
             except Exception as e:

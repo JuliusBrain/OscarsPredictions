@@ -35,26 +35,56 @@ class AvailabilityTests(unittest.TestCase):
         self.assertEqual(hint, {"date": "2026-11-17", "country": "US"})
         self.assertEqual(pl, "2026-12-01")
 
-    def test_pick_match_by_year_and_popularity(self):
+    def test_pick_match_by_year_popularity_and_date(self):
         r = [{"id": 1, "release_date": "1999-01-01", "popularity": 90}, {"id": 2, "release_date": "2026-05-01", "popularity": 5},
              {"id": 3, "release_date": "2025-12-01", "popularity": 50}]
-        self.assertEqual(pick_match(r, 2026), 3)
+        self.assertEqual(pick_match(r, 2026)["id"], 3)
         self.assertIsNone(pick_match(r, 2040))
+        # same-title older film is rejected by the date cross-check
+        homonyms = [{"id": 10, "release_date": "2026-02-01", "popularity": 80}, {"id": 11, "release_date": "2026-10-05", "popularity": 3}]
+        self.assertEqual(pick_match(homonyms, 2026, "2026-10-05")["id"], 11)
+        self.assertEqual(pick_match(homonyms, 2026)["id"], 10)  # without a reference date popularity wins
 
     def test_check_film_flow_with_fake_api(self):
         calls = []
         def get(path, **params):
-            calls.append(path)
+            calls.append((path, params))
             if path == "/search/movie":
-                return {"results": [{"id": 7, "release_date": "2026-03-20", "popularity": 1}]}
+                return {"results": [{"id": 7, "title": "X", "release_date": "2026-03-20", "popularity": 1}]}
             if path.endswith("/watch/providers"):
                 return {"results": {"PL": {"flatrate": [{"provider_name": "Netflix"}]}}}
+            if path == "/movie/7":
+                return {"title": "X", "release_date": "2026-03-20"}
             return {"results": []}
-        r = check_film(get, "X", 2026)
-        self.assertEqual((r["tmdb_id"], r["providers"]["flatrate"]), (7, ["Netflix"]))
-        r2 = check_film(get, "X", 2026, tmdb_id=7)
-        self.assertNotIn("/search/movie", calls[-3:])
-        self.assertEqual(check_film(lambda p, **k: {"results": []}, "Nope", 2026), {"tmdb_id": None, "unmatched": True})
+        r = check_film(get, ["X"], 2026, "2026-03-09")
+        self.assertEqual((r["tmdb_id"], r["tmdb_title"], r["providers"]["flatrate"]), (7, "X", ["Netflix"]))
+        n = len(calls)
+        check_film(get, ["X"], 2026, "2026-03-09", cached=7)
+        self.assertFalse(any(p == "/search/movie" for p, _ in calls[n:]))  # cached id validated, no search
+
+    def test_wrong_cached_id_is_dropped_and_researched(self):
+        def get(path, **params):
+            if path == "/movie/99":
+                return {"title": "Other Artificial", "release_date": "2024-02-17"}
+            if path == "/search/movie":
+                return {"results": [{"id": 5, "title": "Artificial", "release_date": "2026-10-05", "popularity": 2}]}
+            return {"results": {}}
+        r = check_film(get, ["Artificial"], 2026, "2026-10-05", cached=99)
+        self.assertEqual(r["tmdb_id"], 5)
+
+    def test_unmatched_reports_candidates_and_tries_alternate_titles(self):
+        qs = []
+        def get(path, **params):
+            qs.append(params.get("query"))
+            return {"results": [{"id": 1, "title": "Nope", "release_date": "1990-01-01", "popularity": 1}]}
+        r = check_film(get, ["Possible Love", "Ganeunghan sarang", None], 2026, "2026-09-06")
+        self.assertEqual(r["tmdb_id"], None)
+        self.assertTrue(r["unmatched"] and r["candidates"])
+        self.assertEqual(qs, ["Possible Love", "Ganeunghan sarang"])
+
+    def test_override_is_trusted(self):
+        r = check_film(lambda p, **k: {"title": "T", "release_date": "1990-01-01", "results": {}}, ["x"], 2026, "2026-09-06", override=42)
+        self.assertEqual(r["tmdb_id"], 42)
 
 
 if __name__ == "__main__":
