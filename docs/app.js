@@ -22,6 +22,12 @@
     return null;
   }
 
+  function showError(msg) {
+    var m = document.getElementById('meta');
+    if (m) m.textContent = 'Something went wrong (' + msg + '). Try a hard refresh.';
+    if (window.console) console.error(msg);
+  }
+
   function applyTheme() {
     var root = document.documentElement;
     root.setAttribute('data-theme', state.theme);
@@ -144,13 +150,18 @@
     ['films', 'cats', 'people'].forEach(function (t) {
       document.getElementById(t).hidden = !(predicted && state.tab === t);
     });
-    if (data) { renderFilms(); renderCats(); renderPeople(); }
+    if (data) {
+      [renderFilms, renderCats, renderPeople].forEach(function (fn) {
+        try { fn(); } catch (e) { showError(fn.name + ': ' + e.message); }
+      });
+    }
   }
 
   [['theme', 'theme'], ['accent', 'accent'], ['mode', 'mode'], ['tab', 'tab'], ['filter', 'filter']].forEach(function (p) {
     document.querySelectorAll('[data-' + p[0] + '-btn]').forEach(function (b) {
       b.onclick = function () {
         state[p[1]] = b.getAttribute('data-' + p[0] + '-btn');
+        if (p[1] === 'tab') state.mode = 'predicted';
         if (p[1] === 'theme' || p[1] === 'accent') store(p[1], state[p[1]]);
         render();
       };
@@ -160,7 +171,8 @@
   state.accent = ACCENTS[store('accent')] ? store('accent') : 'gold';
   render();
 
-  Promise.all([fetch('data/latest.json'), fetch('data/changes.json')]).then(function (rs) {
+  Promise.all([fetch('data/latest.json', { cache: 'no-cache' }), fetch('data/changes.json', { cache: 'no-cache' })]).then(function (rs) {
+    rs.forEach(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); });
     return Promise.all(rs.map(function (r) { return r.json(); }));
   }).then(function (j) {
     data = j[0]; changes = j[1];
@@ -168,7 +180,7 @@
     m += changes.from ? ' · Changes vs ' + changes.from : ' · Changes will appear after the next snapshot';
     document.getElementById('meta').textContent = m;
     render();
-  }).catch(function () {
-    document.getElementById('meta').textContent = 'Could not load data.';
+  }).catch(function (e) {
+    showError('data: ' + e.message + '. Open the site via its https URL, not as a local file');
   });
 })();
