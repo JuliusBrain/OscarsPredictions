@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oscars 2027 Predictions Tracker</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 <div class="band"></div>
@@ -44,9 +44,12 @@
     <span class="meta" id="meta"></span>
   </div>
 
-  <section id="nominees" class="empty" hidden>
-    <h2>Nominations not announced yet</h2>
-    <p>When the Academy announces its nominees, they will appear here next to what was predicted.</p>
+  <section id="nominees" hidden>
+    <div id="nomempty" class="empty">
+      <h2>Nominations not announced yet</h2>
+      <p>When the Academy announces its nominees, they will appear here next to what was predicted.</p>
+    </div>
+    <div id="nomlist" class="catlist"></div>
   </section>
 
   <section id="films" aria-label="Films">
@@ -57,6 +60,7 @@
         <button data-filter-btn="seen">Watched</button>
       </div>
       <span id="progress" class="progress" aria-live="polite"></span>
+      <span id="syncstate" class="syncstate" aria-live="polite"></span>
     </div>
     <div class="legend">
       <span><i class="chipkey win"></i>Predicted winner</span>
@@ -76,7 +80,21 @@
     <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
     <div id="cards" class="cards"></div>
   </section>
+  <details class="sync" id="syncbox">
+    <summary>Sync settings</summary>
+    <p>Watched marks are saved to <code>docs/data/watched.json</code> in this repo through the GitHub API, so they follow you across devices. Without a token they are kept only in this browser.</p>
+    <ol>
+      <li>Create a <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a> with repository access to <b>JuliusBrain/OscarsPredictions only</b> and permission <b>Contents: Read and write</b>.</li>
+      <li>Paste it below. It is stored in this browser only and is sent only to api.github.com.</li>
+    </ol>
+    <div class="tokenrow">
+      <label for="token">GitHub token</label>
+      <input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_...">
+      <button id="tokensave" class="chip">Save token</button>
+      <button id="tokenclear" class="chip">Remove token</button>
+    </div>
+  </details>
 </main>
-<script src="app.js?v=4"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

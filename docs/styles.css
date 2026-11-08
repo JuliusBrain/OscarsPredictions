@@ -75,3 +75,17 @@ h1{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:52px;
 .filmrow.seen{box-shadow:inset 4px 0 0 var(--accent)}
 .seen-tag{font-size:12px;font-weight:600;color:var(--accent)}
 .none{padding:32px 16px;text-align:center;color:var(--muted)}
+
+.syncstate{font-size:13px;color:var(--muted)}
+.nom.gone{border-style:dashed;color:var(--muted);background:transparent}
+.nom .ok{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--accent)}
+.nom.win .ok{color:var(--onaccent)}
+.dropnote{font-size:13px;color:var(--muted2)}
+.sechead{margin:24px 0 8px;font-family:'Fraunces',Georgia,serif;font-size:22px}
+.sync{border:1px solid var(--border);border-radius:12px;padding:16px 20px;background:var(--surface);font-size:14px;line-height:1.5;color:var(--muted)}
+.sync summary{cursor:pointer;font-weight:600;color:var(--text);min-height:44px;display:flex;align-items:center}
+.sync a{color:var(--accent)}
+.sync code{font-size:13px}
+.tokenrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tokenrow label{font-weight:600;color:var(--text)}
+.tokenrow input{flex:1 1 260px;min-height:44px;padding:0 12px;border-radius:8px;border:1px solid var(--chipborder);background:var(--bg);color:var(--text);font:inherit}

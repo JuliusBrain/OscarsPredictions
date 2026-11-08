@@ -6,12 +6,14 @@ Per (category, film): status new | same | winner_gained | winner_lost.
 """
 import json
 import sys
+from registry import build as build_registry
 from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SNAPS = ROOT / "data" / "snapshots"
 OUT = ROOT / "docs" / "data"
+OFFICIAL = ROOT / "data" / "official"
 
 
 def load_snapshots(directory=SNAPS):
@@ -60,6 +62,15 @@ def main():
     latest = snaps[-1]
     changes = diff(latest, pick_baseline(snaps, latest))
     OUT.mkdir(parents=True, exist_ok=True)
+    official = load_snapshots(OFFICIAL) if OFFICIAL.exists() else []
+    films_path = OUT / "films.json"
+    existing = json.loads(films_path.read_text()) if films_path.exists() else None
+    films_path.write_text(json.dumps(build_registry(snaps, official, existing), indent=1, ensure_ascii=False) + "\n")
+    off_path = OUT / "official.json"
+    if official:
+        off_path.write_text(json.dumps(official[-1], indent=1, ensure_ascii=False) + "\n")
+    elif off_path.exists():
+        off_path.unlink()
     (OUT / "latest.json").write_text(json.dumps(latest, indent=1, ensure_ascii=False) + "\n")
     (OUT / "changes.json").write_text(json.dumps(changes, indent=1, ensure_ascii=False) + "\n")
     moved = sum(1 for v in changes["entries"].values() if v != "same")

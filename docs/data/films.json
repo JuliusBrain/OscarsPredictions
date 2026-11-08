@@ -1,0 +1,1628 @@
+{
+ "updated": "2026-11-08",
+ "films": {
+  "american-doctor": {
+   "id": "american-doctor",
+   "name": "American Doctor",
+   "studio": "Watermelon Pictures",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Documentary Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "artificial": {
+   "id": "artificial",
+   "name": "Artificial",
+   "studio": "Neon",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Best Picture": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "David Heyman",
+      "Jeffrey Clifford",
+      "Jennifer Fox",
+      "Luca Guadagnino",
+      "Simon Rich"
+     ]
+    },
+    "Supporting Actor": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Andrew Garfield"
+     ]
+    },
+    "Original Screenplay": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Simon Rich"
+     ]
+    }
+   }
+  },
+  "avengers-doomsday": {
+   "id": "avengers-doomsday",
+   "name": "Avengers: Doomsday",
+   "studio": "Marvel Studios",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Visual Effects": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "behemoth": {
+   "id": "behemoth",
+   "name": "Behemoth!",
+   "studio": "Searchlight Pictures",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Sound": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "disclosure-day": {
+   "id": "disclosure-day",
+   "name": "Disclosure Day",
+   "studio": "Universal Pictures",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Actress": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Emily Blunt"
+     ]
+    },
+    "Original Score": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "John Williams"
+     ]
+    }
+   }
+  },
+  "dune-part-three": {
+   "id": "dune-part-three",
+   "name": "Dune: Part Three",
+   "studio": "Warner Bros.",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Best Picture": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Cale Boyter",
+      "Denis Villeneuve",
+      "Mary Parent"
+     ]
+    },
+    "Directing": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Denis Villeneuve"
+     ]
+    },
+    "Adapted Screenplay": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Brian K. Vaughan",
+      "Denis Villeneuve"
+     ]
+    },
+    "Casting": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Francine Maisler"
+     ]
+    },
+    "Production Design": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Patrice Vermette (production designer)",
+      "Shane Vieau (set decorator)"
+     ]
+    },
+    "Cinematography": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Linus Sandgren"
+     ]
+    },
+    "Costume Design": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": []
+    },
+    "Film Editing": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Joe Walker"
+     ]
+    },
+    "Makeup and Hairstyling": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": []
+    },
+    "Sound": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    },
+    "Visual Effects": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": []
+    },
+    "Original Score": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Hans Zimmer"
+     ]
+    }
+   }
+  },
+  "ebenezer-a-christmas-carol": {
+   "id": "ebenezer-a-christmas-carol",
+   "name": "Ebenezer: A Christmas Carol",
+   "studio": "Paramount Pictures",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Makeup and Hairstyling": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "elsinore": {
+   "id": "elsinore",
+   "name": "Elsinore",
+   "studio": "Focus Features",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Best Picture": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Andrew Scott",
+      "Gaby Tana",
+      "Mickey Liddell",
+      "Pete Shilaimon"
+     ]
+    },
+    "Actor": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Andrew Scott"
+     ]
+    },
+    "Supporting Actress": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Olivia Colman"
+     ]
+    },
+    "Original Screenplay": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Stephen Beresford"
+     ]
+    },
+    "Casting": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Jessica Ronane"
+     ]
+    }
+   }
+  },
+  "fjord": {
+   "id": "fjord",
+   "name": "Fjord",
+   "studio": "Neon",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "International Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Cristian Mingui"
+     ]
+    }
+   }
+  },
+  "iron-boy": {
+   "id": "iron-boy",
+   "name": "Iron Boy",
+   "studio": "Sony Pictures Classics",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Animated Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Fabrice Delville",
+      "Louis Clichy",
+      "Nicolas de Rosanbo"
+     ]
+    }
+   }
+  },
+  "la-bola-negra": {
+   "id": "la-bola-negra",
+   "name": "La Bola Negra",
+   "studio": "Netflix",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Best Picture": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Javier Ambrossi",
+      "Javier Calvo",
+      "Jorge Pezzi"
+     ]
+    },
+    "Directing": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Javier Ambrossi",
+      "Javier Calvo"
+     ]
+    },
+    "Supporting Actor": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Guitarricadelafuente"
+     ]
+    },
+    "Adapted Screenplay": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Alberto Conejero",
+      "Javier Ambrossi",
+      "Javier Calvo"
+     ]
+    },
+    "Casting": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Eva Leira",
+      "Yolanda Serrano"
+     ]
+    },
+    "Production Design": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Judit Ferrer (set decorator)",
+      "Roger Bellés (production designer)"
+     ]
+    },
+    "Cinematography": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Gris Jordana"
+     ]
+    },
+    "Costume Design": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    },
+    "Original Score": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Raül Refree"
+     ]
+    },
+    "Original Song": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    },
+    "International Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Javier Ambrossi",
+      "Javier Calvo"
+     ]
+    }
+   }
+  },
+  "maserati-the-brothers": {
+   "id": "maserati-the-brothers",
+   "name": "Maserati: The Brothers",
+   "studio": "Self-Distributed",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Original Song": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "michael": {
+   "id": "michael",
+   "name": "Michael",
+   "studio": "Lionsgate",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Makeup and Hairstyling": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "minotaur": {
+   "id": "minotaur",
+   "name": "Minotaur",
+   "studio": "Mubi",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "International Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Andrey Zvyagintsev"
+     ]
+    }
+   }
+  },
+  "musk": {
+   "id": "musk",
+   "name": "Musk",
+   "studio": "Bleecker Street",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Original Song": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "naza": {
+   "id": "naza",
+   "name": "Naza",
+   "studio": "The Guardian, MK2 and Neon",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Documentary Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "obsession": {
+   "id": "obsession",
+   "name": "Obsession",
+   "studio": "Focus Features",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Actress": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Inde Navarrette"
+     ]
+    }
+   }
+  },
+  "once-upon-a-time-in-harlem": {
+   "id": "once-upon-a-time-in-harlem",
+   "name": "Once Upon a Time in Harlem",
+   "studio": "Neon",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Documentary Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "one-in-a-million": {
+   "id": "one-in-a-million",
+   "name": "One in a Million",
+   "studio": "Frontline",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Documentary Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "possible-love": {
+   "id": "possible-love",
+   "name": "Possible Love",
+   "studio": "Netflix",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "International Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Lee Chang-dong"
+     ]
+    }
+   }
+  },
+  "project-hail-mary": {
+   "id": "project-hail-mary",
+   "name": "Project Hail Mary",
+   "studio": "Amazon MGM Studios",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Best Picture": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Aditya Sood",
+      "Amy Pascal",
+      "Christopher Miller",
+      "Phil Lord",
+      "Rachel O’Connor",
+      "Ryan Gosling"
+     ]
+    },
+    "Directing": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Christopher Miller",
+      "Phil Lord"
+     ]
+    },
+    "Actor": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Ryan Gosling"
+     ]
+    },
+    "Adapted Screenplay": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Drew Goddard"
+     ]
+    },
+    "Production Design": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Charles Wood (production designer)",
+      "John Bush (set decorator)"
+     ]
+    },
+    "Cinematography": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Greig Fraser"
+     ]
+    },
+    "Sound": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    },
+    "Visual Effects": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    },
+    "Original Score": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Daniel Pemberton"
+     ]
+    }
+   }
+  },
+  "ray-gunn": {
+   "id": "ray-gunn",
+   "name": "Ray Gunn",
+   "studio": "Netflix",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Animated Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Brad Bird",
+      "Lisa Beroud"
+     ]
+    }
+   }
+  },
+  "rehearsals-for-a-revolution": {
+   "id": "rehearsals-for-a-revolution",
+   "name": "Rehearsals for a Revolution",
+   "studio": "Sony Pictures Classics",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Documentary Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "rose": {
+   "id": "rose",
+   "name": "Rose",
+   "studio": "Mubi",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Actress": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Sandra Hüller"
+     ]
+    },
+    "International Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Markus Schleinzer"
+     ]
+    }
+   }
+  },
+  "sense-and-sensibility": {
+   "id": "sense-and-sensibility",
+   "name": "Sense and Sensibility",
+   "studio": "Focus Features",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Costume Design": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "tangles": {
+   "id": "tangles",
+   "name": "Tangles",
+   "studio": "Independent Film Company",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Animated Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Jay Grandin",
+      "Jennifer W. Ray",
+      "Lauren Miller Rogen",
+      "Leah Nelson",
+      "Seth Rogen"
+     ]
+    }
+   }
+  },
+  "tender-loving-care": {
+   "id": "tender-loving-care",
+   "name": "Tender Loving Care",
+   "studio": "Bleecker Street",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Original Screenplay": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Mike Leigh"
+     ]
+    }
+   }
+  },
+  "the-debut": {
+   "id": "the-debut",
+   "name": "The Debut",
+   "studio": "A24",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Best Picture": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Ali Herting",
+      "Dave McCary",
+      "Emma Stone",
+      "Jesse Eisenberg"
+     ]
+    },
+    "Actress": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Julianne Moore"
+     ]
+    },
+    "Supporting Actor": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Paul Giamatti"
+     ]
+    },
+    "Original Screenplay": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Jesse Eisenberg"
+     ]
+    },
+    "Original Song": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "the-invite": {
+   "id": "the-invite",
+   "name": "The Invite",
+   "studio": "A24",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Best Picture": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Ben Browning",
+      "David Permut",
+      "Megan Ellison"
+     ]
+    },
+    "Actress": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Olivia Wilde"
+     ]
+    },
+    "Supporting Actress": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Penélope Cruz"
+     ]
+    },
+    "Adapted Screenplay": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Rashida Jones",
+      "Will McCormack"
+     ]
+    },
+    "Film Editing": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Anthony Boys",
+      "Yorgos Mavropsaridis"
+     ]
+    }
+   }
+  },
+  "the-odyssey": {
+   "id": "the-odyssey",
+   "name": "The Odyssey",
+   "studio": "Universal Pictures",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Best Picture": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Christopher Nolan",
+      "Emma Thomas"
+     ]
+    },
+    "Directing": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Christopher Nolan"
+     ]
+    },
+    "Actor": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Matt Damon"
+     ]
+    },
+    "Supporting Actor": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "John Leguizamo"
+     ]
+    },
+    "Supporting Actress": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Anne Hathaway",
+      "Samantha Morton"
+     ]
+    },
+    "Adapted Screenplay": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Christopher Nolan"
+     ]
+    },
+    "Casting": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "John Papsidera"
+     ]
+    },
+    "Production Design": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Larry Dias (set decorator)",
+      "Ruth De Jong (production designer)"
+     ]
+    },
+    "Cinematography": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Hoyte van Hoytema"
+     ]
+    },
+    "Costume Design": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    },
+    "Film Editing": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Jennifer Lame"
+     ]
+    },
+    "Sound": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": []
+    },
+    "Original Score": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Ludwig Göransson"
+     ]
+    }
+   }
+  },
+  "the-only-living-pickpocket-in-new-york": {
+   "id": "the-only-living-pickpocket-in-new-york",
+   "name": "The Only Living Pickpocket in New York",
+   "studio": "Sony Pictures Classics",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Actor": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "John Turturro"
+     ]
+    }
+   }
+  },
+  "toy-story-5": {
+   "id": "toy-story-5",
+   "name": "Toy Story 5",
+   "studio": "Pixar",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Animated Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Andrew Stanton",
+      "Jessica Choi",
+      "Lindsey Collins"
+     ]
+    },
+    "Original Song": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "werwulf": {
+   "id": "werwulf",
+   "name": "Werwulf",
+   "studio": "Focus Features",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Production Design": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Anna Pinnock (set decorator)",
+      "Craig Lathrop (production designer)"
+     ]
+    },
+    "Cinematography": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Jarin Blaschke"
+     ]
+    },
+    "Makeup and Hairstyling": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    },
+    "Sound": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "whalefall": {
+   "id": "whalefall",
+   "name": "Whalefall",
+   "studio": "20th Century Studios",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Visual Effects": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "wicker": {
+   "id": "wicker",
+   "name": "Wicker",
+   "studio": "Black Bear Pictures",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Makeup and Hairstyling": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "wild-horse-nine": {
+   "id": "wild-horse-nine",
+   "name": "Wild Horse Nine",
+   "studio": "Searchlight Pictures",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Best Picture": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Anie Overland",
+      "Graham Broadbent",
+      "Martin McDonagh",
+      "Pete Czernin"
+     ]
+    },
+    "Actor": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "John Malkovich"
+     ]
+    },
+    "Supporting Actor": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Sam Rockwell"
+     ]
+    },
+    "Original Screenplay": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Martin McDonagh"
+     ]
+    },
+    "Casting": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Sarah Finn"
+     ]
+    },
+    "Film Editing": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Mikkel E.G. Nielsen"
+     ]
+    }
+   }
+  },
+  "wildwood": {
+   "id": "wildwood",
+   "name": "Wildwood",
+   "studio": "Laika",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Animated Feature": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": true,
+     "ever_winner": true,
+     "official": false,
+     "people": [
+      "Sam Wilson",
+      "Travis Knight"
+     ]
+    },
+    "Visual Effects": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "wuthering-heights": {
+   "id": "wuthering-heights",
+   "name": "Wuthering Heights",
+   "studio": "Warner Bros.",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Costume Design": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": []
+    }
+   }
+  },
+  "you-can-see-everything": {
+   "id": "you-can-see-everything",
+   "name": "You Can See Everything",
+   "studio": "A24",
+   "first_seen": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Best Picture": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Jack Davis",
+      "Lance Oppenheim",
+      "Maggie Ambrose",
+      "Nathan Fielder",
+      "Tatiana Bears"
+     ]
+    },
+    "Directing": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Lance Oppenheim",
+      "Nathan Fielder"
+     ]
+    },
+    "Supporting Actress": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Amanda Seyfried"
+     ]
+    },
+    "Film Editing": {
+     "first_seen": "2026-11-08",
+     "last_seen": "2026-11-08",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Adam Locke-Norton"
+     ]
+    }
+   }
+  }
+ }
+}
