@@ -20,7 +20,7 @@
   "pl_cinema": null,
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Artificial-2026-10089195",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "avengers-doomsday": {
@@ -32,7 +32,7 @@
   "pl_cinema": "2026-12-16",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Avengers:+Doomsday-2026-10016660",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "behemoth": {
@@ -44,7 +44,7 @@
   "pl_cinema": "2026-12-04",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Behemot-2026-10091549",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "disclosure-day": {
@@ -68,7 +68,7 @@
   "pl_cinema": "2026-12-16",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Diuna%3A+Cz%C4%99%C5%9B%C4%87+trzecia-2026-10068059",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "ebenezer-a-christmas-carol": {
@@ -80,7 +80,7 @@
   "pl_cinema": "2026-11-13",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Ebenezer%3A+A+Christmas+Carol-2026-10103213",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "elsinore": {
@@ -92,7 +92,7 @@
   "pl_cinema": "2027-01-29",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Elsinore-2026-10112663",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "fjord": {
@@ -104,7 +104,7 @@
   "pl_cinema": "2027-01-29",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Fiord-2026-10100686",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "iron-boy": {
@@ -128,7 +128,7 @@
   "pl_cinema": "2027-02-19",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Czarna+kula-2026-10099866",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "maserati-the-brothers": {
@@ -140,7 +140,7 @@
   "pl_cinema": null,
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Maserati:+The+Brothers-2026-10063250",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false,
   "world_premiere_year": 2026
  },
@@ -165,7 +165,7 @@
   "pl_cinema": "2027-02-05",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Minotaur-2026-10076774",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "musk": {
@@ -177,7 +177,7 @@
   "pl_cinema": null,
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Musk-2026-10131544",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "naza": {
@@ -213,7 +213,7 @@
   "pl_cinema": null,
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Pewnego+razu+w+Harlemie-2026-10108005",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "one-in-a-million": {
@@ -261,7 +261,7 @@
   "pl_cinema": "2026-12-18",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Ray+Gunn-2026-10008914",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "rehearsals-for-a-revolution": {
@@ -273,7 +273,7 @@
   "pl_cinema": null,
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Przygotowania+do+rewolucji-2026-10120986",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "rose": {
@@ -309,7 +309,7 @@
   "pl_cinema": null,
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Tangles-2026-10122092",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "tender-loving-care": {
@@ -321,7 +321,7 @@
   "pl_cinema": null,
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Tender+Loving+Care-2026-10123835",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "the-debut": {
@@ -333,7 +333,7 @@
   "pl_cinema": "2026-12-25",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Debiut-2026-10127603",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "the-invite": {
@@ -369,7 +369,7 @@
   "pl_cinema": null,
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/The+Only+Living+Pickpocket+in+New+York-2026-10111054",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "toy-story-5": {
@@ -393,7 +393,7 @@
   "pl_cinema": "2027-01-08",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Werwulf-2026-10074424",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "whalefall": {
@@ -417,7 +417,7 @@
   "pl_cinema": "2026-12-11",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Wicker-2026-10108008",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "wild-horse-nine": {
@@ -429,7 +429,7 @@
   "pl_cinema": "2026-11-13",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Dziki+Ko%C5%84+Dziewi%C4%99%C4%87-2026-10075493",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "wildwood": {
@@ -441,7 +441,7 @@
   "pl_cinema": "2027-01-01",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Kroniki+lasu.+Wildwood-2026-10062007",
-  "fetched": "2026-11-08",
+  "fetched": "2026-11-09",
   "stale": false
  },
  "wuthering-heights": {
