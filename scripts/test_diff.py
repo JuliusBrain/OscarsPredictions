@@ -1,5 +1,5 @@
 import unittest
-from diff import diff, pick_baseline
+from diff import build_history, compare, diff, pick_baseline
 
 
 def snap(d, entries):
@@ -34,6 +34,28 @@ class DiffTests(unittest.TestCase):
         s = snap("2026-11-12", [("A", False)])
         self.assertIsNone(pick_baseline([s], s))
         self.assertEqual(diff(s, None)["entries"], {})
+
+    def test_history_lists_new_dropped_and_winner_change(self):
+        a = snap("2026-11-01", [("A", True), ("B", False), ("C", False)])
+        b = snap("2026-11-08", [("A", False), ("B", True), ("D", False)])
+        c = snap("2026-11-12", [("A", False), ("B", True), ("D", False)])
+        h = build_history([a, b, c])
+        self.assertEqual(len(h), 1, "an identical snapshot is not an update")
+        u = h[0]
+        self.assertEqual((u["from"], u["to"]), ("2026-11-01", "2026-11-08"))
+        self.assertEqual([e["film"] for e in u["new"]], ["D"])
+        self.assertEqual([e["film"] for e in u["dropped"]], ["C"])
+        w = u["winners"][0]
+        self.assertEqual((w["category"], w["from"]["film"], w["to"]["film"]), ("Best Picture", "A", "B"))
+
+    def test_history_newest_first_and_empty(self):
+        a, b, c = snap("2026-11-01", [("A", False)]), snap("2026-11-08", [("A", False), ("B", False)]), snap("2026-11-15", [("B", False)])
+        self.assertEqual([u["to"] for u in build_history([a, b, c])], ["2026-11-15", "2026-11-08"])
+        self.assertEqual(build_history([a]), [])
+
+    def test_winner_removed_without_replacement(self):
+        w = compare(snap("2026-11-01", [("A", True)]), snap("2026-11-08", [("A", False)]))["winners"][0]
+        self.assertIsNone(w["to"])
 
 
 if __name__ == "__main__":

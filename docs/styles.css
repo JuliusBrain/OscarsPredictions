@@ -221,3 +221,32 @@ h1{font-size:40px;overflow-wrap:anywhere}
 .agrow{grid-template-columns:56px 1fr}
 .agside{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between}
 }
+
+/* Performer names on film chips */
+.nomwho{font-weight:400;opacity:.85;text-transform:none;letter-spacing:0}
+.nomwho::before{content:"· ";opacity:.6}
+
+/* What changed */
+.updbanner{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;justify-content:space-between;margin-bottom:16px;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--r-box);font-size:14px}
+.updbanner[hidden]{display:none}
+.upbtext b{margin-right:4px}
+.update{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-card);padding:20px 24px;margin-bottom:16px;box-shadow:var(--shadow)}
+.uphead{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+.uphead h3{margin:0;font-family:var(--font-display);font-weight:var(--h1-weight);font-size:24px}
+.upcount{font-size:13px;font-weight:600;color:var(--muted)}
+.upgroup{margin-top:14px}
+.upgroup h4{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.upgroup h4.up{color:var(--up)}.upgroup h4.down{color:var(--down)}.upgroup h4.new{color:var(--accent-text)}
+.upgroup ul{list-style:none;margin:0;padding:0}
+.upgroup li{display:flex;flex-wrap:wrap;gap:2px 12px;padding:8px 10px;border-radius:var(--r-sm);font-size:14px}
+.upgroup li:nth-child(even){background:var(--zebra)}
+.upcat{min-width:170px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted2)}
+.upolder summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;margin-bottom:8px}
+
+/* Changes since the last update, per film */
+#chgtoggle{min-height:44px}
+#chgtoggle[hidden]{display:none}
+.chgnotes{flex:0 0 100%;list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:4px}
+.chgnote{font-size:13px;line-height:1.4;padding:4px 10px;border-left:3px solid var(--accent);color:var(--text)}
+.chgnote.dropped,.chgnote.winnerLost{border-left-color:var(--down)}
+.chgnote.winnerGained{border-left-color:var(--up)}

@@ -2,11 +2,11 @@
   var REPO = 'JuliusBrain/OscarsPredictions', WPATH = 'docs/data/watched.json';
   var THEMES = ['modern', 'deco'];
   var LANGS = ['en', 'pl'];
-  var TABS = ['films', 'cal', 'cats', 'people'];
+  var TABS = ['films', 'updates', 'cal', 'cats', 'people'];
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
-  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', cal: null };
+  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', changed: false, cal: null };
   var filmweb = {}, availability = { films: {}, tmdb_enabled: false };
-  var data = null, registry = null, official = null, changes = { entries: {}, dropped: [] };
+  var data = null, registry = null, official = null, changes = { entries: {}, dropped: [] }, history = { updates: [] };
   var watched = {}, ops = [], remoteSha = null, saveTimer = null, saving = false;
   var syncState = null, metaError = null;
 
@@ -263,6 +263,34 @@
   function winCount(f) {
     return Object.keys(f.categories).filter(function (c) { return f.categories[c].active && f.categories[c].winner; }).length;
   }
+  /* what the latest update changed, per film: new / removed / winner moved, and who took whose place */
+  var chgMap = {};
+  function buildChanges() {
+    chgMap = {};
+    var u = (history.updates || [])[0];
+    if (!u) return;
+    function add(name, item) { (chgMap[name] = chgMap[name] || []).push(item); }
+    function others(list, cat) { return list.filter(function (e) { return e.category === cat; }); }
+    u.new.forEach(function (e) { add(e.film, { cat: e.category, type: 'new', other: others(u.dropped, e.category) }); });
+    u.dropped.forEach(function (e) { add(e.film, { cat: e.category, type: 'dropped', other: others(u.new, e.category) }); });
+    u.winners.forEach(function (w) {
+      if (w.to) add(w.to.film, { cat: w.category, type: 'winnerGained', other: w.from ? [w.from] : [] });
+      if (w.from) add(w.from.film, { cat: w.category, type: 'winnerLost', other: w.to ? [w.to] : [] });
+    });
+  }
+  function changeNotes(f) {
+    var items = chgMap[f.name];
+    if (!items) return null;
+    var box = el('ul', 'chgnotes');
+    items.slice().sort(function (a, b) { return cl(a.cat).localeCompare(cl(b.cat), locale()); }).forEach(function (it) {
+      var other = it.other.map(entryText).join(' / ');
+      var li = el('li', 'chgnote ' + it.type);
+      li.textContent = t('chg.' + it.type + (other ? '.x' : '.none'), { cat: cl(it.cat), other: other });
+      box.appendChild(li);
+    });
+    return box;
+  }
+
   function filmChips(f) {
     var chips = el('div', 'noms');
     Object.keys(f.categories).map(function (cat) { return { cat: cat, c: f.categories[cat] }; })
@@ -270,7 +298,9 @@
       .forEach(function (n) {
         var cls = 'nom' + (n.c.active ? (n.c.winner ? ' win' : '') : ' gone');
         var chip = el('span', cls, cl(n.cat));
-        var v = { cat: cl(n.cat), date: n.c.last_seen };
+        var who = PEOPLE_CATS.indexOf(n.cat) >= 0 && n.c.people && n.c.people.length ? n.c.people.join(', ') : '';
+        if (who) chip.appendChild(el('span', 'nomwho', who));
+        var v = { cat: cl(n.cat) + (who ? ' (' + who + ')' : ''), date: n.c.last_seen };
         chip.setAttribute('aria-label', t(n.c.official ? 'chip.official' : n.c.active ? (n.c.winner ? 'chip.winner' : 'chip.nominee') : 'chip.gone', v));
         if (!n.c.active) chip.title = t('chip.goneTitle', v);
         if (n.c.official) { chip.appendChild(document.createTextNode(' ')); chip.appendChild(el('b', 'ok', t('badge.nominated'))); }
@@ -278,6 +308,8 @@
         if (m) { chip.appendChild(document.createTextNode(' ')); chip.appendChild(m); }
         chips.appendChild(chip);
       });
+    var notes = changeNotes(f);
+    if (notes) chips.appendChild(notes);
     return chips;
   }
 
@@ -331,11 +363,21 @@
     var seenCount = active.filter(function (f) { return watched[f.id]; }).length;
     document.getElementById('progress').textContent = t('progress', { seen: seenCount, total: active.length, left: active.length - seenCount });
     renderHero(active.length, seenCount);
-    function keep(f) { return state.filter === 'all' || (state.filter === 'seen') === !!watched[f.id]; }
+    buildChanges();
+    var upd = (history.updates || [])[0], nChanged = active.concat(gone).filter(function (f) { return chgMap[f.name]; }).length;
+    var tog = document.getElementById('chgtoggle');
+    tog.hidden = !upd;
+    tog.textContent = t('filter.changed') + ' (' + nChanged + ')';
+    tog.setAttribute('aria-pressed', String(state.changed));
+    document.getElementById('chgbasis').textContent = upd && state.changed ? t('upd.range', { to: fmt(upd.to), from: fmt(upd.from) }) : '';
+    function keep(f) {
+      if (state.changed && !chgMap[f.name]) return false;
+      return state.filter === 'all' || (state.filter === 'seen') === !!watched[f.id];
+    }
     var box = document.getElementById('filmlist');
     box.textContent = '';
     var shown = active.filter(keep);
-    if (!shown.length) box.appendChild(el('div', 'none', t(state.filter === 'seen' ? 'films.noneSeen' : 'films.noneLeft')));
+    if (!shown.length) box.appendChild(el('div', 'none', t(state.changed ? 'films.noneChanged' : state.filter === 'seen' ? 'films.noneSeen' : 'films.noneLeft')));
     shown.forEach(function (f) { box.appendChild(filmRow(f)); });
     var d = document.getElementById('dropped');
     d.textContent = '';
@@ -491,6 +533,65 @@
     });
   }
 
+  /* ---------- what changed ---------- */
+  function who(e) { return e.people && e.people.length ? ' (' + e.people.join(', ') + ')' : ''; }
+  function entryText(e) { return (e.song ? e.song + ' · ' : '') + ftitle(e.film) + who(e); }
+  function updateCounts(u) {
+    return [['upd.new', u.new], ['upd.dropped', u.dropped], ['upd.winners', u.winners]].filter(function (p) { return p[1].length; })
+      .map(function (p) { return tn(p[0], p[1].length); }).join(' · ');
+  }
+  function updateBlock(u, open) {
+    var box = el('article', 'update');
+    var head = el('div', 'uphead');
+    head.appendChild(el('h3', '', t('upd.range', { to: fmt(u.to), from: fmt(u.from) })));
+    head.appendChild(el('span', 'upcount', updateCounts(u)));
+    box.appendChild(head);
+    function group(titleKey, items, line, cls) {
+      if (!items.length) return;
+      var g = el('div', 'upgroup'), ul = el('ul');
+      g.appendChild(el('h4', cls, t(titleKey)));
+      items.slice().sort(function (a, b) { return cl(a.category).localeCompare(cl(b.category), locale()); }).forEach(function (it) {
+        var li = el('li'); li.appendChild(el('span', 'upcat', cl(it.category))); li.appendChild(document.createTextNode(line(it))); ul.appendChild(li);
+      });
+      g.appendChild(ul); box.appendChild(g);
+    }
+    group('upd.winnersTitle', u.winners, function (w) {
+      return (w.from ? entryText(w.from) : t('upd.noWinner')) + '  →  ' + (w.to ? entryText(w.to) : t('upd.noWinner'));
+    }, 'up');
+    group('upd.newTitle', u.new, entryText, 'new');
+    group('upd.droppedTitle', u.dropped, entryText, 'down');
+    return box;
+  }
+  function renderUpdates() {
+    var box = document.getElementById('updatelist');
+    if (!box) return;
+    box.textContent = '';
+    var list = history.updates || [];
+    if (!list.length) { box.appendChild(el('div', 'none', t('upd.none'))); return; }
+    box.appendChild(updateBlock(list[0]));
+    if (list.length > 1) {
+      var det = el('details', 'upolder');
+      det.appendChild(el('summary', '', t('upd.older', { n: list.length - 1 })));
+      list.slice(1).forEach(function (u) { det.appendChild(updateBlock(u)); });
+      box.appendChild(det);
+    }
+  }
+  function renderBanner() {
+    var b = document.getElementById('updbanner');
+    if (!b) return;
+    b.textContent = '';
+    var u = (history.updates || [])[0];
+    b.hidden = !u;
+    if (!u) return;
+    var txt = el('span', 'upbtext');
+    txt.appendChild(el('b', '', t('upd.banner', { date: fmt(u.to) })));
+    txt.appendChild(document.createTextNode(' ' + updateCounts(u)));
+    b.appendChild(txt);
+    var go = el('button', 'chip', t('upd.open'));
+    go.onclick = function () { state.tab = 'updates'; render(); window.scrollTo(0, 0); };
+    b.appendChild(go);
+  }
+
   function renderPeople() {
     var chips = document.getElementById('chips'), cards = document.getElementById('cards');
     chips.textContent = ''; cards.textContent = '';
@@ -526,7 +627,7 @@
     document.getElementById('nomempty').hidden = !!official;
     renderMeta();
     if (data && registry) {
-      [renderFilms, renderCalendar, function renderCats() { catCards(data, document.getElementById('catlist')); }, renderPeople,
+      [renderFilms, renderBanner, renderUpdates, renderCalendar, function renderCats() { catCards(data, document.getElementById('catlist')); }, renderPeople,
         function renderOfficial() { if (official) catCards(official, document.getElementById('nomlist')); }].forEach(function (fn) {
         try { fn(); } catch (e) { showError('err.generic', { msg: (fn.name || 'render') + ': ' + e.message }); }
       });
@@ -545,6 +646,7 @@
       };
     });
   });
+  document.getElementById('chgtoggle').onclick = function () { state.changed = !state.changed; render(); };
   document.getElementById('tokensave').onclick = function () {
     var v = document.getElementById('token').value.trim();
     if (!v) { setSync('sync.pasteFirst'); return; }
@@ -568,9 +670,9 @@
       return r.json();
     });
   }
-  Promise.all([getJson('data/latest.json'), getJson('data/changes.json'), getJson('data/films.json'), getJson('data/official.json', true), getJson('data/filmweb.json', true), getJson('data/availability.json', true)]).then(function (j) {
+  Promise.all([getJson('data/latest.json'), getJson('data/changes.json'), getJson('data/films.json'), getJson('data/official.json', true), getJson('data/filmweb.json', true), getJson('data/availability.json', true), getJson('data/history.json', true)]).then(function (j) {
     data = j[0]; changes = j[1]; registry = j[2]; official = j[3];
-    filmweb = j[4] || {}; availability = j[5] || { films: {}, tmdb_enabled: false };
+    filmweb = j[4] || {}; availability = j[5] || { films: {}, tmdb_enabled: false }; history = j[6] || { updates: [] };
     return loadWatched();
   }).then(render).catch(function (e) {
     showError('err.data', { msg: e.message });

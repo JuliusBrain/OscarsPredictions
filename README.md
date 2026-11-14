@@ -41,6 +41,7 @@ git add data/snapshots docs/data && git commit -m "Update Variety snapshot" && g
 | `data/snapshots/*.json` | One parsed Variety snapshot per save. Never deleted. |
 | `docs/data/films.json` | Film registry: every film ever on the list, with first/last seen dates and per-category history. A film that drops off Variety stays here (inactive) and is tagged NOMINATED if it later appears in the official nominees. Rebuilt by `scripts/diff.py` and merged with the existing file, so nothing is lost. |
 | `data/official/YYYY-MM-DD.json` | Official Academy nominees (same format as a snapshot). Drop one in on Jan. 21, 2027 and the Official nominees tab fills in. |
+| `docs/data/history.json` | What changed in every snapshot compared with the one before it (new, dropped, winner changes), newest first. Rebuilt by `scripts/diff.py`; drives the **Updates** tab and the banner on the Films tab. |
 | `docs/data/watched.json` | Your watched films, written by the site itself via the GitHub API. |
 
 ### Polish release dates and where to watch
@@ -55,6 +56,8 @@ Each film row shows its world premiere and Polish cinema date (from [Filmweb](ht
 Open **Sync settings** on the site and paste a fine-grained GitHub token limited to this repo with **Contents: Read and write**. It stays in your browser and is only sent to api.github.com. Each tick commits `docs/data/watched.json` (about a second later), which redeploys the site. Without a token, marks stay in that browser only.
 
 ## How changes are tracked
+The **Updates** tab lists every update (each snapshot that differs from the previous one) with new nominees, dropped films and predicted-winner changes; the Films tab shows a banner for the latest one. Film chips for the acting and directing categories show who the nomination is for.
+
 `scripts/diff.py` compares the newest snapshot with the newest one at least 7 days older and writes `docs/data/changes.json` (new nominees, winner gained or lost, dropped). The workflow also runs daily so the window keeps rolling, and redeploys on every push.
 
 ## Local

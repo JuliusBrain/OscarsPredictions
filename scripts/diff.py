@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Compare the latest snapshot with the newest one at least 7 days older.
 
-Writes docs/data/latest.json and docs/data/changes.json.
+Writes docs/data/latest.json, docs/data/changes.json and docs/data/history.json
+(history = what changed in every snapshot compared with the one before it).
 Per (category, film): status new | same | winner_gained | winner_lost.
 """
 import json
@@ -55,6 +56,39 @@ def diff(latest, baseline):
     return {"from": baseline["date"], "to": latest["date"], "entries": entries, "dropped": dropped}
 
 
+def _brief(e):
+    return {"film": e["film"], "people": e.get("people", []), "winner": e["winner"],
+            **({"song": e["song"]} if e.get("song") else {})}
+
+
+def winner_of(snap, category):
+    return next((e for e in snap["categories"].get(category, []) if e["winner"]), None)
+
+
+def compare(old, new):
+    """What changed between two consecutive snapshots, as plain lists for the site's Updates tab."""
+    o, n = index(old), index(new)
+    added = [{"category": k[0], **_brief(e)} for k, e in n.items() if k not in o]
+    dropped = [{"category": k[0], **_brief(e)} for k, e in o.items() if k not in n]
+    winners = []
+    for cat in dict.fromkeys(list(new["categories"]) + list(old["categories"])):
+        a, b = winner_of(old, cat), winner_of(new, cat)
+        if (a and a["film"]) != (b and b["film"]):
+            winners.append({"category": cat, "from": _brief(a) if a else None, "to": _brief(b) if b else None})
+    return {"from": old["date"], "to": new["date"], "source_updated": new.get("source_updated"),
+            "new": added, "dropped": dropped, "winners": winners}
+
+
+def build_history(snaps):
+    """One entry per snapshot that changed something compared with the snapshot before it, newest first."""
+    out = []
+    for old, new in zip(snaps, snaps[1:]):
+        c = compare(old, new)
+        if c["new"] or c["dropped"] or c["winners"]:
+            out.append(c)
+    return list(reversed(out))
+
+
 def main():
     snaps = load_snapshots()
     if not snaps:
@@ -73,6 +107,7 @@ def main():
         off_path.unlink()
     (OUT / "latest.json").write_text(json.dumps(latest, indent=1, ensure_ascii=False) + "\n")
     (OUT / "changes.json").write_text(json.dumps(changes, indent=1, ensure_ascii=False) + "\n")
+    (OUT / "history.json").write_text(json.dumps({"updates": build_history(snaps)}, indent=1, ensure_ascii=False) + "\n")
     moved = sum(1 for v in changes["entries"].values() if v != "same")
     print(f"latest {latest['date']} vs {changes['from']}: {moved} changed, {len(changes['dropped'])} dropped")
 
