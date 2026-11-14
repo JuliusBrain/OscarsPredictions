@@ -4,7 +4,7 @@
   var LANGS = ['en', 'pl'];
   var TABS = ['films', 'updates', 'cal', 'cats', 'people'];
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
-  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', cal: null };
+  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', changed: false, cal: null };
   var filmweb = {}, availability = { films: {}, tmdb_enabled: false };
   var data = null, registry = null, official = null, changes = { entries: {}, dropped: [] }, history = { updates: [] };
   var watched = {}, ops = [], remoteSha = null, saveTimer = null, saving = false;
@@ -263,6 +263,34 @@
   function winCount(f) {
     return Object.keys(f.categories).filter(function (c) { return f.categories[c].active && f.categories[c].winner; }).length;
   }
+  /* what the latest update changed, per film: new / removed / winner moved, and who took whose place */
+  var chgMap = {};
+  function buildChanges() {
+    chgMap = {};
+    var u = (history.updates || [])[0];
+    if (!u) return;
+    function add(name, item) { (chgMap[name] = chgMap[name] || []).push(item); }
+    function others(list, cat) { return list.filter(function (e) { return e.category === cat; }); }
+    u.new.forEach(function (e) { add(e.film, { cat: e.category, type: 'new', other: others(u.dropped, e.category) }); });
+    u.dropped.forEach(function (e) { add(e.film, { cat: e.category, type: 'dropped', other: others(u.new, e.category) }); });
+    u.winners.forEach(function (w) {
+      if (w.to) add(w.to.film, { cat: w.category, type: 'winnerGained', other: w.from ? [w.from] : [] });
+      if (w.from) add(w.from.film, { cat: w.category, type: 'winnerLost', other: w.to ? [w.to] : [] });
+    });
+  }
+  function changeNotes(f) {
+    var items = chgMap[f.name];
+    if (!items) return null;
+    var box = el('ul', 'chgnotes');
+    items.slice().sort(function (a, b) { return cl(a.cat).localeCompare(cl(b.cat), locale()); }).forEach(function (it) {
+      var other = it.other.map(entryText).join(' / ');
+      var li = el('li', 'chgnote ' + it.type);
+      li.textContent = t('chg.' + it.type + (other ? '.x' : '.none'), { cat: cl(it.cat), other: other });
+      box.appendChild(li);
+    });
+    return box;
+  }
+
   function filmChips(f) {
     var chips = el('div', 'noms');
     Object.keys(f.categories).map(function (cat) { return { cat: cat, c: f.categories[cat] }; })
@@ -280,6 +308,8 @@
         if (m) { chip.appendChild(document.createTextNode(' ')); chip.appendChild(m); }
         chips.appendChild(chip);
       });
+    var notes = changeNotes(f);
+    if (notes) chips.appendChild(notes);
     return chips;
   }
 
@@ -333,11 +363,21 @@
     var seenCount = active.filter(function (f) { return watched[f.id]; }).length;
     document.getElementById('progress').textContent = t('progress', { seen: seenCount, total: active.length, left: active.length - seenCount });
     renderHero(active.length, seenCount);
-    function keep(f) { return state.filter === 'all' || (state.filter === 'seen') === !!watched[f.id]; }
+    buildChanges();
+    var upd = (history.updates || [])[0], nChanged = active.concat(gone).filter(function (f) { return chgMap[f.name]; }).length;
+    var tog = document.getElementById('chgtoggle');
+    tog.hidden = !upd;
+    tog.textContent = t('filter.changed') + ' (' + nChanged + ')';
+    tog.setAttribute('aria-pressed', String(state.changed));
+    document.getElementById('chgbasis').textContent = upd && state.changed ? t('upd.range', { to: fmt(upd.to), from: fmt(upd.from) }) : '';
+    function keep(f) {
+      if (state.changed && !chgMap[f.name]) return false;
+      return state.filter === 'all' || (state.filter === 'seen') === !!watched[f.id];
+    }
     var box = document.getElementById('filmlist');
     box.textContent = '';
     var shown = active.filter(keep);
-    if (!shown.length) box.appendChild(el('div', 'none', t(state.filter === 'seen' ? 'films.noneSeen' : 'films.noneLeft')));
+    if (!shown.length) box.appendChild(el('div', 'none', t(state.changed ? 'films.noneChanged' : state.filter === 'seen' ? 'films.noneSeen' : 'films.noneLeft')));
     shown.forEach(function (f) { box.appendChild(filmRow(f)); });
     var d = document.getElementById('dropped');
     d.textContent = '';
@@ -606,6 +646,7 @@
       };
     });
   });
+  document.getElementById('chgtoggle').onclick = function () { state.changed = !state.changed; render(); };
   document.getElementById('tokensave').onclick = function () {
     var v = document.getElementById('token').value.trim();
     if (!v) { setSync('sync.pasteFirst'); return; }
