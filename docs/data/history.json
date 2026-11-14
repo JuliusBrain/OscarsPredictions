@@ -1,0 +1,79 @@
+{
+ "updates": [
+  {
+   "from": "2026-11-08",
+   "to": "2026-11-14",
+   "source_updated": "2026-11-13T21:09:32+00:00",
+   "new": [
+    {
+     "category": "Directing",
+     "film": "Wild Horse Nine",
+     "people": [
+      "Martin McDonagh"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Actor",
+     "film": "Behemoth!",
+     "people": [
+      "Pedro Pascal"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Actress",
+     "film": "The Drama",
+     "people": [
+      "Zendaya"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Supporting Actress",
+     "film": "Tender Loving Care",
+     "people": [
+      "Kate O’Flynn"
+     ],
+     "winner": false
+    }
+   ],
+   "dropped": [
+    {
+     "category": "Directing",
+     "film": "You Can See Everything",
+     "people": [
+      "Nathan Fielder",
+      "Lance Oppenheim"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Actor",
+     "film": "Project Hail Mary",
+     "people": [
+      "Ryan Gosling"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Actress",
+     "film": "Disclosure Day",
+     "people": [
+      "Emily Blunt"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Supporting Actress",
+     "film": "Elsinore",
+     "people": [
+      "Olivia Colman"
+     ],
+     "winner": false
+    }
+   ],
+   "winners": []
+  }
+ ]
+}

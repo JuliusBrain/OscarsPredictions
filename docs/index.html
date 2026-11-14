@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oscars Predictions Tracker</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=23">
+<link rel="stylesheet" href="styles.css?v=24">
 </head>
 <body>
 <main class="wrap">
@@ -42,6 +42,7 @@
   <div class="tabbar">
     <div class="tabs">
       <button class="tab" data-tab-btn="films" data-i18n="tab.films">Films</button>
+      <button class="tab" data-tab-btn="updates" data-i18n="tab.updates">Updates</button>
       <button class="tab" data-tab-btn="cal" data-i18n="tab.cal">Calendar</button>
       <button class="tab" data-tab-btn="cats" data-i18n="tab.cats">Categories</button>
       <button class="tab" data-tab-btn="people" data-i18n="tab.people">People</button>
@@ -67,6 +68,7 @@
       <span id="progress" class="progress" aria-live="polite"></span>
       <span id="syncstate" class="syncstate" aria-live="polite"></span>
     </div>
+    <div id="updbanner" class="updbanner" hidden></div>
     <div class="legend">
       <span><i class="chipkey win"></i><span data-i18n="legend.win">Predicted winner</span></span>
       <span><i class="chipkey nom"></i><span data-i18n="legend.nom">Predicted nominee</span></span>
@@ -75,6 +77,12 @@
     </div>
     <div id="filmlist" class="filmlist"></div>
     <div id="dropped"></div>
+  </section>
+
+  <section id="updates" data-i18n-aria="tab.updates" aria-label="Updates" hidden>
+    <h2 class="sechead" data-i18n="upd.title">What changed</h2>
+    <p class="dropnote" data-i18n="upd.note">Every time Variety changes its list, the differences are listed here: new nominees, dropped films and predicted winners that changed.</p>
+    <div id="updatelist"></div>
   </section>
 
   <section id="cal" data-i18n-aria="tab.cal" aria-label="Calendar" hidden>
@@ -106,7 +114,7 @@
   </details>
   <p class="credits" data-i18n-html="credits">Premiere dates: <a href="https://www.filmweb.pl" target="_blank" rel="noopener">Filmweb</a>.</p>
 </main>
-<script src="i18n.js?v=23"></script>
-<script src="app.js?v=23"></script>
+<script src="i18n.js?v=24"></script>
+<script src="app.js?v=24"></script>
 </body>
 </html>
