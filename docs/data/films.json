@@ -1,18 +1,18 @@
 {
- "updated": "2026-11-08",
+ "updated": "2026-11-14",
  "films": {
   "american-doctor": {
    "id": "american-doctor",
    "name": "American Doctor",
    "studio": "Watermelon Pictures",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Documentary Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -27,13 +27,13 @@
    "name": "Artificial",
    "studio": "Neon",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Best Picture": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -49,7 +49,7 @@
     },
     "Supporting Actor": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -61,7 +61,7 @@
     },
     "Original Screenplay": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -78,13 +78,13 @@
    "name": "Avengers: Doomsday",
    "studio": "Marvel Studios",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Visual Effects": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -99,18 +99,30 @@
    "name": "Behemoth!",
    "studio": "Searchlight Pictures",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Sound": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
      "official": false,
      "people": [],
+     "entries": 1
+    },
+    "Actor": {
+     "first_seen": "2026-11-14",
+     "last_seen": "2026-11-14",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Pedro Pascal"
+     ],
      "entries": 1
     }
    }
@@ -120,14 +132,14 @@
    "name": "Disclosure Day",
    "studio": "Universal Pictures",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Actress": {
      "first_seen": "2026-11-08",
      "last_seen": "2026-11-08",
-     "active": true,
+     "active": false,
      "winner": false,
      "ever_winner": false,
      "official": false,
@@ -138,7 +150,7 @@
     },
     "Original Score": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -155,13 +167,13 @@
    "name": "Dune: Part Three",
    "studio": "Warner Bros.",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Best Picture": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -169,13 +181,14 @@
      "people": [
       "Cale Boyter",
       "Denis Villeneuve",
-      "Mary Parent"
+      "Mary Parent",
+      "Tanya Lapointe"
      ],
      "entries": 1
     },
     "Directing": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -187,7 +200,7 @@
     },
     "Adapted Screenplay": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -200,7 +213,7 @@
     },
     "Casting": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -212,7 +225,7 @@
     },
     "Production Design": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -225,7 +238,7 @@
     },
     "Cinematography": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -237,7 +250,7 @@
     },
     "Costume Design": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -247,7 +260,7 @@
     },
     "Film Editing": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -259,7 +272,7 @@
     },
     "Makeup and Hairstyling": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -269,7 +282,7 @@
     },
     "Sound": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -279,7 +292,7 @@
     },
     "Visual Effects": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -289,7 +302,7 @@
     },
     "Original Score": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -306,13 +319,13 @@
    "name": "Ebenezer: A Christmas Carol",
    "studio": "Paramount Pictures",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Makeup and Hairstyling": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -327,13 +340,13 @@
    "name": "Elsinore",
    "studio": "Focus Features",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Best Picture": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -348,7 +361,7 @@
     },
     "Actor": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -361,7 +374,7 @@
     "Supporting Actress": {
      "first_seen": "2026-11-08",
      "last_seen": "2026-11-08",
-     "active": true,
+     "active": false,
      "winner": false,
      "ever_winner": false,
      "official": false,
@@ -372,7 +385,7 @@
     },
     "Original Screenplay": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -384,7 +397,7 @@
     },
     "Casting": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -401,13 +414,13 @@
    "name": "Fjord",
    "studio": "Neon",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "International Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -424,13 +437,13 @@
    "name": "Iron Boy",
    "studio": "Sony Pictures Classics",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Animated Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -449,13 +462,13 @@
    "name": "La Bola Negra",
    "studio": "Netflix",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Best Picture": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -469,7 +482,7 @@
     },
     "Directing": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -482,7 +495,7 @@
     },
     "Supporting Actor": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -494,7 +507,7 @@
     },
     "Adapted Screenplay": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -508,7 +521,7 @@
     },
     "Casting": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -521,7 +534,7 @@
     },
     "Production Design": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -534,7 +547,7 @@
     },
     "Cinematography": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -546,7 +559,7 @@
     },
     "Costume Design": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -556,7 +569,7 @@
     },
     "Original Score": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -568,7 +581,7 @@
     },
     "Original Song": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -578,7 +591,7 @@
     },
     "International Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -594,15 +607,15 @@
   "maserati-the-brothers": {
    "id": "maserati-the-brothers",
    "name": "Maserati: The Brothers",
-   "studio": "Self-Distributed",
+   "studio": "Magenta",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Original Song": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -617,13 +630,13 @@
    "name": "Michael",
    "studio": "Lionsgate",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Makeup and Hairstyling": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -638,13 +651,13 @@
    "name": "Minotaur",
    "studio": "Mubi",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "International Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -661,13 +674,13 @@
    "name": "Musk",
    "studio": "Bleecker Street",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Original Song": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -682,13 +695,13 @@
    "name": "Naza",
    "studio": "The Guardian, MK2 and Neon",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Documentary Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -703,13 +716,13 @@
    "name": "Obsession",
    "studio": "Focus Features",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Actress": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -726,13 +739,13 @@
    "name": "Once Upon a Time in Harlem",
    "studio": "Neon",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Documentary Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -747,13 +760,13 @@
    "name": "One in a Million",
    "studio": "Frontline",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Documentary Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -768,13 +781,13 @@
    "name": "Possible Love",
    "studio": "Netflix",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "International Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -791,13 +804,13 @@
    "name": "Project Hail Mary",
    "studio": "Amazon MGM Studios",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Best Picture": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -814,7 +827,7 @@
     },
     "Directing": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -828,7 +841,7 @@
     "Actor": {
      "first_seen": "2026-11-08",
      "last_seen": "2026-11-08",
-     "active": true,
+     "active": false,
      "winner": false,
      "ever_winner": false,
      "official": false,
@@ -839,7 +852,7 @@
     },
     "Adapted Screenplay": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -851,7 +864,7 @@
     },
     "Production Design": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -864,7 +877,7 @@
     },
     "Cinematography": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -876,7 +889,7 @@
     },
     "Sound": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -886,7 +899,7 @@
     },
     "Visual Effects": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -896,7 +909,7 @@
     },
     "Original Score": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -913,13 +926,13 @@
    "name": "Ray Gunn",
    "studio": "Netflix",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Animated Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -937,13 +950,13 @@
    "name": "Rehearsals for a Revolution",
    "studio": "Sony Pictures Classics",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Documentary Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -958,13 +971,13 @@
    "name": "Rose",
    "studio": "Mubi",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Actress": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -976,7 +989,7 @@
     },
     "International Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -993,13 +1006,13 @@
    "name": "Sense and Sensibility",
    "studio": "Focus Features",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Costume Design": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1014,13 +1027,13 @@
    "name": "Tangles",
    "studio": "Independent Film Company",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Animated Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1041,19 +1054,31 @@
    "name": "Tender Loving Care",
    "studio": "Bleecker Street",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Original Screenplay": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
      "official": false,
      "people": [
       "Mike Leigh"
+     ],
+     "entries": 1
+    },
+    "Supporting Actress": {
+     "first_seen": "2026-11-14",
+     "last_seen": "2026-11-14",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Kate O’Flynn"
      ],
      "entries": 1
     }
@@ -1064,13 +1089,13 @@
    "name": "The Debut",
    "studio": "A24",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Best Picture": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1085,7 +1110,7 @@
     },
     "Actress": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1097,7 +1122,7 @@
     },
     "Supporting Actor": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1109,7 +1134,7 @@
     },
     "Original Screenplay": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1121,7 +1146,7 @@
     },
     "Original Song": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1131,18 +1156,41 @@
     }
    }
   },
+  "the-drama": {
+   "id": "the-drama",
+   "name": "The Drama",
+   "studio": "A24",
+   "first_seen": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "active": true,
+   "nominated": [],
+   "categories": {
+    "Actress": {
+     "first_seen": "2026-11-14",
+     "last_seen": "2026-11-14",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Zendaya"
+     ],
+     "entries": 1
+    }
+   }
+  },
   "the-invite": {
    "id": "the-invite",
    "name": "The Invite",
    "studio": "A24",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Best Picture": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1156,7 +1204,7 @@
     },
     "Actress": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1168,7 +1216,7 @@
     },
     "Supporting Actress": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1180,7 +1228,7 @@
     },
     "Adapted Screenplay": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1193,7 +1241,7 @@
     },
     "Film Editing": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1211,13 +1259,13 @@
    "name": "The Odyssey",
    "studio": "Universal Pictures",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Best Picture": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1230,7 +1278,7 @@
     },
     "Directing": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1242,7 +1290,7 @@
     },
     "Actor": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1254,7 +1302,7 @@
     },
     "Supporting Actor": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1266,7 +1314,7 @@
     },
     "Supporting Actress": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1279,7 +1327,7 @@
     },
     "Adapted Screenplay": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1291,7 +1339,7 @@
     },
     "Casting": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1303,7 +1351,7 @@
     },
     "Production Design": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1316,7 +1364,7 @@
     },
     "Cinematography": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1328,7 +1376,7 @@
     },
     "Costume Design": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1338,7 +1386,7 @@
     },
     "Film Editing": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1350,7 +1398,7 @@
     },
     "Sound": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1360,7 +1408,7 @@
     },
     "Original Score": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1377,13 +1425,13 @@
    "name": "The Only Living Pickpocket in New York",
    "studio": "Sony Pictures Classics",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Actor": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1400,13 +1448,13 @@
    "name": "Toy Story 5",
    "studio": "Pixar",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Animated Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1420,7 +1468,7 @@
     },
     "Original Song": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1435,13 +1483,13 @@
    "name": "Werwulf",
    "studio": "Focus Features",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Production Design": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1454,7 +1502,7 @@
     },
     "Cinematography": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1466,7 +1514,7 @@
     },
     "Makeup and Hairstyling": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1476,7 +1524,7 @@
     },
     "Sound": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1491,13 +1539,13 @@
    "name": "Whalefall",
    "studio": "20th Century Studios",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Visual Effects": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1512,13 +1560,13 @@
    "name": "Wicker",
    "studio": "Black Bear Pictures",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Makeup and Hairstyling": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1533,13 +1581,13 @@
    "name": "Wild Horse Nine",
    "studio": "Searchlight Pictures",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Best Picture": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1554,7 +1602,7 @@
     },
     "Actor": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1566,7 +1614,7 @@
     },
     "Supporting Actor": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1578,7 +1626,7 @@
     },
     "Original Screenplay": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1590,7 +1638,7 @@
     },
     "Casting": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1602,13 +1650,25 @@
     },
     "Film Editing": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
      "official": false,
      "people": [
       "Mikkel E.G. Nielsen"
+     ],
+     "entries": 1
+    },
+    "Directing": {
+     "first_seen": "2026-11-14",
+     "last_seen": "2026-11-14",
+     "active": true,
+     "winner": false,
+     "ever_winner": false,
+     "official": false,
+     "people": [
+      "Martin McDonagh"
      ],
      "entries": 1
     }
@@ -1619,13 +1679,13 @@
    "name": "Wildwood",
    "studio": "Laika",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Animated Feature": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": true,
      "ever_winner": true,
@@ -1638,7 +1698,7 @@
     },
     "Visual Effects": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1653,13 +1713,13 @@
    "name": "Wuthering Heights",
    "studio": "Warner Bros.",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Costume Design": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1674,13 +1734,13 @@
    "name": "You Can See Everything",
    "studio": "A24",
    "first_seen": "2026-11-08",
-   "last_seen": "2026-11-08",
+   "last_seen": "2026-11-14",
    "active": true,
    "nominated": [],
    "categories": {
     "Best Picture": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1697,7 +1757,7 @@
     "Directing": {
      "first_seen": "2026-11-08",
      "last_seen": "2026-11-08",
-     "active": true,
+     "active": false,
      "winner": false,
      "ever_winner": false,
      "official": false,
@@ -1709,7 +1769,7 @@
     },
     "Supporting Actress": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,
@@ -1721,7 +1781,7 @@
     },
     "Film Editing": {
      "first_seen": "2026-11-08",
-     "last_seen": "2026-11-08",
+     "last_seen": "2026-11-14",
      "active": true,
      "winner": false,
      "ever_winner": false,

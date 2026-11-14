@@ -1,7 +1,7 @@
 {
- "date": "2026-11-08",
+ "date": "2026-11-14",
  "source": "variety",
- "source_updated": "2026-11-06T00:43:59+00:00",
+ "source_updated": "2026-11-13T21:09:32+00:00",
  "categories": {
   "Best Picture": [
    {
@@ -32,6 +32,7 @@
     "studio": "Warner Bros.",
     "people": [
      "Cale Boyter",
+     "Tanya Lapointe",
      "Mary Parent",
      "Denis Villeneuve"
     ],
@@ -125,20 +126,19 @@
     "winner": false
    },
    {
-    "film": "You Can See Everything",
-    "studio": "A24",
-    "people": [
-     "Nathan Fielder",
-     "Lance Oppenheim"
-    ],
-    "winner": false
-   },
-   {
     "film": "Project Hail Mary",
     "studio": "Amazon MGM Studios",
     "people": [
      "Phil Lord",
      "Christopher Miller"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Wild Horse Nine",
+    "studio": "Searchlight Pictures",
+    "people": [
+     "Martin McDonagh"
     ],
     "winner": false
    },
@@ -169,18 +169,18 @@
     "winner": false
    },
    {
-    "film": "Project Hail Mary",
-    "studio": "Amazon MGM Studios",
-    "people": [
-     "Ryan Gosling"
-    ],
-    "winner": false
-   },
-   {
     "film": "Wild Horse Nine",
     "studio": "Searchlight Pictures",
     "people": [
      "John Malkovich"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Behemoth!",
+    "studio": "Searchlight Pictures",
+    "people": [
+     "Pedro Pascal"
     ],
     "winner": false
    },
@@ -202,14 +202,6 @@
    }
   ],
   "Actress": [
-   {
-    "film": "Disclosure Day",
-    "studio": "Universal Pictures",
-    "people": [
-     "Emily Blunt"
-    ],
-    "winner": false
-   },
    {
     "film": "Rose",
     "studio": "Mubi",
@@ -239,6 +231,14 @@
     "studio": "A24",
     "people": [
      "Olivia Wilde"
+    ],
+    "winner": false
+   },
+   {
+    "film": "The Drama",
+    "studio": "A24",
+    "people": [
+     "Zendaya"
     ],
     "winner": false
    }
@@ -287,14 +287,6 @@
   ],
   "Supporting Actress": [
    {
-    "film": "Elsinore",
-    "studio": "Focus Features",
-    "people": [
-     "Olivia Colman"
-    ],
-    "winner": false
-   },
-   {
     "film": "The Invite",
     "studio": "A24",
     "people": [
@@ -315,6 +307,14 @@
     "studio": "Universal Pictures",
     "people": [
      "Samantha Morton"
+    ],
+    "winner": false
+   },
+   {
+    "film": "Tender Loving Care",
+    "studio": "Bleecker Street",
+    "people": [
+     "Kate O’Flynn"
     ],
     "winner": false
    },
@@ -829,7 +829,7 @@
    },
    {
     "film": "Maserati: The Brothers",
-    "studio": "Self-Distributed",
+    "studio": "Magenta",
     "people": [],
     "winner": false,
     "song": "One Right Here"

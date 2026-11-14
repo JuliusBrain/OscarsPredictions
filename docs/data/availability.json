@@ -848,6 +848,54 @@
    "pl_digital": null,
    "checked": "2026-11-14"
   },
+  "the-drama": {
+   "tmdb_id": 1325734,
+   "tmdb_title": "The Drama",
+   "tmdb_release_date": "2026-04-01",
+   "providers": {
+    "flatrate": [
+     "Polsat Box Go"
+    ],
+    "rent": [
+     "Amazon Video",
+     "Pilot WP",
+     "Player",
+     "Premiery Canal+",
+     "Rakuten TV",
+     "TVP"
+    ],
+    "buy": [
+     "Amazon Video",
+     "Pilot WP",
+     "Rakuten TV"
+    ],
+    "ads": [],
+    "free": []
+   },
+   "link": "https://www.themoviedb.org/movie/1325734-the-drama/watch?locale=PL",
+   "digital_hint": {
+    "date": "2026-05-05",
+    "country": "US"
+   },
+   "pl_digital": null,
+   "checked": "2026-11-14",
+   "estimate": {
+    "rent_buy": [
+     "2026-05-05",
+     "2026-06-04"
+    ],
+    "streaming": [
+     "2026-06-04",
+     "2026-09-02"
+    ],
+    "basis": "A digital release is already dated 2026-05-05 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-05-05",
+     "country": "US"
+    }
+   }
+  },
   "the-invite": {
    "estimate": {
     "rent_buy": [
