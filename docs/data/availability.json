@@ -850,6 +850,22 @@
   },
   "the-drama": {
    "tmdb_id": 1325734,
+   "estimate": {
+    "rent_buy": [
+     "2026-05-05",
+     "2026-06-04"
+    ],
+    "streaming": [
+     "2026-07-09",
+     "2026-10-07"
+    ],
+    "basis": "A digital release is already dated 2026-05-05 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-05-05",
+     "country": "US"
+    }
+   },
    "tmdb_title": "The Drama",
    "tmdb_release_date": "2026-04-01",
    "providers": {
@@ -878,23 +894,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-14",
-   "estimate": {
-    "rent_buy": [
-     "2026-05-05",
-     "2026-06-04"
-    ],
-    "streaming": [
-     "2026-06-04",
-     "2026-09-02"
-    ],
-    "basis": "A digital release is already dated 2026-05-05 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
-    "basis_kind": "digital",
-    "hint": {
-     "date": "2026-05-05",
-     "country": "US"
-    }
-   }
+   "checked": "2026-11-14"
   },
   "the-invite": {
    "estimate": {
