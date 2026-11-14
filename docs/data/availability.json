@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13",
+ "generated": "2026-11-14",
  "tmdb_enabled": true,
  "films": {
   "american-doctor": {
@@ -29,7 +29,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "artificial": {
    "estimate": null,
@@ -46,7 +46,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "avengers-doomsday": {
    "estimate": {
@@ -75,7 +75,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "behemoth": {
    "estimate": {
@@ -104,7 +104,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "disclosure-day": {
    "estimate": {
@@ -153,7 +153,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "dune-part-three": {
    "estimate": {
@@ -182,7 +182,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "ebenezer-a-christmas-carol": {
    "estimate": {
@@ -211,7 +211,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "elsinore": {
    "estimate": {
@@ -240,7 +240,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "fjord": {
    "estimate": {
@@ -275,7 +275,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "iron-boy": {
    "estimate": {
@@ -304,7 +304,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "la-bola-negra": {
    "estimate": {
@@ -339,7 +339,7 @@
     "country": "CA"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "maserati-the-brothers": {
    "estimate": null,
@@ -356,7 +356,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "michael": {
    "estimate": {
@@ -405,7 +405,7 @@
     "country": "DE"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "minotaur": {
    "estimate": {
@@ -434,7 +434,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "musk": {
    "estimate": {
@@ -469,7 +469,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "naza": {
    "estimate": {
@@ -498,7 +498,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "obsession": {
    "estimate": {
@@ -527,7 +527,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "once-upon-a-time-in-harlem": {
    "estimate": null,
@@ -544,7 +544,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "one-in-a-million": {
    "estimate": {
@@ -579,7 +579,7 @@
     "country": "DE"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "possible-love": {
    "estimate": {
@@ -610,13 +610,13 @@
     "ads": [],
     "free": []
    },
-   "link": "https://www.themoviedb.org/movie/1483525/watch?locale=PL",
+   "link": "https://www.themoviedb.org/movie/1483525-ganeunghan-salang/watch?locale=PL",
    "digital_hint": {
     "date": "2026-11-05",
     "country": "AS"
    },
    "pl_digital": "2026-11-06",
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "project-hail-mary": {
    "estimate": {
@@ -667,7 +667,7 @@
     "country": "DE"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "ray-gunn": {
    "estimate": {
@@ -702,7 +702,7 @@
     "country": "AE"
    },
    "pl_digital": "2026-12-18",
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "rehearsals-for-a-revolution": {
    "estimate": null,
@@ -719,7 +719,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "rose": {
    "estimate": {
@@ -748,7 +748,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "sense-and-sensibility": {
    "estimate": {
@@ -783,7 +783,7 @@
     "country": "GB"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "tangles": {
    "estimate": null,
@@ -800,7 +800,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "tender-loving-care": {
    "estimate": null,
@@ -817,7 +817,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "the-debut": {
    "estimate": {
@@ -846,7 +846,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "the-invite": {
    "estimate": {
@@ -894,7 +894,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "the-odyssey": {
    "estimate": {
@@ -929,7 +929,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "the-only-living-pickpocket-in-new-york": {
    "estimate": null,
@@ -946,7 +946,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "toy-story-5": {
    "estimate": {
@@ -995,7 +995,7 @@
     "country": "RO"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "werwulf": {
    "estimate": {
@@ -1024,7 +1024,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "whalefall": {
    "estimate": {
@@ -1053,7 +1053,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "wicker": {
    "estimate": {
@@ -1088,7 +1088,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "wild-horse-nine": {
    "estimate": {
@@ -1117,7 +1117,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "wildwood": {
    "estimate": {
@@ -1152,7 +1152,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "wuthering-heights": {
    "estimate": {
@@ -1203,7 +1203,7 @@
     "country": "DE"
    },
    "pl_digital": "2026-05-01",
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   },
   "you-can-see-everything": {
    "estimate": {
@@ -1232,7 +1232,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-13"
+   "checked": "2026-11-14"
   }
  }
 }
