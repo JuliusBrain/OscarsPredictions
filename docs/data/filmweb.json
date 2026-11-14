@@ -336,6 +336,18 @@
   "fetched": "2026-11-14",
   "stale": false
  },
+ "the-drama": {
+  "world_premiere": "2026-04-01",
+  "pl_cinema_main": "2026-04-10",
+  "title_pl": "Drama",
+  "title_original": "The Drama",
+  "year": 2026,
+  "pl_cinema": "2026-04-10",
+  "dates_conflict": false,
+  "url": "https://www.filmweb.pl/film/Drama-2026-10063474",
+  "fetched": "2026-11-14",
+  "stale": false
+ },
  "the-invite": {
   "world_premiere": "2026-01-24",
   "pl_cinema_main": "2026-07-03",
