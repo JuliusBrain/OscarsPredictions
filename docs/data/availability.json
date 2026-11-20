@@ -108,6 +108,22 @@
   },
   "being-heumann": {
    "tmdb_id": 1050981,
+   "estimate": {
+    "rent_buy": [
+     "2026-11-12",
+     "2026-12-12"
+    ],
+    "streaming": [
+     "2026-12-12",
+     "2027-03-12"
+    ],
+    "basis": "A digital release is already dated 2026-11-12 in AR; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-11-12",
+     "country": "AR"
+    }
+   },
    "tmdb_title": "Being Heumann",
    "tmdb_release_date": "2026-11-06",
    "providers": {
@@ -126,23 +142,7 @@
     "country": "AR"
    },
    "pl_digital": "2026-11-13",
-   "checked": "2026-11-20",
-   "estimate": {
-    "rent_buy": [
-     "2026-11-12",
-     "2026-12-12"
-    ],
-    "streaming": [
-     "2026-12-12",
-     "2027-03-12"
-    ],
-    "basis": "A digital release is already dated 2026-11-12 in AR; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
-    "basis_kind": "digital",
-    "hint": {
-     "date": "2026-11-12",
-     "country": "AR"
-    }
-   }
+   "checked": "2026-11-20"
   },
   "disclosure-day": {
    "estimate": {
@@ -317,6 +317,7 @@
   },
   "i-play-rocky": {
    "tmdb_id": 1286656,
+   "estimate": null,
    "tmdb_title": "I Play Rocky",
    "tmdb_release_date": "2026-11-06",
    "providers": {
@@ -329,8 +330,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20",
-   "estimate": null
+   "checked": "2026-11-20"
   },
   "iron-boy": {
    "estimate": {
@@ -953,22 +953,6 @@
   },
   "the-further-mis-adventures-of-cliff-booth": {
    "tmdb_id": 1457866,
-   "tmdb_title": "THE FURTHER MIS-ADVENTURES OF CLIFF BOOTH",
-   "tmdb_release_date": "2026-11-24",
-   "providers": {
-    "flatrate": [],
-    "rent": [],
-    "buy": [],
-    "ads": [],
-    "free": []
-   },
-   "link": null,
-   "digital_hint": {
-    "date": "2026-12-23",
-    "country": "AR"
-   },
-   "pl_digital": "2026-12-23",
-   "checked": "2026-11-20",
    "estimate": {
     "rent_buy": [
      "2026-12-23",
@@ -984,7 +968,23 @@
      "date": "2026-12-23",
      "country": "AR"
     }
-   }
+   },
+   "tmdb_title": "THE FURTHER MIS-ADVENTURES OF CLIFF BOOTH",
+   "tmdb_release_date": "2026-11-24",
+   "providers": {
+    "flatrate": [],
+    "rent": [],
+    "buy": [],
+    "ads": [],
+    "free": []
+   },
+   "link": null,
+   "digital_hint": {
+    "date": "2026-12-23",
+    "country": "AR"
+   },
+   "pl_digital": "2026-12-23",
+   "checked": "2026-11-20"
   },
   "the-invite": {
    "estimate": {
