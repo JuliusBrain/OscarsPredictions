@@ -1,6 +1,260 @@
 {
  "updates": [
   {
+   "from": "2026-11-14",
+   "to": "2026-11-20",
+   "source_updated": "2026-11-20T00:30:00+00:00",
+   "new": [
+    {
+     "category": "Best Picture",
+     "film": "I Play Rocky",
+     "people": [
+      "Christian Baha",
+      "Toby Emmerich"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Directing",
+     "film": "You Can See Everything",
+     "people": [
+      "Nathan Fielder",
+      "Lance Oppenheim"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Actor",
+     "film": "I Play Rocky",
+     "people": [
+      "Anthony Ippolito"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Actress",
+     "film": "Dune: Part Three",
+     "people": [
+      "Zendaya"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Original Screenplay",
+     "film": "Fjord",
+     "people": [
+      "Cristian Mungiu"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Casting",
+     "film": "Being Heumann",
+     "people": [
+      "Adam Caldwell",
+      "Bernard Telsey"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Casting",
+     "film": "I Play Rocky",
+     "people": [
+      "Rick Montgomery"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Production Design",
+     "film": "The Further Mis-Adventures of Cliff Booth",
+     "people": [
+      "Donald Graham Burt"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Costume Design",
+     "film": "Michael",
+     "people": [
+      "Marci Rodgers"
+     ],
+     "winner": false
+    }
+   ],
+   "dropped": [
+    {
+     "category": "Best Picture",
+     "film": "Elsinore",
+     "people": [
+      "Mickey Liddell",
+      "Pete Shilaimon",
+      "Andrew Scott",
+      "Gaby Tana"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Directing",
+     "film": "Project Hail Mary",
+     "people": [
+      "Phil Lord",
+      "Christopher Miller"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Actor",
+     "film": "Behemoth!",
+     "people": [
+      "Pedro Pascal"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Actress",
+     "film": "The Drama",
+     "people": [
+      "Zendaya"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Supporting Actor",
+     "film": "La Bola Negra",
+     "people": [
+      "Guitarricadelafuente"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Original Screenplay",
+     "film": "Elsinore",
+     "people": [
+      "Stephen Beresford"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Casting",
+     "film": "Dune: Part Three",
+     "people": [
+      "Francine Maisler"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Casting",
+     "film": "Elsinore",
+     "people": [
+      "Jessica Ronane"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Production Design",
+     "film": "Werwulf",
+     "people": [
+      "Craig Lathrop (production designer)",
+      "Anna Pinnock (set decorator)"
+     ],
+     "winner": false
+    },
+    {
+     "category": "Costume Design",
+     "film": "Wuthering Heights",
+     "people": [],
+     "winner": false
+    }
+   ],
+   "winners": [
+    {
+     "category": "Actor",
+     "from": {
+      "film": "Elsinore",
+      "people": [
+       "Andrew Scott"
+      ],
+      "winner": true
+     },
+     "to": {
+      "film": "The Odyssey",
+      "people": [
+       "Matt Damon"
+      ],
+      "winner": true
+     }
+    },
+    {
+     "category": "Supporting Actress",
+     "from": {
+      "film": "The Odyssey",
+      "people": [
+       "Anne Hathaway"
+      ],
+      "winner": true
+     },
+     "to": {
+      "film": "You Can See Everything",
+      "people": [
+       "Amanda Seyfried"
+      ],
+      "winner": true
+     }
+    },
+    {
+     "category": "Production Design",
+     "from": {
+      "film": "Dune: Part Three",
+      "people": [
+       "Patrice Vermette (production designer)",
+       "Shane Vieau (set decorator)"
+      ],
+      "winner": true
+     },
+     "to": {
+      "film": "The Odyssey",
+      "people": [
+       "Ruth De Jong (production designer)",
+       "Larry Dias (set decorator)"
+      ],
+      "winner": true
+     }
+    },
+    {
+     "category": "Cinematography",
+     "from": {
+      "film": "The Odyssey",
+      "people": [
+       "Hoyte van Hoytema"
+      ],
+      "winner": true
+     },
+     "to": {
+      "film": "Dune: Part Three",
+      "people": [
+       "Linus Sandgren"
+      ],
+      "winner": true
+     }
+    },
+    {
+     "category": "Costume Design",
+     "from": {
+      "film": "Dune: Part Three",
+      "people": [],
+      "winner": true
+     },
+     "to": {
+      "film": "La Bola Negra",
+      "people": [
+       "Ana López Cobos"
+      ],
+      "winner": true
+     }
+    }
+   ]
+  },
+  {
    "from": "2026-11-08",
    "to": "2026-11-14",
    "source_updated": "2026-11-13T21:09:32+00:00",

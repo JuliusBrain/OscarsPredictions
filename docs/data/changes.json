@@ -1,11 +1,11 @@
 {
  "from": "2026-11-08",
- "to": "2026-11-14",
+ "to": "2026-11-20",
  "entries": {
   "Best Picture|Artificial": "same",
   "Best Picture|The Debut": "same",
   "Best Picture|Dune: Part Three": "same",
-  "Best Picture|Elsinore": "same",
+  "Best Picture|I Play Rocky": "new",
   "Best Picture|The Invite": "same",
   "Best Picture|La Bola Negra": "same",
   "Best Picture|The Odyssey": "same",
@@ -13,32 +13,31 @@
   "Best Picture|Wild Horse Nine": "same",
   "Best Picture|You Can See Everything": "same",
   "Directing|La Bola Negra": "same",
-  "Directing|Project Hail Mary": "same",
+  "Directing|You Can See Everything": "same",
   "Directing|Wild Horse Nine": "new",
   "Directing|The Odyssey": "same",
   "Directing|Dune: Part Three": "same",
-  "Actor|The Odyssey": "same",
+  "Actor|The Odyssey": "winner_gained",
+  "Actor|I Play Rocky": "new",
   "Actor|Wild Horse Nine": "same",
-  "Actor|Behemoth!": "new",
-  "Actor|Elsinore": "same",
+  "Actor|Elsinore": "winner_lost",
   "Actor|The Only Living Pickpocket in New York": "same",
   "Actress|Rose": "same",
   "Actress|The Debut": "same",
   "Actress|Obsession": "same",
   "Actress|The Invite": "same",
-  "Actress|The Drama": "new",
+  "Actress|Dune: Part Three": "new",
   "Supporting Actor|Artificial": "same",
   "Supporting Actor|The Debut": "same",
-  "Supporting Actor|La Bola Negra": "same",
   "Supporting Actor|The Odyssey": "same",
   "Supporting Actor|Wild Horse Nine": "same",
   "Supporting Actress|The Invite": "same",
   "Supporting Actress|The Odyssey": "same",
   "Supporting Actress|Tender Loving Care": "new",
-  "Supporting Actress|You Can See Everything": "same",
+  "Supporting Actress|You Can See Everything": "winner_gained",
   "Original Screenplay|Artificial": "same",
   "Original Screenplay|The Debut": "same",
-  "Original Screenplay|Elsinore": "same",
+  "Original Screenplay|Fjord": "new",
   "Original Screenplay|Tender Loving Care": "same",
   "Original Screenplay|Wild Horse Nine": "same",
   "Adapted Screenplay|Dune: Part Three": "same",
@@ -46,8 +45,8 @@
   "Adapted Screenplay|La Bola Negra": "same",
   "Adapted Screenplay|The Odyssey": "same",
   "Adapted Screenplay|Project Hail Mary": "same",
-  "Casting|Dune: Part Three": "same",
-  "Casting|Elsinore": "same",
+  "Casting|Being Heumann": "new",
+  "Casting|I Play Rocky": "new",
   "Casting|La Bola Negra": "same",
   "Casting|The Odyssey": "same",
   "Casting|Wild Horse Nine": "same",
@@ -56,21 +55,21 @@
   "Animated Feature|Tangles": "same",
   "Animated Feature|Toy Story 5": "same",
   "Animated Feature|Wildwood": "same",
-  "Production Design|Dune: Part Three": "same",
+  "Production Design|Dune: Part Three": "winner_lost",
+  "Production Design|The Further Mis-Adventures of Cliff Booth": "new",
   "Production Design|La Bola Negra": "same",
-  "Production Design|The Odyssey": "same",
+  "Production Design|The Odyssey": "winner_gained",
   "Production Design|Project Hail Mary": "same",
-  "Production Design|Werwulf": "same",
-  "Cinematography|Dune: Part Three": "same",
+  "Cinematography|Dune: Part Three": "winner_gained",
   "Cinematography|La Bola Negra": "same",
-  "Cinematography|The Odyssey": "same",
+  "Cinematography|The Odyssey": "winner_lost",
   "Cinematography|Project Hail Mary": "same",
   "Cinematography|Werwulf": "same",
-  "Costume Design|Dune: Part Three": "same",
-  "Costume Design|La Bola Negra": "same",
+  "Costume Design|Dune: Part Three": "winner_lost",
+  "Costume Design|La Bola Negra": "winner_gained",
+  "Costume Design|Michael": "new",
   "Costume Design|The Odyssey": "same",
   "Costume Design|Sense and Sensibility": "same",
-  "Costume Design|Wuthering Heights": "same",
   "Film Editing|Dune: Part Three": "same",
   "Film Editing|The Invite": "same",
   "Film Editing|The Odyssey": "same",
@@ -114,11 +113,22 @@
  },
  "dropped": [
   {
-   "category": "Directing",
-   "film": "You Can See Everything",
+   "category": "Best Picture",
+   "film": "Elsinore",
    "people": [
-    "Nathan Fielder",
-    "Lance Oppenheim"
+    "Mickey Liddell",
+    "Pete Shilaimon",
+    "Andrew Scott",
+    "Gaby Tana"
+   ],
+   "winner": false
+  },
+  {
+   "category": "Directing",
+   "film": "Project Hail Mary",
+   "people": [
+    "Phil Lord",
+    "Christopher Miller"
    ],
    "winner": false
   },
@@ -139,11 +149,58 @@
    "winner": false
   },
   {
+   "category": "Supporting Actor",
+   "film": "La Bola Negra",
+   "people": [
+    "Guitarricadelafuente"
+   ],
+   "winner": false
+  },
+  {
    "category": "Supporting Actress",
    "film": "Elsinore",
    "people": [
     "Olivia Colman"
    ],
+   "winner": false
+  },
+  {
+   "category": "Original Screenplay",
+   "film": "Elsinore",
+   "people": [
+    "Stephen Beresford"
+   ],
+   "winner": false
+  },
+  {
+   "category": "Casting",
+   "film": "Dune: Part Three",
+   "people": [
+    "Francine Maisler"
+   ],
+   "winner": false
+  },
+  {
+   "category": "Casting",
+   "film": "Elsinore",
+   "people": [
+    "Jessica Ronane"
+   ],
+   "winner": false
+  },
+  {
+   "category": "Production Design",
+   "film": "Werwulf",
+   "people": [
+    "Craig Lathrop (production designer)",
+    "Anna Pinnock (set decorator)"
+   ],
+   "winner": false
+  },
+  {
+   "category": "Costume Design",
+   "film": "Wuthering Heights",
+   "people": [],
    "winner": false
   }
  ]
