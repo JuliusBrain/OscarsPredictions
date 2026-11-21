@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20",
+ "generated": "2026-11-21",
  "tmdb_enabled": true,
  "films": {
   "american-doctor": {
@@ -29,7 +29,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "artificial": {
    "estimate": null,
@@ -46,7 +46,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "avengers-doomsday": {
    "estimate": {
@@ -75,7 +75,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "behemoth": {
    "estimate": {
@@ -104,7 +104,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "being-heumann": {
    "tmdb_id": 1050981,
@@ -142,7 +142,7 @@
     "country": "AR"
    },
    "pl_digital": "2026-11-13",
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "disclosure-day": {
    "estimate": {
@@ -191,7 +191,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "dune-part-three": {
    "estimate": {
@@ -220,7 +220,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "ebenezer-a-christmas-carol": {
    "estimate": {
@@ -249,7 +249,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "elsinore": {
    "estimate": {
@@ -278,7 +278,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "fjord": {
    "estimate": {
@@ -313,7 +313,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "i-play-rocky": {
    "tmdb_id": 1286656,
@@ -330,7 +330,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "iron-boy": {
    "estimate": {
@@ -359,7 +359,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "la-bola-negra": {
    "estimate": {
@@ -380,7 +380,7 @@
    },
    "tmdb_id": 1422041,
    "tmdb_title": "LA BOLA NEGRA",
-   "tmdb_release_date": "2026-01-14",
+   "tmdb_release_date": "2026-09-25",
    "providers": {
     "flatrate": [],
     "rent": [],
@@ -394,7 +394,7 @@
     "country": "CA"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "maserati-the-brothers": {
    "estimate": null,
@@ -411,7 +411,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "michael": {
    "estimate": {
@@ -460,7 +460,7 @@
     "country": "DE"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "minotaur": {
    "estimate": {
@@ -489,7 +489,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "musk": {
    "estimate": {
@@ -524,7 +524,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "naza": {
    "estimate": {
@@ -553,7 +553,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "obsession": {
    "estimate": {
@@ -582,7 +582,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "once-upon-a-time-in-harlem": {
    "estimate": null,
@@ -599,7 +599,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "one-in-a-million": {
    "estimate": {
@@ -634,7 +634,7 @@
     "country": "DE"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "possible-love": {
    "estimate": {
@@ -671,7 +671,7 @@
     "country": "AS"
    },
    "pl_digital": "2026-11-06",
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "project-hail-mary": {
    "estimate": {
@@ -722,7 +722,7 @@
     "country": "DE"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "ray-gunn": {
    "estimate": {
@@ -757,7 +757,7 @@
     "country": "AE"
    },
    "pl_digital": "2026-12-18",
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "rehearsals-for-a-revolution": {
    "estimate": null,
@@ -774,7 +774,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "rose": {
    "estimate": {
@@ -803,7 +803,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "sense-and-sensibility": {
    "estimate": {
@@ -838,7 +838,7 @@
     "country": "GB"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "tangles": {
    "estimate": null,
@@ -855,7 +855,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "tender-loving-care": {
    "estimate": null,
@@ -872,7 +872,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "the-debut": {
    "estimate": {
@@ -901,7 +901,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "the-drama": {
    "tmdb_id": 1325734,
@@ -984,7 +984,7 @@
     "country": "AR"
    },
    "pl_digital": "2026-12-23",
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "the-invite": {
    "estimate": {
@@ -1032,7 +1032,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "the-odyssey": {
    "estimate": {
@@ -1073,7 +1073,7 @@
     "country": "BR"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "the-only-living-pickpocket-in-new-york": {
    "estimate": null,
@@ -1090,7 +1090,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "toy-story-5": {
    "estimate": {
@@ -1139,7 +1139,7 @@
     "country": "RO"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "werwulf": {
    "estimate": {
@@ -1168,7 +1168,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "whalefall": {
    "estimate": {
@@ -1197,7 +1197,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "wicker": {
    "estimate": {
@@ -1232,7 +1232,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "wild-horse-nine": {
    "estimate": {
@@ -1261,7 +1261,7 @@
    "link": null,
    "digital_hint": null,
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "wildwood": {
    "estimate": {
@@ -1296,7 +1296,7 @@
     "country": "US"
    },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   },
   "wuthering-heights": {
    "estimate": {
@@ -1352,16 +1352,19 @@
   "you-can-see-everything": {
    "estimate": {
     "rent_buy": [
-     "2026-12-21",
-     "2027-02-04"
+     "2026-11-24",
+     "2026-12-24"
     ],
     "streaming": [
      "2027-02-04",
      "2027-05-05"
     ],
-    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
-    "basis_kind": "typical",
-    "hint": null
+    "basis": "A digital release is already dated 2026-11-24 in US; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
+    "basis_kind": "digital",
+    "hint": {
+     "date": "2026-11-24",
+     "country": "US"
+    }
    },
    "tmdb_id": 1765072,
    "tmdb_title": "You Can See Everything",
@@ -1374,9 +1377,12 @@
     "free": []
    },
    "link": null,
-   "digital_hint": null,
+   "digital_hint": {
+    "date": "2026-11-24",
+    "country": "US"
+   },
    "pl_digital": null,
-   "checked": "2026-11-20"
+   "checked": "2026-11-21"
   }
  }
 }
