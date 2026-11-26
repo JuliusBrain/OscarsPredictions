@@ -2,11 +2,11 @@
   var REPO = 'JuliusBrain/OscarsPredictions', WPATH = 'docs/data/watched.json';
   var THEMES = ['modern', 'deco'];
   var LANGS = ['en', 'pl'];
-  var TABS = ['films', 'plan', 'updates', 'cal', 'cats', 'people'];
+  var TABS = ['films', 'plan', 'now', 'updates', 'cal', 'awards', 'cats', 'people'];
   var PLAN_CATS = ['Best Picture', 'Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress', 'Original Screenplay', 'Adapted Screenplay'];
   var SUPPORTING = ['Supporting Actor', 'Supporting Actress'];
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
-  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', changed: false, open: {}, supp: true, share: null, cal: null };
+  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', changed: false, open: {}, supp: true, share: null, nowKind: 'all', awardsTracked: false, cal: null };
   var filmweb = {}, availability = { films: {}, tmdb_enabled: false };
   var data = null, registry = null, official = null, changes = { entries: {}, dropped: [] }, history = { updates: [] };
   var watched = {}, ops = [], remoteSha = null, saveTimer = null, saving = false;
@@ -337,6 +337,66 @@
     return lab;
   }
 
+  /* ---------- precursor awards (Golden Globes, Critics' Choice, ...), scraped from Wikipedia ---------- */
+  var precursors = { events: [], by_film: {} };
+  function precEvent(id) { return (precursors.events || []).filter(function (e) { return e.id === id; })[0]; }
+  function precBadges(f) {
+    var box = el('div', 'noms precs'), list = (precursors.by_film || {})[f.id] || [];
+    list.slice().sort(function (a, b) { return (b.winner ? 1 : 0) - (a.winner ? 1 : 0); }).forEach(function (r) {
+      var ev = precEvent(r.event);
+      if (!ev) return;
+      var cat = r.oscar ? cl(r.oscar) : r.category;
+      var chip = el('span', 'nom prec' + (r.winner ? ' win' : ''), t(r.winner ? 'awards.badge.won' : 'awards.badge.nom', { event: ev.short, cat: cat }));
+      chip.title = r.category + ' · ' + ev.name;
+      box.appendChild(chip);
+    });
+    if (!box.firstChild) box.hidden = true;
+    return box;
+  }
+
+  function renderAwards() {
+    var box = document.getElementById('awardslist');
+    if (!box) return;
+    box.textContent = '';
+    var tog = document.getElementById('awardstracked');
+    tog.textContent = t('awards.tracked');
+    tog.setAttribute('aria-pressed', String(state.awardsTracked));
+    var evs = (precursors.events || []).slice().sort(function (a, b) { return a.order - b.order; });
+    if (!evs.length) { box.appendChild(el('div', 'none', t('awards.none'))); return; }
+    evs.forEach(function (ev) {
+      var det = el('details', 'awardev' + (ev.status === 'pending' ? ' pending' : ''));
+      if (ev.status !== 'pending') det.open = true;
+      var sum = el('summary', '');
+      sum.appendChild(el('b', '', ev.name));
+      sum.appendChild(el('span', 'awardst ' + ev.status, t('awards.status.' + ev.status)));
+      det.appendChild(sum);
+      if (ev.status === 'pending') det.appendChild(el('p', 'psub', t('awards.pending')));
+      if (ev.stale) det.appendChild(el('p', 'psub', t('awards.stale')));
+      (ev.categories || []).forEach(function (c) {
+        var entries = c.entries.filter(function (e) { return !state.awardsTracked || e.film_id; });
+        if (!c.oscar || !entries.length) return;
+        var card = el('div', 'awardcat');
+        card.appendChild(el('h4', '', c.label));
+        var ul = el('ul');
+        entries.forEach(function (e) {
+          var li = el('li', (e.winner ? 'win' : '') + (e.film_id ? ' tracked' : ''));
+          var txt = e.film_id && registry.films[e.film_id] ? e.text : e.text;
+          if (e.film_id && watched[e.film_id]) txt = '✓ ' + txt;
+          li.appendChild(el('span', '', txt));
+          if (e.winner) li.appendChild(el('span', 'tag', t('tag.winner')));
+          ul.appendChild(li);
+        });
+        card.appendChild(ul);
+        det.appendChild(card);
+      });
+      if (ev.url) {
+        var a = el('a', 'psub', t('awards.source')); a.href = ev.url; a.target = '_blank'; a.rel = 'noopener';
+        det.appendChild(a);
+      }
+      box.appendChild(det);
+    });
+  }
+
   function filmRow(f) {
     var seen = !!watched[f.id];
     var open = !!state.open[f.id];
@@ -357,7 +417,7 @@
     var line = f.studio + ' · ' + (f.active ? tn('film.nom', noms) + (wins ? ' · ' + tn('film.win', wins) : '') : t('film.dropped', { date: f.last_seen }));
     name.appendChild(el('span', 'detail', line));
     name.appendChild(watchLabel(f));
-    row.appendChild(name); row.appendChild(filmChips(f)); row.appendChild(availBlock(f));
+    row.appendChild(name); row.appendChild(filmChips(f)); row.appendChild(precBadges(f)); row.appendChild(availBlock(f));
     return row;
   }
 
@@ -481,6 +541,11 @@
     var tod = el('button', 'calbtn wide', t('cal.today')); tod.setAttribute('data-cal', 'today');
     tod.onclick = function () { var n = new Date(); go('today', n.getFullYear(), n.getMonth()); };
     btns.appendChild(prev); btns.appendChild(tod); btns.appendChild(next);
+    if (past.length) {
+      var lp = el('button', 'calbtn wide', t('cal.lastPremiere')); lp.setAttribute('data-cal', 'lp');
+      lp.onclick = function () { var dd = new Date(past[0].date + 'T00:00:00'); go('lp', dd.getFullYear(), dd.getMonth()); };
+      btns.appendChild(lp);
+    }
     if (upcoming.length) {
       var np = el('button', 'calbtn wide', t('cal.nextPremiere')); np.setAttribute('data-cal', 'np');
       np.onclick = function () { var dd = new Date(upcoming[0].date + 'T00:00:00'); go('np', dd.getFullYear(), dd.getMonth()); };
@@ -517,14 +582,16 @@
     }
     box.appendChild(grid);
 
-    box.appendChild(el('h3', 'sechead', t('cal.upcoming')));
-    if (!upcoming.length) box.appendChild(el('div', 'none', t('cal.upcomingNone')));
-    var cur = '';
-    upcoming.forEach(function (it) {
-      var key = it.date.slice(0, 7);
-      if (key !== cur) { cur = key; var p = it.date.split('-'); box.appendChild(el('h4', 'agmonth', monthLabel(+p[0], +p[1] - 1))); }
-      box.appendChild(agRow(it));
-    });
+    var mkey = y + '-' + String(m + 1).padStart(2, '0');
+    var inMonth = dated.filter(function (i) { return i.date.slice(0, 7) === mkey; });
+    if (mkey <= now.slice(0, 7)) inMonth.reverse();   // looking back: newest first
+    box.appendChild(el('h3', 'sechead', t('cal.inMonth', { month: monthLabel(y, m) })));
+    if (!inMonth.length) box.appendChild(el('div', 'none', t('cal.monthNone')));
+    inMonth.forEach(function (it) { box.appendChild(agRow(it)); });
+
+    box.appendChild(el('h3', 'sechead', t('cal.recent')));
+    if (!past.length) box.appendChild(el('div', 'none', t('cal.recentNone')));
+    past.slice(0, 10).forEach(function (it) { box.appendChild(agRow(it)); });
     function fold(titleKey, arr) {
       if (!arr.length) return;
       var det = el('details', 'calfold'), sum = el('summary', '', t(titleKey, { n: arr.length }));
@@ -532,7 +599,8 @@
       arr.forEach(function (it) { det.appendChild(agRow(it)); });
       box.appendChild(det);
     }
-    fold('cal.past', past);
+    fold('cal.earlier', past.slice(10));
+    fold('cal.upcoming', upcoming);
     fold('cal.undated', undated);
     box.appendChild(el('p', 'credits', t('cal.source')));
   }
@@ -743,6 +811,61 @@
     });
   }
 
+  /* ---------- watch now: nominated-or-predicted films that can be streamed, rented or bought in Poland today and are not yet seen ---------- */
+  function renderNow() {
+    var box = document.getElementById('nowlist');
+    if (!box) return;
+    var items = Object.keys(registry.films).map(function (k) { return registry.films[k]; })
+      .filter(function (f) { return f.active && !watched[f.id]; })
+      .map(function (f) { return { f: f, ws: watchStatus(f) }; })
+      .filter(function (x) { return x.ws.any; });
+    items.forEach(function (x) { x.stream = x.ws.groups[0][1].length > 0; });
+    var counts = { all: items.length, stream: items.filter(function (x) { return x.stream; }).length, rent: items.filter(function (x) { return !x.stream; }).length };
+    if (!counts[state.nowKind]) state.nowKind = 'all';
+    var shown = items.filter(function (x) { return state.nowKind === 'all' || (state.nowKind === 'stream') === x.stream; });
+    shown.sort(function (a, b) {
+      return nomCount(b.f) - nomCount(a.f) || ftitle(a.f.name).localeCompare(ftitle(b.f.name), locale());
+    });
+
+    var chips = document.getElementById('nowchips');
+    chips.textContent = '';
+    ['all', 'stream', 'rent'].forEach(function (k) {
+      var b = el('button', 'chip', t('now.' + k) + ' (' + counts[k] + ')');
+      b.setAttribute('aria-pressed', String(state.nowKind === k));
+      b.onclick = function () { state.nowKind = k; renderNow(); };
+      chips.appendChild(b);
+    });
+
+    var head = document.getElementById('nowhead');
+    head.textContent = '';
+    head.appendChild(el('b', 'plannum', String(shown.length)));
+    head.appendChild(el('span', '', shown.length ? tn('now.left', shown.length) : t('now.none')));
+
+    box.textContent = '';
+    shown.forEach(function (x) {
+      var f = x.f, row = el('div', 'planfilm');
+      var top = el('div', 'plantop');
+      top.appendChild(el('b', '', ftitle(f.name)));
+      top.appendChild(el('span', 'plancover', tn('film.nom', nomCount(f))));
+      top.appendChild(watchLabel(f));
+      row.appendChild(top);
+      var cs = el('div', 'noms');
+      Object.keys(f.categories).filter(function (c) { return f.categories[c].active; }).forEach(function (c) {
+        cs.appendChild(el('span', 'nom' + (f.categories[c].winner ? ' win' : ''), cl(c)));
+      });
+      row.appendChild(cs);
+      var w = el('div', 'nowwhere');
+      x.ws.groups.forEach(function (g) {
+        if (!g[1].length) return;
+        var line = el('span', 'pgroup'); line.appendChild(el('b', '', t(g[0]))); line.appendChild(document.createTextNode(g[1].join(' · ')));
+        w.appendChild(line);
+      });
+      row.appendChild(w);
+      box.appendChild(row);
+    });
+    box.appendChild(el('p', 'credits', t('now.source')));
+  }
+
   function renderUpdates() {
     var box = document.getElementById('updatelist');
     if (!box) return;
@@ -808,7 +931,7 @@
     document.getElementById('nomempty').hidden = !!official;
     renderMeta();
     if (data && registry) {
-      [renderFilms, renderPlan, renderBanner, renderUpdates, renderCalendar, function renderCats() { catCards(data, document.getElementById('catlist')); }, renderPeople,
+      [renderFilms, renderPlan, renderNow, renderBanner, renderAwards, renderUpdates, renderCalendar, function renderCats() { catCards(data, document.getElementById('catlist')); }, renderPeople,
         function renderOfficial() { if (official) catCards(official, document.getElementById('nomlist')); }].forEach(function (fn) {
         try { fn(); } catch (e) { showError('err.generic', { msg: (fn.name || 'render') + ': ' + e.message }); }
       });
@@ -832,6 +955,7 @@
     shownIds.forEach(function (id) { if (allOpen) delete state.open[id]; else state.open[id] = true; });
     renderFilms();
   };
+  document.getElementById('awardstracked').onclick = function () { state.awardsTracked = !state.awardsTracked; renderAwards(); };
   document.getElementById('sharelink').onclick = function () { copyText(shareLink(), 'plan.copied'); };
   document.getElementById('sharetext').onclick = function () { copyText(shareText(), 'plan.copied'); };
   window.addEventListener('hashchange', function () {
@@ -863,7 +987,8 @@
       return r.json();
     });
   }
-  Promise.all([getJson('data/latest.json'), getJson('data/changes.json'), getJson('data/films.json'), getJson('data/official.json', true), getJson('data/filmweb.json', true), getJson('data/availability.json', true), getJson('data/history.json', true)]).then(function (j) {
+  Promise.all([getJson('data/latest.json'), getJson('data/changes.json'), getJson('data/films.json'), getJson('data/official.json', true), getJson('data/filmweb.json', true), getJson('data/availability.json', true), getJson('data/history.json', true), getJson('data/precursors.json', true)]).then(function (j) {
+    precursors = j[7] || { events: [], by_film: {} };
     data = j[0]; changes = j[1]; registry = j[2]; official = j[3];
     filmweb = j[4] || {}; availability = j[5] || { films: {}, tmdb_enabled: false }; history = j[6] || { updates: [] };
     state.share = parseShare();

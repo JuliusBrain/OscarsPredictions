@@ -1,0 +1,95 @@
+{
+  "_note": "Season 2026-27. 'titles' are Wikipedia page titles tried in order; the first that exists and parses wins. 'official' optionally names a parser in scripts/precursors.py OFFICIAL_PARSERS used when Wikipedia has nothing usable.",
+  "events": [
+    {
+      "id": "nbr",
+      "name": "National Board of Review",
+      "short": "NBR",
+      "order": 1,
+      "titles": [
+        "National Board of Review Awards 2026"
+      ],
+      "official": null
+    },
+    {
+      "id": "gotham",
+      "name": "Gotham Awards",
+      "short": "Gotham",
+      "order": 2,
+      "titles": [
+        "Gotham Independent Film Awards 2026"
+      ],
+      "official": null
+    },
+    {
+      "id": "nyfcc",
+      "name": "New York Film Critics Circle",
+      "short": "NYFCC",
+      "order": 3,
+      "titles": [
+        "2026 New York Film Critics Circle Awards"
+      ],
+      "official": null
+    },
+    {
+      "id": "globes",
+      "name": "Golden Globe Awards",
+      "short": "Globes",
+      "order": 4,
+      "titles": [
+        "84th Golden Globe Awards"
+      ],
+      "official": null
+    },
+    {
+      "id": "critics",
+      "name": "Critics' Choice Awards",
+      "short": "Critics' Choice",
+      "order": 5,
+      "titles": [
+        "32nd Critics' Choice Awards"
+      ],
+      "official": null
+    },
+    {
+      "id": "pga",
+      "name": "Producers Guild of America Awards",
+      "short": "PGA",
+      "order": 6,
+      "titles": [
+        "38th Producers Guild of America Awards"
+      ],
+      "official": null
+    },
+    {
+      "id": "dga",
+      "name": "Directors Guild of America Awards",
+      "short": "DGA",
+      "order": 7,
+      "titles": [
+        "79th Directors Guild of America Awards"
+      ],
+      "official": null
+    },
+    {
+      "id": "sag",
+      "name": "Actor Awards (formerly SAG Awards)",
+      "short": "Actor Awards",
+      "order": 8,
+      "titles": [
+        "33rd Actor Awards"
+      ],
+      "official": null
+    },
+    {
+      "id": "bafta",
+      "name": "BAFTA Film Awards",
+      "short": "BAFTA",
+      "order": 9,
+      "titles": [
+        "80th British Academy Film Awards"
+      ],
+      "official": null
+    }
+  ]
+}

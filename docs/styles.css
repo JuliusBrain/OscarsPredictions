@@ -312,3 +312,15 @@ h1{font-size:40px;overflow-wrap:anywhere}
 #plansharedbanner{margin-bottom:12px}
 #planshare{margin-bottom:12px}
 #plansupp[hidden],#planshare[hidden]{display:none}
+
+.nowwhere{padding:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+#nowchips{margin-bottom:12px}
+
+.precs{padding-top:4px}.nom.prec{font-size:.8em;opacity:.9}
+.awardev{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-box);box-shadow:var(--shadow);margin-bottom:12px}
+.awardev>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:12px;padding:0 16px;font-weight:600}
+.awardev>.psub,.awardev>.awardcat{padding:0 16px 12px}
+.awardev.pending{opacity:.75}
+.awardst{font-size:.8em;font-weight:500;color:var(--muted)}
+.awardcat h4{margin:12px 0 4px;font-size:.95em}.awardcat ul{margin:0;padding-left:18px}
+.awardcat li.tracked{font-weight:600}.awardcat li.win{font-weight:700}
