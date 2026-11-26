@@ -250,3 +250,25 @@ h1{font-size:40px;overflow-wrap:anywhere}
 .chgnote{font-size:13px;line-height:1.4;padding:4px 10px;border-left:3px solid var(--accent);color:var(--text)}
 .chgnote.dropped,.chgnote.winnerLost{border-left-color:var(--down)}
 .chgnote.winnerGained{border-left-color:var(--up)}
+
+/* Compact film rows: name + nominations; the rest opens on click */
+.filmtoggle{display:flex;align-items:center;gap:10px;margin:0;padding:0;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;min-height:44px}
+.filmtoggle::after{content:"";flex:0 0 auto;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin:-4px 0 0 2px;transition:transform .15s}
+.filmrow.collapsed .filmtoggle::after{transform:rotate(-45deg);margin:0 0 0 2px}
+.filmtoggle:hover b{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.filmtoggle:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:var(--r-sm)}
+#expandall{min-height:44px}
+#expandall[hidden]{display:none}
+.filmrow.collapsed{align-items:center}
+.filmrow.collapsed .poland,.filmrow.collapsed .detail,.filmrow.collapsed .wtext{display:none}
+.filmrow.collapsed .filmname{flex-direction:row;align-items:center;gap:6px;padding:8px 0 8px 20px}
+.filmrow.collapsed .filmname b{font-size:20px;line-height:1.2}
+.filmrow.collapsed .watch{gap:0;min-height:44px;min-width:44px;justify-content:center}
+.filmrow.collapsed .noms{padding:10px 20px 10px 0;align-content:center}
+.filmrow.collapsed .nom{min-height:26px;padding:0 10px}
+.filmrow.collapsed .chgnotes{display:none;margin-top:2px}
+#films.showchg .filmrow.collapsed .chgnotes{display:flex}
+@media (max-width:640px){
+  .filmrow.collapsed .filmname{padding:8px 12px 0 8px}
+  .filmrow.collapsed .noms{padding:4px 12px 12px}
+}

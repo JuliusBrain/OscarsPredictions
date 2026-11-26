@@ -4,7 +4,7 @@
   var LANGS = ['en', 'pl'];
   var TABS = ['films', 'updates', 'cal', 'cats', 'people'];
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
-  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', changed: false, cal: null };
+  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', changed: false, open: {}, cal: null };
   var filmweb = {}, availability = { films: {}, tmdb_enabled: false };
   var data = null, registry = null, official = null, changes = { entries: {}, dropped: [] }, history = { updates: [] };
   var watched = {}, ops = [], remoteSha = null, saveTimer = null, saving = false;
@@ -320,20 +320,32 @@
   function watchLabel(f) {
     var seen = !!watched[f.id], lab = el('label', 'watch'), cb = el('input');
     cb.type = 'checkbox'; cb.checked = seen; cb.setAttribute('data-film', f.id);
+    cb.setAttribute('aria-label', t('film.watched') + ': ' + ftitle(f.name));
     cb.onchange = function () { setWatched(f.id, cb.checked); render(); focusFilm(f.id); };
     lab.appendChild(cb);
-    lab.appendChild(document.createTextNode(seen && watched[f.id].at ? t('film.watchedOn', { date: watched[f.id].at }) : t('film.watched')));
+    lab.appendChild(el('span', 'wtext', seen && watched[f.id].at ? t('film.watchedOn', { date: watched[f.id].at }) : t('film.watched')));
     return lab;
   }
 
   function filmRow(f) {
     var seen = !!watched[f.id];
-    var row = el('div', 'filmrow' + (seen ? ' seen' : '')), name = el('div', 'filmname');
-    name.appendChild(el('b', '', ftitle(f.name)));
-    if (state.lang === 'pl' && ftitle(f.name) !== f.name) name.appendChild(el('span', 'filmorig', t('film.original', { title: f.name })));
+    var open = !!state.open[f.id];
+    var row = el('div', 'filmrow' + (seen ? ' seen' : '') + (open ? '' : ' collapsed')), name = el('div', 'filmname');
+    var tg = el('button', 'filmtoggle');
+    tg.type = 'button';
+    tg.setAttribute('aria-expanded', String(open));
+    tg.appendChild(el('b', '', ftitle(f.name)));
+    tg.onclick = function () {
+      var now = row.classList.toggle('collapsed') === false;
+      tg.setAttribute('aria-expanded', String(now));
+      if (now) state.open[f.id] = true; else delete state.open[f.id];
+      syncExpandAll();
+    };
+    name.appendChild(tg);
+    if (state.lang === 'pl' && ftitle(f.name) !== f.name) name.appendChild(el('span', 'filmorig detail', t('film.original', { title: f.name })));
     var wins = winCount(f), noms = nomCount(f);
     var line = f.studio + ' · ' + (f.active ? tn('film.nom', noms) + (wins ? ' · ' + tn('film.win', wins) : '') : t('film.dropped', { date: f.last_seen }));
-    name.appendChild(el('span', '', line));
+    name.appendChild(el('span', 'detail', line));
     name.appendChild(watchLabel(f));
     row.appendChild(name); row.appendChild(filmChips(f)); row.appendChild(availBlock(f));
     return row;
@@ -355,6 +367,16 @@
     });
   }
 
+  var shownIds = [];
+  function syncExpandAll() {
+    var b = document.getElementById('expandall');
+    if (!b) return;
+    var allOpen = shownIds.length > 0 && shownIds.every(function (id) { return state.open[id]; });
+    b.textContent = t(allOpen ? 'films.collapseAll' : 'films.expandAll');
+    b.setAttribute('aria-pressed', String(allOpen));
+    b.hidden = !shownIds.length;
+  }
+
   function renderFilms() {
     var all = Object.keys(registry.films).map(function (k) { return registry.films[k]; });
     var active = all.filter(function (f) { return f.active; }), gone = all.filter(function (f) { return !f.active; });
@@ -364,6 +386,7 @@
     document.getElementById('progress').textContent = t('progress', { seen: seenCount, total: active.length, left: active.length - seenCount });
     renderHero(active.length, seenCount);
     buildChanges();
+    document.getElementById('films').classList.toggle('showchg', state.changed);
     var upd = (history.updates || [])[0], nChanged = active.concat(gone).filter(function (f) { return chgMap[f.name]; }).length;
     var tog = document.getElementById('chgtoggle');
     tog.hidden = !upd;
@@ -379,6 +402,7 @@
     var shown = active.filter(keep);
     if (!shown.length) box.appendChild(el('div', 'none', t(state.changed ? 'films.noneChanged' : state.filter === 'seen' ? 'films.noneSeen' : 'films.noneLeft')));
     shown.forEach(function (f) { box.appendChild(filmRow(f)); });
+    shownIds = shown.concat(gone.filter(keep)).map(function (f) { return f.id; });
     var d = document.getElementById('dropped');
     d.textContent = '';
     var g = gone.filter(keep);
@@ -389,6 +413,7 @@
       g.forEach(function (f) { list.appendChild(filmRow(f)); });
       d.appendChild(list);
     }
+    syncExpandAll();
   }
 
   /* ---------- calendar of Polish premieres ---------- */
@@ -646,6 +671,11 @@
       };
     });
   });
+  document.getElementById('expandall').onclick = function () {
+    var allOpen = shownIds.length > 0 && shownIds.every(function (id) { return state.open[id]; });
+    shownIds.forEach(function (id) { if (allOpen) delete state.open[id]; else state.open[id] = true; });
+    renderFilms();
+  };
   document.getElementById('chgtoggle').onclick = function () { state.changed = !state.changed; render(); };
   document.getElementById('tokensave').onclick = function () {
     var v = document.getElementById('token').value.trim();
