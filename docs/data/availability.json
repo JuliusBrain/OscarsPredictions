@@ -317,7 +317,19 @@
   },
   "i-play-rocky": {
    "tmdb_id": 1286656,
-   "estimate": null,
+   "estimate": {
+    "rent_buy": [
+     "2027-01-04",
+     "2027-02-18"
+    ],
+    "streaming": [
+     "2027-02-18",
+     "2027-05-19"
+    ],
+    "basis": "Typical gap after the Polish cinema release: rent/buy about 6 to 13 weeks, subscription streaming about 3 to 6 months.",
+    "basis_kind": "typical",
+    "hint": null
+   },
    "tmdb_title": "I Play Rocky",
    "tmdb_release_date": "2026-11-06",
    "providers": {
@@ -962,8 +974,8 @@
      "2027-01-22"
     ],
     "streaming": [
-     "2027-01-22",
-     "2027-04-22"
+     "2027-02-23",
+     "2027-05-24"
     ],
     "basis": "A digital release is already dated 2026-12-23 in AR; Poland usually gets rent/buy within about a month of that, and subscription streaming a few months later.",
     "basis_kind": "digital",
