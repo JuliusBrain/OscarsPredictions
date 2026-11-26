@@ -6,7 +6,7 @@
   var PLAN_CATS = ['Best Picture', 'Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress', 'Original Screenplay', 'Adapted Screenplay'];
   var SUPPORTING = ['Supporting Actor', 'Supporting Actress'];
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
-  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', changed: false, open: {}, supp: true, cal: null };
+  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', changed: false, open: {}, supp: true, share: null, cal: null };
   var filmweb = {}, availability = { films: {}, tmdb_enabled: false };
   var data = null, registry = null, official = null, changes = { entries: {}, dropped: [] }, history = { updates: [] };
   var watched = {}, ops = [], remoteSha = null, saveTimer = null, saving = false;
@@ -625,6 +625,46 @@
     return box;
   }
   /* ---------- watch plan: what is left to see to have seen every nominee in the main categories ---------- */
+  /* A shared plan travels in the URL fragment: #share=<base64url JSON of the sender's watched film ids>. */
+  var planNow = { left: [], total: 0, seen: 0, cats: [] };
+  function isSeen(id) { return state.share ? !!state.share.watched[id] : !!watched[id]; }
+  function b64url(s) { return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
+  function unb64url(s) { s = s.replace(/-/g, '+').replace(/_/g, '/'); while (s.length % 4) s += '='; return atob(s); }
+  function shareLink() {
+    var ids = Object.keys(watched).filter(function (k) { return watched[k]; });
+    var payload = b64url(JSON.stringify({ w: ids, s: state.supp ? 1 : 0, d: today() }));
+    return location.origin + location.pathname + '#share=' + payload;
+  }
+  function parseShare() {
+    var m = /^#share=([A-Za-z0-9_-]+)$/.exec(location.hash || '');
+    if (!m || m[1].length > 6000) return null;
+    try {
+      var o = JSON.parse(unb64url(m[1]));
+      if (!o || !Array.isArray(o.w) || o.w.length > 300) return null;
+      var w = {};
+      o.w.forEach(function (id) { if (typeof id === 'string' && /^[a-z0-9-]{1,80}$/.test(id)) w[id] = true; });
+      return { watched: w, supp: o.s !== 0, date: /^\d{4}-\d{2}-\d{2}$/.test(o.d || '') ? o.d : '' };
+    } catch (e) { return null; }
+  }
+  function shareText() {
+    var lines = [t('plan.text.head', { left: planNow.left.length, seen: planNow.seen, total: planNow.total })];
+    planNow.left.forEach(function (x, i) {
+      lines.push((i + 1) + '. ' + ftitle(x.f.name) + ': ' + x.cats.map(cl).join(', '));
+    });
+    lines.push('', shareLink());
+    return lines.join('\n');
+  }
+  function copyText(text, msgKey) {
+    var msg = document.getElementById('sharemsg');
+    function done(ok) { msg.textContent = ok ? t(msgKey) : t('plan.copyFail'); setTimeout(function () { msg.textContent = ''; }, 4000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+    else done(false);
+  }
+
+  function history_replaceHash() {
+    try { window.history.replaceState(null, '', location.pathname + location.search); } catch (e) { location.hash = ''; }
+  }
+
   function renderPlan() {
     var cats = PLAN_CATS.filter(function (c) { return state.supp || SUPPORTING.indexOf(c) < 0; });
     var films = Object.keys(registry.films).map(function (k) { return registry.films[k]; });
@@ -633,9 +673,9 @@
       byCat[c] = films.filter(function (f) { return f.categories[c] && f.categories[c].active; });
       byCat[c].forEach(function (f) { (nominees[f.id] = nominees[f.id] || { f: f, cats: [] }).cats.push(c); });
     });
-    var left = Object.keys(nominees).map(function (k) { return nominees[k]; }).filter(function (x) { return !watched[x.f.id]; });
+    var left = Object.keys(nominees).map(function (k) { return nominees[k]; }).filter(function (x) { return !isSeen(x.f.id); });
     var leftByCat = {};
-    cats.forEach(function (c) { leftByCat[c] = byCat[c].filter(function (f) { return !watched[f.id]; }); });
+    cats.forEach(function (c) { leftByCat[c] = byCat[c].filter(function (f) { return !isSeen(f.id); }); });
     left.forEach(function (x) {
       x.completes = x.cats.filter(function (c) { return leftByCat[c].length === 1; });
       x.near = x.cats.reduce(function (s, c) { return s + 1 / leftByCat[c].length; }, 0);
@@ -647,12 +687,26 @@
     var tog = document.getElementById('plansupp');
     tog.textContent = t('plan.supp');
     tog.setAttribute('aria-pressed', String(state.supp));
+    tog.hidden = !!state.share;
+    document.getElementById('sharelink').textContent = t('plan.copyLink');
+    document.getElementById('sharetext').textContent = t('plan.copyText');
+    document.getElementById('planshare').hidden = !!state.share;
+    var sb = document.getElementById('plansharedbanner');
+    sb.hidden = !state.share;
+    sb.textContent = '';
+    if (state.share) {
+      sb.appendChild(el('span', 'upbtext', t('plan.sharedBanner', { date: state.share.date ? fmt(state.share.date) : '–' })));
+      var back = el('button', 'chip', t('plan.backToMine'));
+      back.onclick = function () { state.share = null; history_replaceHash(); render(); };
+      sb.appendChild(back);
+    }
 
     var head = document.getElementById('planhead');
     head.textContent = '';
     head.appendChild(el('b', 'plannum', String(left.length)));
     head.appendChild(el('span', '', left.length ? tn('plan.left', left.length) : t('plan.done')));
     var total = Object.keys(nominees).length;
+    planNow = { left: left, total: total, seen: total - left.length, cats: cats };
     head.appendChild(el('span', 'plansub', t('plan.of', { seen: total - left.length, total: total })));
 
     var prog = document.getElementById('planprog');
@@ -675,7 +729,7 @@
       var top = el('div', 'plantop');
       top.appendChild(el('b', '', ftitle(f.name)));
       top.appendChild(el('span', 'plancover', t('plan.covers', { n: x.cats.length, total: cats.length })));
-      top.appendChild(watchLabel(f));
+      if (!state.share) top.appendChild(watchLabel(f));
       row.appendChild(top);
       var chips = el('div', 'noms');
       x.cats.forEach(function (c) {
@@ -778,6 +832,12 @@
     shownIds.forEach(function (id) { if (allOpen) delete state.open[id]; else state.open[id] = true; });
     renderFilms();
   };
+  document.getElementById('sharelink').onclick = function () { copyText(shareLink(), 'plan.copied'); };
+  document.getElementById('sharetext').onclick = function () { copyText(shareText(), 'plan.copied'); };
+  window.addEventListener('hashchange', function () {
+    var s = parseShare();
+    if (s || state.share) { state.share = s; if (s) { state.tab = 'plan'; state.mode = 'predicted'; state.supp = s.supp; } render(); }
+  });
   document.getElementById('plansupp').onclick = function () { state.supp = !state.supp; render(); };
   document.getElementById('chgtoggle').onclick = function () { state.changed = !state.changed; render(); };
   document.getElementById('tokensave').onclick = function () {
@@ -806,6 +866,8 @@
   Promise.all([getJson('data/latest.json'), getJson('data/changes.json'), getJson('data/films.json'), getJson('data/official.json', true), getJson('data/filmweb.json', true), getJson('data/availability.json', true), getJson('data/history.json', true)]).then(function (j) {
     data = j[0]; changes = j[1]; registry = j[2]; official = j[3];
     filmweb = j[4] || {}; availability = j[5] || { films: {}, tmdb_enabled: false }; history = j[6] || { updates: [] };
+    state.share = parseShare();
+    if (state.share) { state.tab = 'plan'; state.mode = 'predicted'; state.supp = state.share.supp; }
     return loadWatched();
   }).then(render).catch(function (e) {
     showError('err.data', { msg: e.message });

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oscars Predictions Tracker</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=28">
+<link rel="stylesheet" href="styles.css?v=29">
 </head>
 <body>
 <main class="wrap">
@@ -86,7 +86,13 @@
   <section id="plan" aria-label="Watch plan" hidden>
     <h2 class="sechead" data-i18n="plan.title">Path to 100%</h2>
     <p class="dropnote" data-i18n="plan.note">The films you still need to see to have watched every nominee in the main categories: Best Picture, Directing, the acting categories and both screenplays. Films that cover the most categories come first.</p>
+    <div id="plansharedbanner" class="updbanner" hidden></div>
     <div class="watchbar"><button id="plansupp" class="chip" aria-pressed="true"></button></div>
+    <div id="planshare" class="watchbar">
+      <button id="sharelink" class="chip"></button>
+      <button id="sharetext" class="chip"></button>
+      <span id="sharemsg" class="progress" role="status" aria-live="polite"></span>
+    </div>
     <div id="planhead" class="planhead" aria-live="polite"></div>
     <div id="planprog" class="planprog"></div>
     <div id="planlist"></div>
@@ -127,7 +133,7 @@
   </details>
   <p class="credits" data-i18n-html="credits">Premiere dates: <a href="https://www.filmweb.pl" target="_blank" rel="noopener">Filmweb</a>.</p>
 </main>
-<script src="i18n.js?v=28"></script>
-<script src="app.js?v=28"></script>
+<script src="i18n.js?v=29"></script>
+<script src="app.js?v=29"></script>
 </body>
 </html>
