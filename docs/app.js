@@ -559,32 +559,59 @@
   }
 
   /* ---------- what changed ---------- */
-  function who(e) { return e.people && e.people.length ? ' (' + e.people.join(', ') + ')' : ''; }
+  function plainName(p) { return p.replace(/\s*\((?:production designer|set decorator)\)/gi, ''); }
+  function who(e) { return e.people && e.people.length ? ' (' + e.people.map(plainName).join(', ') + ')' : ''; }
   function entryText(e) { return (e.song ? e.song + ' · ' : '') + ftitle(e.film) + who(e); }
   function updateCounts(u) {
     return [['upd.new', u.new], ['upd.dropped', u.dropped], ['upd.winners', u.winners]].filter(function (p) { return p[1].length; })
       .map(function (p) { return tn(p[0], p[1].length); }).join(' · ');
   }
-  function updateBlock(u, open) {
+  /* One card per category: what was added, what was removed and whether the predicted winner moved. */
+  function updateBlock(u) {
     var box = el('article', 'update');
     var head = el('div', 'uphead');
     head.appendChild(el('h3', '', t('upd.range', { to: fmt(u.to), from: fmt(u.from) })));
     head.appendChild(el('span', 'upcount', updateCounts(u)));
     box.appendChild(head);
-    function group(titleKey, items, line, cls) {
-      if (!items.length) return;
-      var g = el('div', 'upgroup'), ul = el('ul');
-      g.appendChild(el('h4', cls, t(titleKey)));
-      items.slice().sort(function (a, b) { return cl(a.category).localeCompare(cl(b.category), locale()); }).forEach(function (it) {
-        var li = el('li'); li.appendChild(el('span', 'upcat', cl(it.category))); li.appendChild(document.createTextNode(line(it))); ul.appendChild(li);
-      });
-      g.appendChild(ul); box.appendChild(g);
-    }
-    group('upd.winnersTitle', u.winners, function (w) {
-      return (w.from ? entryText(w.from) : t('upd.noWinner')) + '  →  ' + (w.to ? entryText(w.to) : t('upd.noWinner'));
-    }, 'up');
-    group('upd.newTitle', u.new, entryText, 'new');
-    group('upd.droppedTitle', u.dropped, entryText, 'down');
+    var cats = {};
+    function slot(c) { return cats[c] || (cats[c] = { added: [], removed: [], winner: null }); }
+    u.new.forEach(function (e) { slot(e.category).added.push(e); });
+    u.dropped.forEach(function (e) { slot(e.category).removed.push(e); });
+    u.winners.forEach(function (w) { slot(w.category).winner = w; });
+    var order = Object.keys(data.categories);
+    Object.keys(cats).sort(function (a, b) {
+      var ia = order.indexOf(a), ib = order.indexOf(b);
+      return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.localeCompare(b);
+    }).forEach(function (c) {
+      var d = cats[c], card = el('section', 'upcard');
+      card.appendChild(el('h4', '', cl(c)));
+      function row(kind, label, node) {
+        var r = el('div', 'uprow ' + kind);
+        r.appendChild(el('span', 'upsign', kind === 'add' ? '+' : kind === 'rem' ? '−' : '★'));
+        r.appendChild(el('span', 'uplabel', label));
+        var body = el('span', 'upbody');
+        if (typeof node === 'string') body.textContent = node; else body.appendChild(node);
+        r.appendChild(body);
+        card.appendChild(r);
+      }
+      d.added.forEach(function (e) { row('add', t('upd.added'), entryText(e)); });
+      d.removed.forEach(function (e) { row('rem', t('upd.removed'), entryText(e)); });
+      if (d.winner) {
+        var w = d.winner, span = el('span');
+        function side(e, tagKey, list) {
+          if (!e) return el('b', '', t('upd.noWinner'));
+          var x = el('span'), isNew = list.some(function (n) { return n.film === e.film; });
+          x.appendChild(el('b', '', entryText(e)));
+          if (isNew) x.appendChild(el('em', '', ' ' + t(tagKey)));
+          return x;
+        }
+        span.appendChild(side(w.from, 'upd.nowGone', d.removed));
+        span.appendChild(el('span', 'uparrow', '→'));
+        span.appendChild(side(w.to, 'upd.nowNew', d.added));
+        row('win', t('upd.winnerLine'), span);
+      }
+      box.appendChild(card);
+    });
     return box;
   }
   function renderUpdates() {
