@@ -47,6 +47,18 @@
   "fetched": "2026-11-26",
   "stale": false
  },
+ "being-heumann": {
+  "world_premiere": "2026-09-10",
+  "pl_cinema_main": null,
+  "title_pl": "Być człowiekiem: historia Judy Heumann",
+  "title_original": "Being Heumann",
+  "year": 2026,
+  "pl_cinema": null,
+  "dates_conflict": false,
+  "url": "https://www.filmweb.pl/film/By%C4%87+cz%C5%82owiekiem:+historia+Judy+Heumann-2026-10130490",
+  "fetched": "2026-11-26",
+  "stale": false
+ },
  "disclosure-day": {
   "world_premiere": "2026-06-10",
   "pl_cinema_main": "2026-06-10",
@@ -104,6 +116,18 @@
   "pl_cinema": "2027-01-29",
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Fiord-2026-10100686",
+  "fetched": "2026-11-26",
+  "stale": false
+ },
+ "i-play-rocky": {
+  "world_premiere": "2026-09-12",
+  "pl_cinema_main": "2026-11-20",
+  "title_pl": "Jestem Rocky",
+  "title_original": "I Play Rocky",
+  "year": 2026,
+  "pl_cinema": "2026-11-20",
+  "dates_conflict": false,
+  "url": "https://www.filmweb.pl/film/Jestem+Rocky-2026-10053105",
   "fetched": "2026-11-26",
   "stale": false
  },
@@ -346,6 +370,18 @@
   "dates_conflict": false,
   "url": "https://www.filmweb.pl/film/Drama-2026-10063474",
   "fetched": "2026-11-21",
+  "stale": false
+ },
+ "the-further-mis-adventures-of-cliff-booth": {
+  "world_premiere": "2026-11-25",
+  "pl_cinema_main": "2026-11-25",
+  "title_pl": "Dalsze perypetie Cliffa Bootha",
+  "title_original": "The Further Mis-Adventures of Cliff Booth",
+  "year": 2026,
+  "pl_cinema": "2026-11-25",
+  "dates_conflict": false,
+  "url": "https://www.filmweb.pl/film/Dalsze+perypetie+Cliffa+Bootha-2026-10081911",
+  "fetched": "2026-11-26",
   "stale": false
  },
  "the-invite": {
