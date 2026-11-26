@@ -308,3 +308,7 @@ h1{font-size:40px;overflow-wrap:anywhere}
 .plancover{font-size:13px;color:var(--muted);margin-right:auto}
 .planfilm .noms{padding:6px 0 0}
 .plancomp{margin-top:8px;font-size:13px;font-weight:600;color:var(--up)}
+
+#plansharedbanner{margin-bottom:12px}
+#planshare{margin-bottom:12px}
+#plansupp[hidden],#planshare[hidden]{display:none}
