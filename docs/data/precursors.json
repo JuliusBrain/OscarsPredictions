@@ -1,0 +1,1532 @@
+{
+ "updated": "2026-11-26",
+ "events": [
+  {
+   "id": "nbr",
+   "name": "National Board of Review",
+   "short": "NBR",
+   "order": 1,
+   "status": "pending",
+   "source": null,
+   "page": null,
+   "url": null,
+   "categories": [],
+   "stale": false
+  },
+  {
+   "id": "gotham",
+   "name": "Gotham Awards",
+   "short": "Gotham",
+   "order": 2,
+   "status": "nominees",
+   "source": "wikipedia",
+   "page": "Gotham Independent Film Awards 2026",
+   "url": "https://en.wikipedia.org/wiki/Gotham_Independent_Film_Awards_2026",
+   "categories": [
+    {
+     "label": "Best Feature",
+     "oscar": "Best Picture",
+     "entries": [
+      {
+       "text": "Clarissa – Arie Esiri, Chuko Esiri, directors; Arie Esiri, Chuko Esiri, Theresa Park, Nicholas Weinstock, producers",
+       "films": [
+        "Clarissa"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Club Kid – Jordan Firstman, director; Michael Bloom, Alex Coco, Galen Core, Ryan Heller, producers",
+       "films": [
+        "Club Kid"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "The Debut – Jesse Eisenberg, director; Jesse Eisenberg, Ali Herting, Dave McCary, Emma Stone, producers",
+       "films": [
+        "The Debut"
+       ],
+       "winner": false,
+       "film_id": "the-debut"
+      },
+      {
+       "text": "Dreams in Nightmares – Shatara Michelle Ford, director; Naima Abed, Shatara Michelle Ford, Pin-Chun Liu, producers",
+       "films": [
+        "Dreams in Nightmares"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "The Invite – Olivia Wilde, director; Ben Browning, Megan Ellison, David Permut, producers",
+       "films": [
+        "The Invite"
+       ],
+       "winner": false,
+       "film_id": "the-invite"
+      },
+      {
+       "text": "Josephine – Beth de Araújo, director; Beth de Araújo, Josh Beirne-Golden, Gemma Chan, David Kaplan, Josh Peters, Jordan Rapaport, Mark H. Rapaport, Robina Riccitiello, Marina Stabile, Channing Tatum, Crystine Zhang, producers",
+       "films": [
+        "Josephine"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Mouse – Kelly O'Sullivan, Alex Thompson, directors; Bonnie Comley, Pierce Cravens, Steven A. Jones, Ian Keiser, Chelsea Krant, Stewart F. Lane, Abigail Rose Solomon, Alex Thompson, Alex Wilson, producers",
+       "films": [
+        "Mouse"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Paper Tiger – James Gray, director; Andrea Bucko, Leonardo Maria del Vecchio, Gary Farkas, James Gray, Anthony Katagas, Andrea Leone, Raffaella Leone, Marco Perego, Carlo Salem, Rodrigo Teixeira, producers",
+       "films": [
+        "Paper Tiger"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Primetime – Lance Oppenheim, director; Ari Aster, Fred Berger, William Iannaccone, Brian Kavanaugh-Jones, Lars Knudsen, Brighton McCloskey, Robert Pattinson, producers",
+       "films": [
+        "Primetime"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Teenage Sex and Death at Camp Miasma – Jane Schoenbrun, director; Dede Gardner, Jeremy Kleiner, producers",
+       "films": [
+        "Teenage Sex and Death at Camp Miasma"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Your Mother Your Mother Your Mother – Bassam Tariq, director; Babak Anvari, Bassam Tariq, Lucan Toh, producers",
+       "films": [
+        "Your Mother Your Mother Your Mother"
+       ],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    },
+    {
+     "label": "Best Director",
+     "oscar": "Directing",
+     "entries": [
+      {
+       "text": "Ryusuke Hamaguchi – All of a Sudden",
+       "films": [
+        "All of a Sudden"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Sandra Wollner – Everytime",
+       "films": [
+        "Everytime"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Andrey Zvyagintsev – Minotaur",
+       "films": [
+        "Minotaur"
+       ],
+       "winner": false,
+       "film_id": "minotaur"
+      },
+      {
+       "text": "Jane Schoenbrun – Teenage Sex and Death at Camp Miasma",
+       "films": [
+        "Teenage Sex and Death at Camp Miasma"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Mike Leigh – Tender Loving Care",
+       "films": [
+        "Tender Loving Care"
+       ],
+       "winner": false,
+       "film_id": "tender-loving-care"
+      }
+     ]
+    },
+    {
+     "label": "Breakthrough Director",
+     "oscar": "Directing",
+     "entries": [
+      {
+       "text": "Sophy Romvari – Blue Heron",
+       "films": [
+        "Blue Heron"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Jordan Firstman – Club Kid",
+       "films": [
+        "Club Kid"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Aleshea Harris – Is God Is",
+       "films": [
+        "Is God Is"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Marine Atlan – La Gradiva",
+       "films": [
+        "La Gradiva"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Joel Alfonso Vargas – Mad Bills to Pay (or Destiny, dile que no soy malo)",
+       "films": [
+        "Mad Bills to Pay (or Destiny, dile que no soy malo)"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "John Early – Maddie's Secret",
+       "films": [
+        "Maddie's Secret"
+       ],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    },
+    {
+     "label": "Best Original Screenplay",
+     "oscar": "Original Screenplay",
+     "entries": [
+      {
+       "text": "Everytime – Sandra Wollner",
+       "films": [
+        "Everytime"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "La Gradiva – Marine Atlan and Anne Brouillet",
+       "films": [
+        "La Gradiva"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Possible Love – Lee Chang-dong and Oh Jung-mi",
+       "films": [
+        "Possible Love"
+       ],
+       "winner": false,
+       "film_id": "possible-love"
+      },
+      {
+       "text": "Tender Loving Care – Mike Leigh",
+       "films": [
+        "Tender Loving Care"
+       ],
+       "winner": false,
+       "film_id": "tender-loving-care"
+      },
+      {
+       "text": "Wild Horse Nine – Martin McDonagh",
+       "films": [
+        "Wild Horse Nine"
+       ],
+       "winner": false,
+       "film_id": "wild-horse-nine"
+      }
+     ]
+    },
+    {
+     "label": "Best Adapted Screenplay",
+     "oscar": "Adapted Screenplay",
+     "entries": [
+      {
+       "text": "All of a Sudden – Ryusuke Hamaguchi",
+       "films": [
+        "All of a Sudden"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Clarissa – Chuko Esiri",
+       "films": [
+        "Clarissa"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "The Invite – Will McCormack and Rashida Jones",
+       "films": [
+        "The Invite"
+       ],
+       "winner": false,
+       "film_id": "the-invite"
+      },
+      {
+       "text": "Minotaur – Simon Lyashenko and Andrey Zvyagintsev",
+       "films": [
+        "Minotaur"
+       ],
+       "winner": false,
+       "film_id": "minotaur"
+      },
+      {
+       "text": "Primetime – Ajon Singh",
+       "films": [
+        "Primetime"
+       ],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    },
+    {
+     "label": "Best Documentary Feature",
+     "oscar": "Documentary Feature",
+     "entries": [
+      {
+       "text": "Closure – Michal Marczak, director; Monika Braid, Rémi Grellety, Karolina Marczak, Michal Marczak, Katarzyna Szczerba, producers",
+       "films": [
+        "Closure"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "A Fox Under a Pink Moon – Soraya Akhlaghi, Mehrdad Oskouei, directors; Siavash Jamali, Mehrdad Oskouei, producers",
+       "films": [
+        "A Fox Under a Pink Moon"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "NAZA – Yuval Abraham, Rachel Szor, directors; Harry Davies, Lindsay Poulton, James Wilson, producers",
+       "films": [
+        "NAZA"
+       ],
+       "winner": false,
+       "film_id": "naza"
+      },
+      {
+       "text": "Once Upon a Time in Harlem – David Greaves, director; Anne de Mare, Liani Greaves, producers",
+       "films": [
+        "Once Upon a Time in Harlem"
+       ],
+       "winner": false,
+       "film_id": "once-upon-a-time-in-harlem"
+      },
+      {
+       "text": "You Can See Everything – Nathan Fielder, Lance Oppenheim, directors; Maggie Ambrose, Tatiana Bears, Jack Davis, Nathan Fielder, Lance Oppenheim, producers",
+       "films": [
+        "You Can See Everything"
+       ],
+       "winner": false,
+       "film_id": "you-can-see-everything"
+      }
+     ]
+    },
+    {
+     "label": "Best International Feature",
+     "oscar": "International Feature",
+     "entries": [
+      {
+       "text": "All of a Sudden – Ryusuke Hamaguchi, director; Julien Deris, David Gauquié, Kosuke Oshida, Yuji Sadai, producers",
+       "films": [
+        "All of a Sudden"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Ben'Imana – Marie Clémentine Dusabejambo, director; Samantha Biffot, Pierre-Adrien Ceccaldi, Marie Clémentine Dusabejambo, Marie Epiphanie Uwayezu, producers",
+       "films": [
+        "Ben'Imana"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Blue Heron – Sophy Romvari, director; Ryan Bobkin, Sara Wylie, Sophy Romvari, Gábor Osváth, producers",
+       "films": [
+        "Blue Heron"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Everytime – Sandra Wollner, director; David Bohun, Lixi Frank, Viktoria Stolpe, producers",
+       "films": [
+        "Everytime"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Fatherland – Pawel Pawlikowski, director; Edward Berger, Lorenzo Gangarossa, Mario Gianani, Lorenzo Mieli, Ewa Puszczyńska, Dimitri Rassam, Jeanne Tremsal, producers",
+       "films": [
+        "Fatherland"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Filipiñana – Rafael Manuel, director; Bianca Balbuena, Jeremy Chua, Omar El Kadi, Bradley Liew, Rafael Manuel, Alex Polunin, Nadia Turincev, producers",
+       "films": [
+        "Filipiñana"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "La Gradiva – Marine Atlan, director; Inès Daïen Dasi, producer",
+       "films": [
+        "La Gradiva"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Minotaur – Andrey Zvyagintsev, director; Charles Gillibert, Nathanaël Karmitz, Marco Perego, Andrey Zvyagintsev, producers",
+       "films": [
+        "Minotaur"
+       ],
+       "winner": false,
+       "film_id": "minotaur"
+      },
+      {
+       "text": "Possible Love – Lee Chang-dong, director; Lee Joon-dong, Lee Chang-dong, David Levine, Chadwick Prichard, producers",
+       "films": [
+        "Possible Love"
+       ],
+       "winner": false,
+       "film_id": "possible-love"
+      },
+      {
+       "text": "Tender Loving Care – Mike Leigh, director; Georgina Lowe, producer",
+       "films": [
+        "Tender Loving Care"
+       ],
+       "winner": false,
+       "film_id": "tender-loving-care"
+      }
+     ]
+    },
+    {
+     "label": "Outstanding Lead Performance",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Mahershala Ali – Your Mother Your Mother Your Mother as Latif",
+       "films": [
+        "Your Mother Your Mother Your Mother"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Gillian Anderson – Teenage Sex and Death at Camp Miasma as Billy Presley",
+       "films": [
+        "Teenage Sex and Death at Camp Miasma"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Jeon Do-yeon – Possible Love as Mi-ok",
+       "films": [
+        "Possible Love"
+       ],
+       "winner": false,
+       "film_id": "possible-love"
+      },
+      {
+       "text": "John Early – Maddie's Secret as Madison \"Maddie\" Ralph",
+       "films": [
+        "Maddie's Secret"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "John Malkovich – Wild Horse Nine as Chris Carlisle",
+       "films": [
+        "Wild Horse Nine"
+       ],
+       "winner": false,
+       "film_id": "wild-horse-nine"
+      },
+      {
+       "text": "Ian McKellen – The Christophers as Julian Sklar",
+       "films": [
+        "The Christophers"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Julianne Moore – The Debut as Mona Friedman",
+       "films": [
+        "The Debut"
+       ],
+       "winner": false,
+       "film_id": "the-debut"
+      },
+      {
+       "text": "Sophie Okonedo – Clarissa as Clarissa",
+       "films": [
+        "Clarissa"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Andrew Scott – Elsinore as Ian Charleson",
+       "films": [
+        "Elsinore"
+       ],
+       "winner": false,
+       "film_id": "elsinore"
+      },
+      {
+       "text": "John Turturro – The Only Living Pickpocket in New York as Harry Lehman",
+       "films": [
+        "The Only Living Pickpocket in New York"
+       ],
+       "winner": false,
+       "film_id": "the-only-living-pickpocket-in-new-york"
+      }
+     ]
+    },
+    {
+     "label": "Outstanding Supporting Performance",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Tom Courtenay – Queen at Sea as Martin",
+       "films": [
+        "Queen at Sea"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Esmé Creed-Miles – Sense and Sensibility as Marianne Dashwood",
+       "films": [
+        "Sense and Sensibility"
+       ],
+       "winner": false,
+       "film_id": "sense-and-sensibility"
+      },
+      {
+       "text": "Penélope Cruz – The Invite as Pina",
+       "films": [
+        "The Invite"
+       ],
+       "winner": false,
+       "film_id": "the-invite"
+      },
+      {
+       "text": "Adam Driver – Paper Tiger as Gary Pearl",
+       "films": [
+        "Paper Tiger"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Andrew Garfield – Artificial as Sam Altman",
+       "films": [
+        "Artificial"
+       ],
+       "winner": false,
+       "film_id": "artificial"
+      },
+      {
+       "text": "Skyler Gisondo – Primetime as Daniel \"Dan\" Plum",
+       "films": [
+        "Primetime"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Sandra Hüller – Fatherland as Erika Mann",
+       "films": [
+        "Fatherland"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Kate O'Flynn – Tender Loving Care as Amy",
+       "films": [
+        "Tender Loving Care"
+       ],
+       "winner": false,
+       "film_id": "tender-loving-care"
+      },
+      {
+       "text": "Tao Okamoto – All of a Sudden as Mari Morisaki",
+       "films": [
+        "All of a Sudden"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Channing Tatum – Josephine as Damien",
+       "films": [
+        "Josephine"
+       ],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    },
+    {
+     "label": "Breakthrough Performer",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Adia – Your Mother Your Mother Your Mother as Fatiha",
+       "films": [
+        "Your Mother Your Mother Your Mother"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "India Amarteifio – Clarissa as Young Clarissa",
+       "films": [
+        "Clarissa"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Guitarricadelafuente – La bola negra as Sebastián",
+       "films": [
+        "La bola negra"
+       ],
+       "winner": false,
+       "film_id": "la-bola-negra"
+      },
+      {
+       "text": "Colas Quignard – La Gradiva as Toni",
+       "films": [
+        "La Gradiva"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Mason Reeves – Josephine as Josephine",
+       "films": [
+        "Josephine"
+       ],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    },
+    {
+     "label": "Audience Award",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Backrooms",
+       "films": [
+        "Backrooms"
+       ],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "La bola negra",
+       "films": [
+        "La bola negra"
+       ],
+       "winner": false,
+       "film_id": "la-bola-negra"
+      },
+      {
+       "text": "The Drama",
+       "films": [
+        "The Drama"
+       ],
+       "winner": false,
+       "film_id": "the-drama"
+      },
+      {
+       "text": "The Invite",
+       "films": [
+        "The Invite"
+       ],
+       "winner": false,
+       "film_id": "the-invite"
+      },
+      {
+       "text": "Michael",
+       "films": [
+        "Michael"
+       ],
+       "winner": false,
+       "film_id": "michael"
+      },
+      {
+       "text": "Obsession",
+       "films": [
+        "Obsession"
+       ],
+       "winner": false,
+       "film_id": "obsession"
+      },
+      {
+       "text": "Project Hail Mary",
+       "films": [
+        "Project Hail Mary"
+       ],
+       "winner": false,
+       "film_id": "project-hail-mary"
+      },
+      {
+       "text": "You Can See Everything",
+       "films": [
+        "You Can See Everything"
+       ],
+       "winner": false,
+       "film_id": "you-can-see-everything"
+      }
+     ]
+    },
+    {
+     "label": "Anniversary Tribute",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Laika",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    },
+    {
+     "label": "Director Tribute",
+     "oscar": "Directing",
+     "entries": [
+      {
+       "text": "Danny Boyle – Ink",
+       "films": [
+        "Ink"
+       ],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    },
+    {
+     "label": "Ensemble Tribute",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Being Heumann – Ruth Madeley, Mark Ruffalo, Madeline Delp, Roberta Colindrez, Jon Beavers, Antwan Tolliver, Ray Fisher, Andrew Pilkington, Michael Patrick Thornton, Russell Harvard, Daniel Durant, Charlie Rush-Reese, Rio Finnegan, D'Arcee Charington Neal, Will Brill, Rob Delaney, Matthew August Jeffers, Siena Rafter, Rein Barcel, Stephen Adly Guirgis, Dylan O'Brien, Bernard Telsey, and Adam Caldwell",
+       "films": [
+        "Being Heumann"
+       ],
+       "winner": false,
+       "film_id": "being-heumann"
+      }
+     ]
+    },
+    {
+     "label": "Legacy Tribute",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Elsinore",
+       "films": [
+        "Elsinore"
+       ],
+       "winner": false,
+       "film_id": "elsinore"
+      }
+     ]
+    },
+    {
+     "label": "Musical Tribute",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Antoine Fuqua, Graham King, Colman Domingo, Jaafar Jackson, and Nia Long – Michael",
+       "films": [
+        "Michael"
+       ],
+       "winner": false,
+       "film_id": "michael"
+      }
+     ]
+    },
+    {
+     "label": "Performer Tribute",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Ellen Burstyn",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    },
+    {
+     "label": "Spotlight Tribute",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Inde Navarrette – Obsession",
+       "films": [
+        "Obsession"
+       ],
+       "winner": false,
+       "film_id": "obsession"
+      }
+     ]
+    },
+    {
+     "label": "Vanguard Tribute",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "La bola negra – Javier Calvo, Javier Ambrossi, Guitarricadelafuente, Miguel Bernardeau, Carlos González, Milo Quifes, Lola Dueñas, Penélope Cruz, and Glenn Close",
+       "films": [
+        "La bola negra"
+       ],
+       "winner": false,
+       "film_id": "la-bola-negra"
+      }
+     ]
+    },
+    {
+     "label": "Film awards",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Best Feature",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Best Director",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Best Documentary",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Best International Feature",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Outstanding Lead Performance",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Outstanding Supporting Performance",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Breakthrough Performer",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Bingham Ray Breakthrough Director",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Best Original Screenplay",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Best Adapted Screenplay",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Audience Award",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    },
+    {
+     "label": "Former categories",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "Best Actor",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Best Actress",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Best Ensemble Cast",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Breakthrough Series – Long Form",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Breakthrough Series – Short Form",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Outstanding Performance in a New Series",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "Best Screenplay",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    },
+    {
+     "label": "Film awards",
+     "oscar": null,
+     "entries": [
+      {
+       "text": "1991",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "1992",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "1993",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "1994",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "1995",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "1996",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "1997",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "1998",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "1999",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2000",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2001",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2002",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2003",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2004",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2005",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2006",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2007",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2008",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2009",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2010",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2011",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2012",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2013",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2014",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2015",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2016",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2017",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2018",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2019",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2020",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2021",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2022",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2023",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2024",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2025",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      },
+      {
+       "text": "2026",
+       "films": [],
+       "winner": false,
+       "film_id": null
+      }
+     ]
+    }
+   ],
+   "stale": false
+  },
+  {
+   "id": "nyfcc",
+   "name": "New York Film Critics Circle",
+   "short": "NYFCC",
+   "order": 3,
+   "status": "pending",
+   "source": null,
+   "page": null,
+   "url": null,
+   "categories": [],
+   "stale": false
+  },
+  {
+   "id": "globes",
+   "name": "Golden Globe Awards",
+   "short": "Globes",
+   "order": 4,
+   "status": "pending",
+   "source": null,
+   "page": null,
+   "url": null,
+   "categories": [],
+   "stale": false
+  },
+  {
+   "id": "critics",
+   "name": "Critics' Choice Awards",
+   "short": "Critics' Choice",
+   "order": 5,
+   "status": "pending",
+   "source": null,
+   "page": null,
+   "url": null,
+   "categories": [],
+   "stale": false
+  },
+  {
+   "id": "pga",
+   "name": "Producers Guild of America Awards",
+   "short": "PGA",
+   "order": 6,
+   "status": "pending",
+   "source": null,
+   "page": null,
+   "url": null,
+   "categories": [],
+   "stale": false
+  },
+  {
+   "id": "dga",
+   "name": "Directors Guild of America Awards",
+   "short": "DGA",
+   "order": 7,
+   "status": "pending",
+   "source": null,
+   "page": null,
+   "url": null,
+   "categories": [],
+   "stale": false
+  },
+  {
+   "id": "sag",
+   "name": "Actor Awards (formerly SAG Awards)",
+   "short": "Actor Awards",
+   "order": 8,
+   "status": "pending",
+   "source": null,
+   "page": null,
+   "url": null,
+   "categories": [],
+   "stale": false
+  },
+  {
+   "id": "bafta",
+   "name": "BAFTA Film Awards",
+   "short": "BAFTA",
+   "order": 9,
+   "status": "pending",
+   "source": null,
+   "page": null,
+   "url": null,
+   "categories": [],
+   "stale": false
+  }
+ ],
+ "by_film": {
+  "the-debut": [
+   {
+    "event": "gotham",
+    "category": "Best Feature",
+    "oscar": "Best Picture",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Outstanding Lead Performance",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "the-invite": [
+   {
+    "event": "gotham",
+    "category": "Best Feature",
+    "oscar": "Best Picture",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Best Adapted Screenplay",
+    "oscar": "Adapted Screenplay",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Outstanding Supporting Performance",
+    "oscar": null,
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Audience Award",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "minotaur": [
+   {
+    "event": "gotham",
+    "category": "Best Director",
+    "oscar": "Directing",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Best Adapted Screenplay",
+    "oscar": "Adapted Screenplay",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Best International Feature",
+    "oscar": "International Feature",
+    "winner": false
+   }
+  ],
+  "tender-loving-care": [
+   {
+    "event": "gotham",
+    "category": "Best Director",
+    "oscar": "Directing",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Best Original Screenplay",
+    "oscar": "Original Screenplay",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Best International Feature",
+    "oscar": "International Feature",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Outstanding Supporting Performance",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "possible-love": [
+   {
+    "event": "gotham",
+    "category": "Best Original Screenplay",
+    "oscar": "Original Screenplay",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Best International Feature",
+    "oscar": "International Feature",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Outstanding Lead Performance",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "wild-horse-nine": [
+   {
+    "event": "gotham",
+    "category": "Best Original Screenplay",
+    "oscar": "Original Screenplay",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Outstanding Lead Performance",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "naza": [
+   {
+    "event": "gotham",
+    "category": "Best Documentary Feature",
+    "oscar": "Documentary Feature",
+    "winner": false
+   }
+  ],
+  "once-upon-a-time-in-harlem": [
+   {
+    "event": "gotham",
+    "category": "Best Documentary Feature",
+    "oscar": "Documentary Feature",
+    "winner": false
+   }
+  ],
+  "you-can-see-everything": [
+   {
+    "event": "gotham",
+    "category": "Best Documentary Feature",
+    "oscar": "Documentary Feature",
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Audience Award",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "elsinore": [
+   {
+    "event": "gotham",
+    "category": "Outstanding Lead Performance",
+    "oscar": null,
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Legacy Tribute",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "the-only-living-pickpocket-in-new-york": [
+   {
+    "event": "gotham",
+    "category": "Outstanding Lead Performance",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "sense-and-sensibility": [
+   {
+    "event": "gotham",
+    "category": "Outstanding Supporting Performance",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "artificial": [
+   {
+    "event": "gotham",
+    "category": "Outstanding Supporting Performance",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "la-bola-negra": [
+   {
+    "event": "gotham",
+    "category": "Breakthrough Performer",
+    "oscar": null,
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Audience Award",
+    "oscar": null,
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Vanguard Tribute",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "the-drama": [
+   {
+    "event": "gotham",
+    "category": "Audience Award",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "michael": [
+   {
+    "event": "gotham",
+    "category": "Audience Award",
+    "oscar": null,
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Musical Tribute",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "obsession": [
+   {
+    "event": "gotham",
+    "category": "Audience Award",
+    "oscar": null,
+    "winner": false
+   },
+   {
+    "event": "gotham",
+    "category": "Spotlight Tribute",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "project-hail-mary": [
+   {
+    "event": "gotham",
+    "category": "Audience Award",
+    "oscar": null,
+    "winner": false
+   }
+  ],
+  "being-heumann": [
+   {
+    "event": "gotham",
+    "category": "Ensemble Tribute",
+    "oscar": null,
+    "winner": false
+   }
+  ]
+ }
+}

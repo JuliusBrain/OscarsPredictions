@@ -6,7 +6,7 @@ name: Update and deploy
 on:
   push:
     branches: [main]
-    paths: ["data/snapshots/**", "data/filmweb-map.json", "scripts/**", "docs/**", ".github/workflows/update.yml"]
+    paths: ["data/snapshots/**", "data/filmweb-map.json", "data/precursors/**", "scripts/**", "docs/**", ".github/workflows/update.yml"]
   workflow_dispatch:
 
 permissions:
@@ -33,6 +33,9 @@ jobs:
       - name: Fetch Polish release dates from Filmweb
         continue-on-error: true
         run: python scripts/filmweb.py
+      - name: Fetch precursor awards from Wikipedia
+        continue-on-error: true
+        run: python scripts/precursors.py
       - name: Check Polish streaming and VOD availability
         continue-on-error: true
         env:

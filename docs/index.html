@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oscars Predictions Tracker</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=29">
+<link rel="stylesheet" href="styles.css?v=31">
 </head>
 <body>
 <main class="wrap">
@@ -43,8 +43,10 @@
     <div class="tabs">
       <button class="tab" data-tab-btn="films" data-i18n="tab.films">Films</button>
       <button class="tab" data-tab-btn="plan" data-i18n="tab.plan">Watch plan</button>
+      <button class="tab" data-tab-btn="now" data-i18n="tab.now">Watch now</button>
       <button class="tab" data-tab-btn="updates" data-i18n="tab.updates">Updates</button>
       <button class="tab" data-tab-btn="cal" data-i18n="tab.cal">Calendar</button>
+      <button class="tab" data-tab-btn="awards" data-i18n="tab.awards">Precursors</button>
       <button class="tab" data-tab-btn="cats" data-i18n="tab.cats">Categories</button>
       <button class="tab" data-tab-btn="people" data-i18n="tab.people">People</button>
     </div>
@@ -104,8 +106,23 @@
     <div id="updatelist"></div>
   </section>
 
+  <section id="now" data-i18n-aria="tab.now" aria-label="Watch now" hidden>
+    <h2 class="sechead" data-i18n="now.title">Watch now</h2>
+    <p class="dropnote" data-i18n="now.note">Films on the list that you can stream, rent or buy in Poland today and have not marked as watched. Most nominations first.</p>
+    <div id="nowchips" class="chips" role="group"></div>
+    <div id="nowhead" class="planhead" role="status" aria-live="polite"></div>
+    <div id="nowlist"></div>
+  </section>
+
   <section id="cal" data-i18n-aria="tab.cal" aria-label="Calendar" hidden>
     <div id="calendar"></div>
+  </section>
+
+  <section id="awards" data-i18n-aria="tab.awards" aria-label="Precursors" hidden>
+    <h2 class="sechead" data-i18n="awards.title">Precursor awards</h2>
+    <p class="dropnote" data-i18n="awards.note">Winners and nominees of the earlier awards of the season, read from Wikipedia. Only the categories that map to an Oscar category are shown.</p>
+    <div class="watchbar"><button id="awardstracked" class="chip" aria-pressed="false"></button></div>
+    <div id="awardslist"></div>
   </section>
 
   <section id="cats" data-i18n-aria="tab.cats" aria-label="Categories" hidden>
@@ -133,7 +150,7 @@
   </details>
   <p class="credits" data-i18n-html="credits">Premiere dates: <a href="https://www.filmweb.pl" target="_blank" rel="noopener">Filmweb</a>.</p>
 </main>
-<script src="i18n.js?v=29"></script>
-<script src="app.js?v=29"></script>
+<script src="i18n.js?v=31"></script>
+<script src="app.js?v=31"></script>
 </body>
 </html>
