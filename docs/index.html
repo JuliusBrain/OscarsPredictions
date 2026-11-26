@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oscars Predictions Tracker</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=26">
+<link rel="stylesheet" href="styles.css?v=27">
 </head>
 <body>
 <main class="wrap">
@@ -42,6 +42,7 @@
   <div class="tabbar">
     <div class="tabs">
       <button class="tab" data-tab-btn="films" data-i18n="tab.films">Films</button>
+      <button class="tab" data-tab-btn="plan" data-i18n="tab.plan">Watch plan</button>
       <button class="tab" data-tab-btn="updates" data-i18n="tab.updates">Updates</button>
       <button class="tab" data-tab-btn="cal" data-i18n="tab.cal">Calendar</button>
       <button class="tab" data-tab-btn="cats" data-i18n="tab.cats">Categories</button>
@@ -82,6 +83,15 @@
     <div id="dropped"></div>
   </section>
 
+  <section id="plan" aria-label="Watch plan" hidden>
+    <h2 class="sechead" data-i18n="plan.title">Path to 100%</h2>
+    <p class="dropnote" data-i18n="plan.note">The films you still need to see to have watched every nominee in the main categories: Best Picture, Directing, the acting categories and both screenplays. Films that cover the most categories come first.</p>
+    <div class="watchbar"><button id="plansupp" class="chip" aria-pressed="true"></button></div>
+    <div id="planhead" class="planhead" aria-live="polite"></div>
+    <div id="planprog" class="planprog"></div>
+    <div id="planlist"></div>
+  </section>
+
   <section id="updates" data-i18n-aria="tab.updates" aria-label="Updates" hidden>
     <h2 class="sechead" data-i18n="upd.title">What changed</h2>
     <p class="dropnote" data-i18n="upd.note">Every time Variety changes its list, each affected category is listed here: what was added (+), what was removed (−) and whether the predicted winner (★) changed.</p>
@@ -117,7 +127,7 @@
   </details>
   <p class="credits" data-i18n-html="credits">Premiere dates: <a href="https://www.filmweb.pl" target="_blank" rel="noopener">Filmweb</a>.</p>
 </main>
-<script src="i18n.js?v=26"></script>
-<script src="app.js?v=26"></script>
+<script src="i18n.js?v=27"></script>
+<script src="app.js?v=27"></script>
 </body>
 </html>
