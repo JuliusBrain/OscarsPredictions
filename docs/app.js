@@ -205,7 +205,15 @@
     var pill, note = '';
     if (any) pill = [stream.length ? 'av.pill.streaming' : rentbuy.length ? 'av.pill.rentbuy' : 'av.pill.free', 'ok'];
     else if (out) { pill = ['av.pill.notout', 'wait']; note = t('av.note.opens', { date: fmt(fw.pl_cinema) }); }
-    else if (fw && !fw.pl_cinema) { pill = ['av.pill.nopl', 'no']; note = t('av.note.notann'); }
+    else if (fw && !fw.pl_cinema && av.pl_digital) {
+      pill = [av.pl_digital > now ? 'av.pill.notout' : 'av.pill.digital', 'wait'];
+      note = t('av.note.digital', { date: fmt(av.pl_digital) });
+    }
+    else if (fw && !fw.pl_cinema && av.digital_hint) {
+      pill = ['av.pill.nopl', 'no'];
+      note = t('av.note.hint', { date: fmt(av.digital_hint.date), country: av.digital_hint.country });
+    }
+    else if (fw && !fw.pl_cinema) { pill = ['av.pill.nopl', 'no']; note = t(av.checked ? 'av.note.nostream' : 'av.note.notann'); }
     else if (!availability.tmdb_enabled || !av.checked) { pill = ['av.pill.notchecked', 'no']; note = t('av.note.nodata'); }
     else if (inCinemas) { pill = ['av.pill.cinemas', 'wait']; note = t('av.note.cinemasonly'); }
     else { pill = ['av.pill.none', 'no']; note = t('av.note.none'); }
