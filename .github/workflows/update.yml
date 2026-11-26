@@ -1,8 +1,9 @@
 name: Update and deploy
 
+# No cron: the site is only rebuilt when something is pushed to main (for example by
+# the scheduled task that runs scripts/daily-update.sh) or when this workflow is
+# started by hand from the Actions tab.
 on:
-  schedule:
-    - cron: "17 6 * * *"
   push:
     branches: [main]
     paths: ["data/snapshots/**", "data/filmweb-map.json", "scripts/**", "docs/**", ".github/workflows/update.yml"]
