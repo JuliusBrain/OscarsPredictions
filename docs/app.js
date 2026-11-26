@@ -2,9 +2,11 @@
   var REPO = 'JuliusBrain/OscarsPredictions', WPATH = 'docs/data/watched.json';
   var THEMES = ['modern', 'deco'];
   var LANGS = ['en', 'pl'];
-  var TABS = ['films', 'updates', 'cal', 'cats', 'people'];
+  var TABS = ['films', 'plan', 'updates', 'cal', 'cats', 'people'];
+  var PLAN_CATS = ['Best Picture', 'Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress', 'Original Screenplay', 'Adapted Screenplay'];
+  var SUPPORTING = ['Supporting Actor', 'Supporting Actress'];
   var PEOPLE_CATS = ['Directing', 'Actor', 'Actress', 'Supporting Actor', 'Supporting Actress'];
-  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', changed: false, open: {}, cal: null };
+  var state = { lang: 'en', theme: 'modern', mode: 'predicted', tab: 'films', cat: 'All', filter: 'all', changed: false, open: {}, supp: true, cal: null };
   var filmweb = {}, availability = { films: {}, tmdb_enabled: false };
   var data = null, registry = null, official = null, changes = { entries: {}, dropped: [] }, history = { updates: [] };
   var watched = {}, ops = [], remoteSha = null, saveTimer = null, saving = false;
@@ -614,6 +616,71 @@
     });
     return box;
   }
+  /* ---------- watch plan: what is left to see to have seen every nominee in the main categories ---------- */
+  function renderPlan() {
+    var cats = PLAN_CATS.filter(function (c) { return state.supp || SUPPORTING.indexOf(c) < 0; });
+    var films = Object.keys(registry.films).map(function (k) { return registry.films[k]; });
+    var nominees = {}, byCat = {};
+    cats.forEach(function (c) {
+      byCat[c] = films.filter(function (f) { return f.categories[c] && f.categories[c].active; });
+      byCat[c].forEach(function (f) { (nominees[f.id] = nominees[f.id] || { f: f, cats: [] }).cats.push(c); });
+    });
+    var left = Object.keys(nominees).map(function (k) { return nominees[k]; }).filter(function (x) { return !watched[x.f.id]; });
+    var leftByCat = {};
+    cats.forEach(function (c) { leftByCat[c] = byCat[c].filter(function (f) { return !watched[f.id]; }); });
+    left.forEach(function (x) {
+      x.completes = x.cats.filter(function (c) { return leftByCat[c].length === 1; });
+      x.near = x.cats.reduce(function (s, c) { return s + 1 / leftByCat[c].length; }, 0);
+    });
+    left.sort(function (a, b) {
+      return b.cats.length - a.cats.length || b.near - a.near || ftitle(a.f.name).localeCompare(ftitle(b.f.name), locale());
+    });
+
+    var tog = document.getElementById('plansupp');
+    tog.textContent = t('plan.supp');
+    tog.setAttribute('aria-pressed', String(state.supp));
+
+    var head = document.getElementById('planhead');
+    head.textContent = '';
+    head.appendChild(el('b', 'plannum', String(left.length)));
+    head.appendChild(el('span', '', left.length ? tn('plan.left', left.length) : t('plan.done')));
+    var total = Object.keys(nominees).length;
+    head.appendChild(el('span', 'plansub', t('plan.of', { seen: total - left.length, total: total })));
+
+    var prog = document.getElementById('planprog');
+    prog.textContent = '';
+    cats.forEach(function (c) {
+      var n = byCat[c].length, seen = n - leftByCat[c].length;
+      var card = el('div', 'plancat' + (seen === n && n ? ' full' : ''));
+      card.appendChild(el('span', 'plancname', cl(c)));
+      var bar = el('div', 'planbar'), fill = el('i');
+      fill.style.width = (n ? Math.round(seen / n * 100) : 0) + '%';
+      bar.setAttribute('aria-hidden', 'true'); bar.appendChild(fill); card.appendChild(bar);
+      card.appendChild(el('span', 'plancnum', (seen === n && n ? '✓ ' : '') + t('plan.catProgress', { seen: seen, total: n })));
+      prog.appendChild(card);
+    });
+
+    var list = document.getElementById('planlist');
+    list.textContent = '';
+    left.forEach(function (x) {
+      var f = x.f, row = el('div', 'planfilm');
+      var top = el('div', 'plantop');
+      top.appendChild(el('b', '', ftitle(f.name)));
+      top.appendChild(el('span', 'plancover', t('plan.covers', { n: x.cats.length, total: cats.length })));
+      top.appendChild(watchLabel(f));
+      row.appendChild(top);
+      var chips = el('div', 'noms');
+      x.cats.forEach(function (c) {
+        var e = f.categories[c], chip = el('span', 'nom' + (e.winner ? ' win' : ''), cl(c));
+        if (PEOPLE_CATS.indexOf(c) >= 0 && e.people && e.people.length) chip.appendChild(el('span', 'nomwho', e.people.join(', ')));
+        chips.appendChild(chip);
+      });
+      row.appendChild(chips);
+      if (x.completes.length) row.appendChild(el('div', 'plancomp', t('plan.completes', { cats: x.completes.map(cl).join(', ') })));
+      list.appendChild(row);
+    });
+  }
+
   function renderUpdates() {
     var box = document.getElementById('updatelist');
     if (!box) return;
@@ -679,7 +746,7 @@
     document.getElementById('nomempty').hidden = !!official;
     renderMeta();
     if (data && registry) {
-      [renderFilms, renderBanner, renderUpdates, renderCalendar, function renderCats() { catCards(data, document.getElementById('catlist')); }, renderPeople,
+      [renderFilms, renderPlan, renderBanner, renderUpdates, renderCalendar, function renderCats() { catCards(data, document.getElementById('catlist')); }, renderPeople,
         function renderOfficial() { if (official) catCards(official, document.getElementById('nomlist')); }].forEach(function (fn) {
         try { fn(); } catch (e) { showError('err.generic', { msg: (fn.name || 'render') + ': ' + e.message }); }
       });
@@ -703,6 +770,7 @@
     shownIds.forEach(function (id) { if (allOpen) delete state.open[id]; else state.open[id] = true; });
     renderFilms();
   };
+  document.getElementById('plansupp').onclick = function () { state.supp = !state.supp; render(); };
   document.getElementById('chgtoggle').onclick = function () { state.changed = !state.changed; render(); };
   document.getElementById('tokensave').onclick = function () {
     var v = document.getElementById('token').value.trim();
